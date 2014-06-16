@@ -44,7 +44,7 @@ if (isnil "IL_Variables") then
 	//-1 - do nothing
 	//0 - set to 0
 	//1 - keep such as before loading/unloading
-	IL_CDamage = 0;
+	IL_CDamage = 1;
 
 	//AddAction menu position
 	IL_Action_LU_Priority = 30; //Load and (para)unload
