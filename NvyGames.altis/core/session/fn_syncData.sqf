@@ -28,7 +28,7 @@ switch (typeName life_fnc_MP_packet) do
 if(!isNil "_exit") exitWith {hint "Because some cheaters manipulate the BIS MP framework, they have stopped you while enjoying Atlis Life.\n\nYou can do it in a minute, try again, if you think it is a mistake.";};
 
 [] call life_fnc_sessionUpdate;
-hint "Synchronize player data.\n\nPlease wait for 20 seconds before you separate the connection.";
+hint "Synchronized player data.\n\nPlease wait 20 seconds before you separate the connection.";
 [] spawn
 {
 	life_session_time = true;
