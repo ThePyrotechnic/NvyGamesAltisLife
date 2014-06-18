@@ -5437,7 +5437,7 @@ class Mission
 				class Item0
 				{
 					position[]={9220.9316,271.70374,19280.078};
-					azimut=-49.435329;
+					azimut=-49.435299;
 					special="NONE";
 					id=282;
 					side="GUER";
@@ -5447,7 +5447,7 @@ class Mission
 					skill=0.5;
 					fuel=0;
 					ammo=0;
-					init="this enableSimulation false;   this addAction[""Kantine"",life_fnc_virt_menu,""cop""];";
+					init="this enableSimulation false; this allowDamage false;   this addAction[""Kantine"",life_fnc_virt_menu,""cop""];";
 				};
 			};
 		};
