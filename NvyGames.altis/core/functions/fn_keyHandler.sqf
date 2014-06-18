@@ -80,8 +80,20 @@ switch (_code) do
 	//Map Key
 	case _mapKey:
 	{
-		if(playerSide == west && !visibleMap) then {
+		if(playerSide == west && !visibleMap) then 
+		{
 			[] spawn life_fnc_copMarkers;
+		}
+		else 
+		{ 
+			if (playerSide != west && !visibleMap) then
+			{
+				_index = [life_my_gang,life_gang_list] call fnc_index;
+				if(_index != -1) then
+				{
+					[] spawn life_fnc_gangMarkers;
+				};
+			};
 		};
 	};
 	

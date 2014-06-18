@@ -284,6 +284,7 @@ class Life_Client_Core
 		class robPerson {};
 		class removeLicenses {};
 		class zoneCreator {};
+		class gangMarkers{};
 	};
 	
 	class Vehicle

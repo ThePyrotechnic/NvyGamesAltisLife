@@ -83,7 +83,7 @@ if(_veh distance impound_obj < 50) then
 		[_v] call life_fnc_vehicleAfterSpawn; //Cleanups, ...
 	};
 
-	hint format["Du hast dein %1 für $%3 ausgeparkt.",_name,[_price] call life_fnc_numberText];
+	hint format["You pulled out your %1 for $%3",_name,[_price] call life_fnc_numberText];
 	detach _veh;
 	if(_veh isKindOf "Air") then 
 	{
