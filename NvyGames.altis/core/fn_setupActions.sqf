@@ -24,16 +24,16 @@ switch (playerSide) do
 //Action key link BUGGY //HACKFIX working?
 life_actions = life_actions + [player addAction["Action ...",life_fnc_actionKeyHandler,"",0,false,true]];
 
-life_actions = life_actions + [player addAction["<t color='#0000FF'>ADAC</t>",life_fnc_serviceTruck,"",99,false,false,"",' (["adac"] call life_fnc_permLevel) > 0 && (typeOf (vehicle player) == "C_Offroad_01_F") && ((vehicle player animationPhase "HideServices") == 0) && ((vehicle player) in life_vehicles) && (speed vehicle player) < 1 ']];
+life_actions = life_actions + [player addAction["<t color='#0000FF'>AAA</t>",life_fnc_serviceTruck,"",99,false,false,"",' (["adac"] call life_fnc_permLevel) > 0 && (typeOf (vehicle player) == "C_Offroad_01_F") && ((vehicle player animationPhase "HideServices") == 0) && ((vehicle player) in life_vehicles) && (speed vehicle player) < 1 ']];
 
 //##61 Cop license show
-life_actions = life_actions + [player addAction["<t color='#00FF00'>Polizeimarke zeigen</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
+life_actions = life_actions + [player addAction["<t color='#00FF00'>You show your police license.</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
 
 //##106
 //BD MK1
-life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKI 'Fuel Killer' abfeuern</t>",life_fnc_fireBirdDown,"BDMK1",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
+life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKI 'Less-Lethal Solution'</t>",life_fnc_fireBirdDown,"BDMK1",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
 //BD MK2
-life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKII 'Electrostatic' abfeuern</t>",life_fnc_fireBirdDown,"BDMK2",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
+life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKII 'Lethal Solution'</t>",life_fnc_fireBirdDown,"BDMK2",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
 
 //##108
 /*life_actions = life_actions + [player addAction["<t color='#00FF00'>Hände hoch</t>",life_fnc_putHandsUp,true,1,false,true,"",' playerSide == civilian && !life_hands_up ']];*/

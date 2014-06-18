@@ -45,7 +45,7 @@ switch(_shop) do
 	////////////////////// Medikit-Shop
 	case "medical":
 	{
-		["Medizinische Ausrüstung",
+		["Medical Equipment",
 			[				
 				["FirstAidKit",nil,150]/*,
 				["Medikit",nil,2000]*/
@@ -90,7 +90,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Du bist kein Cop!"};
-			case (__GETC__(life_coplevel) < 3): {"Du hast nicht den benötigten Rang!"};
+			case (__GETC__(life_coplevel) < 3): {"You are not the required rank."};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -132,7 +132,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Du bist kein Cop!"};
-			case (__GETC__(life_coplevel) < 5): {"Du hast nicht den benötigten Rang!"};
+			case (__GETC__(life_coplevel) < 5): {"You are not the required rank."};
 			default
 			{
 				["Altis Sergeant Officer Shop",
@@ -202,7 +202,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"Du bist kein Cop!"};
-			case (!license_civ_rebel): {"Du hast keine Rebellentlizenz!"};
+			case (!license_civ_rebel): {"You do not have a rebel licence"};
 			default
 			{
 				["Mohammed's Jihadi Shop",
@@ -257,7 +257,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"Du bist kein Cop!"};
-			case (!license_civ_gun): {"Du hast keinen Waffenschein!"};
+			case (!license_civ_gun): {"You do not have a firearms license"};
 			default
 			{
 				["Billy Joe's Firearms",
