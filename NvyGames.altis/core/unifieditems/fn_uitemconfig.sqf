@@ -29,22 +29,22 @@ life_uitems = [
 	["furniture_05", "Schubladen", 15, false, 57000, 14000, 0, false],
 	
 	//##103
-	["handcuffs", "Handschellen", 1, false, 500, 300, 250, true],
+	["handcuffs", "handcuffs", 1, false, 500, 300, 250, true],
 	
 	//##106
-	["bd_mk1_bleachweapon", "BD-MKI 'Fuel Killer'", 25, false, 800000, 600000, true],
-	["bd_mk1_ammo", "MKI Polymerpatrone", 2, false, 10500, 8000, true],	
-	["bd_mk2_microemp", "BD-MKII 'Electrostatic'", 28, false, 1100000, 700000, true],
-	["bd_mk2_ammo", "MKII EMP-Emitter-Patrone", 4, false, 30000, 24000, true],
+	["bd_mk1_bleachweapon", "BD-MKI 'Engine disable'", 25, false, 800000, 600000, true],
+	["bd_mk1_ammo", "MKI polymer cartridge", 2, false, 10500, 8000, true],	
+	["bd_mk2_microemp", "BD-MKII 'EMP cartridge'", 28, false, 1100000, 700000, true],
+	["bd_mk2_ammo", "MKII EMP", 4, false, 30000, 24000, true],
 	
 	//##110 
 	["bomb", "Bombenweste", 20, true, 1500000, 800000, 500000, false],
 	
 	//EVENT
 	["event_1", "Dildo (Event)", 1, false, 1, 1, 0, false],
-	["event_2", "Kondom (Event)", 1, false, 1, 1, 0, false],
-	["event_3", "Gleitcreme (Event)", 1, false, 1, 1, 0, false],
-	["event_score", "Punkte (Event)", 0, false, 1, 1, 0, false],
+	["event_2", "condom (Event)", 1, false, 1, 1, 0, false],
+	["event_3", "Event Item (Event)", 1, false, 1, 1, 0, false],
+	["event_score", "Score (Event)", 0, false, 1, 1, 0, false],
 	
 	//ADAC
 	["adac_toolkit", "ADAC-Werkzeugkasten", 15, false, 500, 400, 0, false],
@@ -57,10 +57,10 @@ life_uitems = [
 	["token_police", "Polizeitoken", 0, false, 200, 150, 50, true],
 	
 	//Troll items
-	["troll_taschentuch", "Tempo(R) Taschentuch", 0, false, 5, 3, 2, true],
-	["troll_nuckel", "BornBaby(R) Nuckel", 0, false, 5, 3, 2, true],
-	["troll_bitering", "BornBaby(R) Beissring", 0, false, 5, 3, 2, true],
-	["troll_money", "$ Spielgeld $", 0, false, 1, 1, 0, false]
+	["troll_taschentuch", "Handkerchief", 0, false, 5, 3, 2, true],
+	["troll_nuckel", "Baby Cry One", 0, false, 5, 3, 2, true],
+	["troll_bitering", "Baby Cry Two", 0, false, 5, 3, 2, true],
+	["troll_money", "Troll Money", 0, false, 1, 1, 0, false]
 ];
 
 ///////////////Generated Config (WIRD GENERIERT)

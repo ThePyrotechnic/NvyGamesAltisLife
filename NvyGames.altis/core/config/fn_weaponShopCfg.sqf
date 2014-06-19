@@ -63,9 +63,9 @@ switch(_shop) do
 				["Altis Cop Shop",
 					[
 						["arifle_sdar_F","SDAR",10000],
-						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Gummigeschoss 556x45",180],
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180],
 						//["30Rnd_556x45_Stanag","SDAR Magazin 556x45",250],
-						["hgun_P07_snds_F","Taser Pistole",5000],
+						["hgun_P07_snds_F","taser pistol",5000],
 						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], 						
 						["hgun_P07_F",nil,2500],
 						["16Rnd_9x21_Mag",nil,50],
@@ -368,7 +368,7 @@ switch(_shop) do
 		{
 			["*** Event ***",
 					[						
-						["hgun_P07_snds_F","Taser Pistole",1],
+						["hgun_P07_snds_F","taser pistol",1],
 						["16Rnd_9x21_Mag","Taser Magazin 9x21",1]
 						/*["hgun_P07_F",nil,2500],
 						["16Rnd_9x21_Mag",nil,50],
