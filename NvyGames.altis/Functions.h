@@ -258,6 +258,8 @@ class Life_Client_Core
 		class dbbanExec {};
 		class handleFlashbang {};
 		class autoSave {};
+		class pushFunction {};
+		
 	};
 	
 	class Network
