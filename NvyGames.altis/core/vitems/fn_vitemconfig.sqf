@@ -25,7 +25,7 @@ life_vitems = [
 	//Zeug
 	["Rangefinder", "rangefinder", "Entfernungsmesser (Eingepackt)", 10, false, 2000, 1000, 0],
 	["ToolKit", "repairkit", "Repairkit (Eingepackt)", 15, false, 250, 150, 0],
-	["FirstAidKit", "firstaidkit", "Erste-Hilfe-Kit (Eingepackt)", 10, false, 150, 80, 0],
+	["FirstAidKit", "firstaidkit", "first aid kit", 10, false, 150, 80, 0],
 	["Medikit", "medikit", "Medikit (Eingepackt)", 15, false, 2000, 1000, 0],
 	["ItemGPS", "itemgps", "GPS (Eingepackt)", 5, false, 100, 50, 0],
 	["Itemwatch", "itemwatch", "Uhr (Eingepackt)", 2, false, 100, 50, 0],
@@ -34,7 +34,7 @@ life_vitems = [
 	["Binocular", "binocular", "Fernglas (Eingepackt)", 10, false, 150, 80, 0],
 	["NVGoggles", "nvgoggles", "Nachtsichtgerät (Eingepackt)", 10, false, 2000, 1000, 0],
 	
-	//Uniformen/Kleidung
+	//Uniformen/Clothing
 	["U_C_Poloshirt_blue", "poloshirt_blue", "Poloshirt Blue (Eingepackt)", 5, false, -1, -1, 0],
 	["U_C_Poloshirt_burgundy", "poloshirt_burgundy", "Poloshirt Burgundy (Eingepackt)", 5, false, -1, -1, 0],
 	["U_C_Poloshirt_redwhite", "poloshirt_redwhite", "Poloshirt Red & White (Eingepackt)", 5, false, -1, -1, 0],

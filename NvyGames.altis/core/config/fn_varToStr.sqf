@@ -73,7 +73,7 @@ switch (_var) do
 	case "life_inv_vfirstaidkit": {"First-Aid Kit "};
 	
 	//##69 BOX
-	case "life_inv_box": {"Kiste"};
+	case "life_inv_box": {"box"};
 	
 	//License Block
 	case "license_civ_driver": {"Drive License"};
