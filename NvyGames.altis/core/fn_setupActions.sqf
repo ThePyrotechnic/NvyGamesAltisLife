@@ -20,6 +20,7 @@ switch (playerSide) do
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && !(cursorTarget getVariable["robbed",FALSE]) && (cursorTarget getVariable["restrained",FALSE]) ']];
 	};
 };
+life_actions = life_actions + [player addAction["Push Boat",life_fnc_pushVehicle,"",0,false,false,"",'player distance cursorTarget < 3.5 && cursorTarget isKindOf "Ship"']];
 
 //Action key link BUGGY //HACKFIX working?
 life_actions = life_actions + [player addAction["Action ...",life_fnc_actionKeyHandler,"",0,false,true]];
