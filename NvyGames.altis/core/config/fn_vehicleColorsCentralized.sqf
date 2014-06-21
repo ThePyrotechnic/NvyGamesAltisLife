@@ -10,14 +10,14 @@ life_vehicle_colors_new =
 [
 	//C_Offroad_01_F
 	//////////////////////////////////////////////////////
-	["C_Offroad_01_F",[]		, "Red", ["\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"], 1], 
-	["C_Offroad_01_F",[]		, "Yellow",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa"], 1],
-	["C_Offroad_01_F",[]		, "White",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa"], 1],
-	["C_Offroad_01_F",[]		, "Blue",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa"], 1],
-	["C_Offroad_01_F",[]		, "Purple",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa"], 1],
-	["C_Offroad_01_F",[]		, "Blue&White",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "Red", ["\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"], 1], 
+	["C_Offroad_01_F",["civ","reb"]		, "Yellow",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "White",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "Blue",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "Purple",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "Blue&White",["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa"], 1],
 	["C_Offroad_01_F",["cop"]	, "Police",["vehskins\Polizei_offroad_test.paa"], 2],
-	["C_Offroad_01_F",[]		, "Taxi",["#(argb,8,8,3)color(0.6,0.3,0.01,1)"], 1],
+	["C_Offroad_01_F",["civ","reb"]		, "Taxi",["#(argb,8,8,3)color(0.6,0.3,0.01,1)"], 1],
 	["C_Offroad_01_F",["donator"], "Unicorn",["vehskins\ziv_offroad.paa"], 3],
 	["C_Offroad_01_F",["donator"], "Gay",["vehskins\ziv_offroad_Gay.paa"], 3],
 	["C_Offroad_01_F",["donator"], "Masked",["vehskins\ziv_offroad_Getarnt.paa"], 3],
