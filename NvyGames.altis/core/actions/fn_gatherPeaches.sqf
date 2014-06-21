@@ -11,7 +11,7 @@ _sum = ["peach",3,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_sum > 0) then
 {
 	life_action_inUse = true;
-	titleText["Sammle Pfirsiche...","PLAIN"];
+	titleText["picking peaches...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	sleep 2;
 	if(([true,"peach",_sum] call life_fnc_handleInv)) then

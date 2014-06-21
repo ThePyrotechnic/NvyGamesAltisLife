@@ -6,7 +6,7 @@
 	Buy a virtual item from the store.
 */
 private["_type","_price","_amount","_diff","_name","_marketprice","_isillegal","_illegalmoney"];
-if((lbCurSel 2401) == -1) exitWith {hint "Du musst ein Item auswählen das du kaufen möchtest."};
+if((lbCurSel 2401) == -1) exitWith {hint "Du musst ein Item auswählen das du buy möchtest."};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
@@ -26,7 +26,7 @@ if(_marketprice != -1) then
 
 /*if(_marketprice != -1) exitWith
 {
-	hint "Du kannst das nicht kaufen!";
+	hint "Du kannst das nicht buy!";
 };*/
 
 ///////////

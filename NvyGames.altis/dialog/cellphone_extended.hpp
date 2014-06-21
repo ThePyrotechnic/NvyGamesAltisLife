@@ -10,7 +10,7 @@ class cellphone_extended {
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Handy</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Mobile</t>"; //--- ToDo: Localize;
 			x = 8 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 24 * GUI_GRID_W;

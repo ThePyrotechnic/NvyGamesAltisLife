@@ -31,7 +31,7 @@ switch (_shop) do
 	case "pmetal": {["Gold & Silver Stocks",[/*"gold",*/"goldr",/*"silver",*/"silverr"]]}; //##11
 	case "coal": {["Coal Trader",[/*"coal",*/"coalr"]]}; //##10
 	case "furniture": {["Furniture" ,["uitem_furniture_01", "uitem_furniture_02", "uitem_furniture_03", "uitem_furniture_04", "uitem_furniture_05"]]};
-	case "adac": {["ADAC-Ausrüstung",["fuelF","uitem_adac_toolkit","uitem_adac_tow","uitem_adac_paint","vitem_repairkit","vitem_firstaidkit","box","water","rabbit","apple","redgull","tbacon","peach"], ["adac"]]};
+	case "adac": {["ADAC Equipment",["fuelF","uitem_adac_toolkit","uitem_adac_tow","uitem_adac_paint","vitem_repairkit","vitem_firstaidkit","box","water","rabbit","apple","redgull","tbacon","peach"], ["adac"]]};
 	
 	//event shops 
 	case "event_1": {["** Event **",["event_1"], ["event"]]};

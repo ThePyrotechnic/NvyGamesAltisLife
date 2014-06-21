@@ -22,7 +22,7 @@ life_clothing_store = _this select 3;
 _var = [life_clothing_store,0] call life_fnc_licenseType;
 /*if(_var select 0 != "") then
 {
-	if(!(missionNamespace getVariable (_var select 0))) exitWith {hint format["Du brauchst eine %1 um etwas von diesem Laden kaufen zu können!",[_var select 0] call life_fnc_varToStr]; closeDialog 0;};
+	if(!(missionNamespace getVariable (_var select 0))) exitWith {hint format["Du brauchst eine %1 um etwas von diesem Laden buy zu können!",[_var select 0] call life_fnc_varToStr]; closeDialog 0;};
 };*/
 
 //initialize camera view

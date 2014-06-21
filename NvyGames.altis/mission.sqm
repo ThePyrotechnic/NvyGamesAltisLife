@@ -2515,7 +2515,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_shorts_3_F_euro";
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Garage"",  life_fnc_openGarage, [""civ_ship_1"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Garage"",  life_fnc_openGarage, [""civ_ship_1"",""Ship""]];";
 				};
 				class Item12
 				{
@@ -2586,7 +2586,7 @@ class Mission
 					vehicle="B_Soldier_F";
 					skill=0.60000002;
 					text="Cop_boatshop";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""cop_ship_1""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_1"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""cop_ship_1""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_1"",""Ship""]];";
 				};
 				class Item18
 				{
@@ -2773,7 +2773,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_shorts_3_F_euro";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_3""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_3"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_3""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_3"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 				class Item34
 				{
@@ -2847,7 +2847,7 @@ class Mission
 					vehicle="C_man_shorts_3_F_euro";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn BIS_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn BIS_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }];";
 				};
 			};
 		};
@@ -2909,7 +2909,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Edelmetallhändler"",life_fnc_virt_menu,""pmetal""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Metal Dealer"",life_fnc_virt_menu,""pmetal""];";
 				};
 			};
 		};
@@ -2950,7 +2950,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal"",""oil"",""cement""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal"",""oil"",""cement""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -3193,7 +3193,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Delikatessen"",life_fnc_virt_menu,""turtledealer""];";
+					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Turtle Dealer"",life_fnc_virt_menu,""turtledealer""];";
 				};
 			};
 		};
@@ -3213,7 +3213,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Delikatessen"",life_fnc_virt_menu,""turtledealer""];";
+					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Turtle Dealer"",life_fnc_virt_menu,""turtledealer""];";
 				};
 			};
 		};
@@ -3863,7 +3863,7 @@ class Mission
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Behandeln lassen"",life_fnc_healHospital];";
+					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Get Treated"",life_fnc_healHospital];";
 				};
 			};
 		};
@@ -3904,7 +3904,7 @@ class Mission
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Behandeln lassen"",life_fnc_healHospital];";
+					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Get treated"",life_fnc_healHospital];";
 				};
 			};
 		};
@@ -4120,7 +4120,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_1";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -4284,7 +4284,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_2";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -4305,7 +4305,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_3";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 				class Item1
 				{
@@ -4426,7 +4426,7 @@ class Mission
 					fuel=0;
 					ammo=0;
 					text="Tonimontana";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4447,7 +4447,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="Tonimontana_1";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4470,7 +4470,7 @@ class Mission
 					fuel=0;
 					ammo=0;
 					text="Tonimontana_1_1";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4491,7 +4491,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="Tonimontana_1_2";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4640,7 +4640,7 @@ class Mission
 					skill=0.2;
 					fuel=0;
 					ammo=0;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Möbelhaus"",life_fnc_virt_menu,""furniture""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Furniture Store"",life_fnc_virt_menu,""furniture""];";
 				};
 			};
 		};
@@ -4857,7 +4857,7 @@ class Mission
 					skill=0.60000002;
 					fuel=0;
 					ammo=0;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""cop_ship_3""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_3"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""cop_ship_3""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_3"",""Ship""]];";
 				};
 				class Item1
 				{
@@ -5291,7 +5291,7 @@ class Mission
 					vehicle="B_Soldier_F";
 					leader=1;
 					skill=0.60000002;
-					init="this addAction[""ADAC-Ausrüstung"",life_fnc_virt_menu,""adac""]; this addAction[""ADAC-Clothing"",life_fnc_clothingMenu,""adac""]; this allowDamage false;";
+					init="this addAction[""ADAC Equipment"",life_fnc_virt_menu,""adac""]; this addAction[""ADAC-Clothing"",life_fnc_clothingMenu,""adac""]; this allowDamage false;";
 				};
 			};
 		};
@@ -8063,7 +8063,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
-			init="this attachTo [desknerd,[0,0,0.568]]; this addAction [""Shop"", life_fnc_itemShopInit, ""super_don""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""don_car"", ""garage_nerd""]]; this addAction [""Flugzeugladen"", life_fnc_vehicleInit, [""don_heli"", ""garage_nerd""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_nerd""]; this addAction [""<t color='#ADFF2F'>$Your Bank Account$</t>"", life_fnc_atmInit]; this addAction[""Bootsladen"",life_fnc_vehicleInit,[""civ_ship"",""nerd_boat""]]; this addAction [""Boat Garage"", life_fnc_garageInit, ""nerd_boat""]; this setVectorup [0,0,0.1]";
+			init="this attachTo [desknerd,[0,0,0.568]]; this addAction [""Shop"", life_fnc_itemShopInit, ""super_don""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""don_car"", ""garage_nerd""]]; this addAction [""Flugzeugladen"", life_fnc_vehicleInit, [""don_heli"", ""garage_nerd""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_nerd""]; this addAction [""<t color='#ADFF2F'>$Your Bank Account$</t>"", life_fnc_atmInit]; this addAction[""Boat Shop"",life_fnc_vehicleInit,[""civ_ship"",""nerd_boat""]]; this addAction [""Boat Garage"", life_fnc_garageInit, ""nerd_boat""]; this setVectorup [0,0,0.1]";
 		};
 		class Item225
 		{
@@ -15463,8 +15463,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_02""];";
+			text="House_Schild_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_02""];";
 		};
 		class Item988
 		{
@@ -15474,7 +15474,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_01""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_01"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_01""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_01"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item989
 		{
@@ -15484,7 +15484,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_01""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_01""];";
 		};
 		class Item990
 		{
@@ -15494,8 +15494,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_03""];";
+			text="House_Schild_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_03""];";
 		};
 		class Item991
 		{
@@ -15505,7 +15505,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_03""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_03"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_03""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_03"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item992
 		{
@@ -15516,7 +15516,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_03""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_03""];";
 		};
 		class Item993
 		{
@@ -15526,8 +15526,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_04""];";
+			text="House_Schild_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_04""];";
 		};
 		class Item994
 		{
@@ -15537,7 +15537,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_04""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_04"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_04""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_04"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item995
 		{
@@ -15548,7 +15548,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_04""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_04""];";
 		};
 		class Item996
 		{
@@ -15558,8 +15558,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_05""];";
+			text="House_Schild_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_05""];";
 		};
 		class Item997
 		{
@@ -15570,7 +15570,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_05""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_05"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_05""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_05"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item998
 		{
@@ -15581,7 +15581,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_05""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_05""];";
 		};
 		class Item999
 		{
@@ -15591,8 +15591,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_06""];";
+			text="House_Schild_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_06""];";
 		};
 		class Item1000
 		{
@@ -15603,7 +15603,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_06""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_06"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_06""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_06"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1001
 		{
@@ -15614,7 +15614,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_06""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_06""];";
 		};
 		class Item1002
 		{
@@ -15624,8 +15624,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_07""];";
+			text="House_Schild_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_07""];";
 		};
 		class Item1003
 		{
@@ -15636,7 +15636,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_07""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_07"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_07""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_07"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1004
 		{
@@ -15647,7 +15647,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_07""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_07""];";
 		};
 		class Item1005
 		{
@@ -15657,8 +15657,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_08""];";
+			text="House_Schild_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_08""];";
 		};
 		class Item1006
 		{
@@ -15668,7 +15668,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_08""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_08"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_08""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_08"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1007
 		{
@@ -15679,7 +15679,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_08""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_08""];";
 		};
 		class Item1008
 		{
@@ -15689,8 +15689,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_2_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_09""];";
+			text="House_Schild_2_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_09""];";
 		};
 		class Item1009
 		{
@@ -15700,7 +15700,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_09""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_09"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_09""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_09"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1010
 		{
@@ -15711,7 +15711,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_09""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_09""];";
 		};
 		class Item1011
 		{
@@ -15722,7 +15722,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_10""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_10"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_10""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_10"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1012
 		{
@@ -15733,7 +15733,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_10""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_10""];";
 		};
 		class Item1013
 		{
@@ -15743,8 +15743,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_2_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_10""];";
+			text="House_Schild_2_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_10""];";
 		};
 		class Item1014
 		{
@@ -15755,7 +15755,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_10""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_10"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_10""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_10"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1015
 		{
@@ -15766,8 +15766,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_11""];";
+			text="House_Schild_3";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_11""];";
 		};
 		class Item1016
 		{
@@ -15778,7 +15778,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_11""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_11"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_11""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_11"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1017
 		{
@@ -15789,7 +15789,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_11""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_11""];";
 		};
 		class Item1018
 		{
@@ -15799,8 +15799,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_11""];";
+			text="House_Schild_3_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_11""];";
 		};
 		class Item1019
 		{
@@ -15811,7 +15811,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_12""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_12"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_12""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_12"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1020
 		{
@@ -15822,7 +15822,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_12""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_12""];";
 		};
 		class Item1021
 		{
@@ -15889,8 +15889,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_14""];";
+			text="House_Schild_3_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_14""];";
 		};
 		class Item1029
 		{
@@ -15901,7 +15901,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_13""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_13"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_13""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_13"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1030
 		{
@@ -15912,7 +15912,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_13""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_13""];";
 		};
 		class Item1031
 		{
@@ -15922,8 +15922,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_13""];";
+			text="House_Schild_3_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_13""];";
 		};
 		class Item1032
 		{
@@ -15934,7 +15934,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_14""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_14"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_14""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_14"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1033
 		{
@@ -15945,7 +15945,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_14""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_14""];";
 		};
 		class Item1034
 		{
@@ -15956,7 +15956,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_16""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_16"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_16""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_16"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1035
 		{
@@ -15967,7 +15967,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_16""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_16""];";
 		};
 		class Item1036
 		{
@@ -15977,8 +15977,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_16""];";
+			text="House_Schild_3_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_16""];";
 		};
 		class Item1037
 		{
@@ -15989,7 +15989,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_15""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_15"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_15""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_15"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1038
 		{
@@ -16000,7 +16000,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_15""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_15""];";
 		};
 		class Item1039
 		{
@@ -16010,8 +16010,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_15""];";
+			text="House_Schild_3_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_15""];";
 		};
 		class Item1040
 		{
@@ -16022,7 +16022,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_17""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_17"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_17""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_17"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1041
 		{
@@ -16033,7 +16033,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_17""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_17""];";
 		};
 		class Item1042
 		{
@@ -16043,8 +16043,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_17""];";
+			text="House_Schild_3_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_17""];";
 		};
 		class Item1043
 		{
@@ -16055,7 +16055,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_18""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_18"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_18""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_18"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1044
 		{
@@ -16066,7 +16066,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_18""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_18""];";
 		};
 		class Item1045
 		{
@@ -16076,8 +16076,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_3";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_18""];";
+			text="House_Schild_3_1_1_1_1_3";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_18""];";
 		};
 		class Item1046
 		{
@@ -16169,7 +16169,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_01""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_01""];";
 		};
 		class Item1056
 		{
@@ -16179,7 +16179,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_01""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_01"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_01""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_01"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1057
 		{
@@ -16189,8 +16189,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_2_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_01""];";
+			text="House_Schild_2_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_01""];";
 		};
 		class Item1058
 		{
@@ -16270,8 +16270,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_92""];";
+			text="House_Schild";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_92""];";
 		};
 		class Item1066
 		{
@@ -16281,7 +16281,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_92""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_92"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_92""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_92"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1067
 		{
@@ -16292,7 +16292,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_92""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_92""];";
 		};
 		class Item1068
 		{
@@ -16302,8 +16302,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_91""];";
+			text="House_Schild_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_91""];";
 		};
 		class Item1069
 		{
@@ -16313,7 +16313,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_91""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_91"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_91""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_91"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1070
 		{
@@ -16324,7 +16324,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_91""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_91""];";
 		};
 		class Item1071
 		{
@@ -16334,8 +16334,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_93""];";
+			text="House_Schild_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_93""];";
 		};
 		class Item1072
 		{
@@ -16345,7 +16345,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_93""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_93"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_93""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_93"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1073
 		{
@@ -16356,7 +16356,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_93""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_93""];";
 		};
 		class Item1074
 		{
@@ -16366,8 +16366,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_94""];";
+			text="House_Schild_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_94""];";
 		};
 		class Item1075
 		{
@@ -16377,7 +16377,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_94""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_94"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_94""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_94"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1076
 		{
@@ -16388,7 +16388,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_94""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_94""];";
 		};
 		class Item1077
 		{
@@ -16398,8 +16398,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_95""];";
+			text="House_Schild_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_95""];";
 		};
 		class Item1078
 		{
@@ -16409,7 +16409,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_95""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_95"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_95""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_95"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1079
 		{
@@ -16420,7 +16420,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_95""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_95""];";
 		};
 		class Item1080
 		{
@@ -16430,8 +16430,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_98""];";
+			text="House_Schild_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_98""];";
 		};
 		class Item1081
 		{
@@ -16441,7 +16441,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_98""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_98"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_98""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_98"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1082
 		{
@@ -16452,7 +16452,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_98""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_98""];";
 		};
 		class Item1083
 		{
@@ -16462,7 +16462,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_97""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_97"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_97""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_97"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1084
 		{
@@ -16473,7 +16473,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_97""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_97""];";
 		};
 		class Item1085
 		{
@@ -16483,8 +16483,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_96""];";
+			text="House_Schild_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_96""];";
 		};
 		class Item1086
 		{
@@ -16494,7 +16494,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_96""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_96"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_96""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_96"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1087
 		{
@@ -16505,7 +16505,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_96""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_96""];";
 		};
 		class Item1088
 		{
@@ -16515,8 +16515,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_99""];";
+			text="House_Schild_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_99""];";
 		};
 		class Item1089
 		{
@@ -16526,7 +16526,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_99""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_99"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_99""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_99"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1090
 		{
@@ -16537,7 +16537,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_99""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_99""];";
 		};
 		class Item1091
 		{
@@ -16547,8 +16547,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_101""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_101""];";
 		};
 		class Item1092
 		{
@@ -16559,7 +16559,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_101""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_101"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_101""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_101"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1093
 		{
@@ -16570,7 +16570,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_101""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_101""];";
 		};
 		class Item1094
 		{
@@ -16580,8 +16580,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_103""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_103""];";
 		};
 		class Item1095
 		{
@@ -16592,7 +16592,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_103""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_103"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_103""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_103"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1096
 		{
@@ -16603,7 +16603,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_103""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_103""];";
 		};
 		class Item1097
 		{
@@ -16613,8 +16613,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_102""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_102""];";
 		};
 		class Item1098
 		{
@@ -16625,7 +16625,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_102""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_102"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_102""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_102"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1099
 		{
@@ -16636,7 +16636,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_102""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_102""];";
 		};
 		class Item1100
 		{
@@ -16646,8 +16646,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_100""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_100""];";
 		};
 		class Item1101
 		{
@@ -16658,7 +16658,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_100""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_100"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_100""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_100"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1102
 		{
@@ -16669,7 +16669,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_100""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_100""];";
 		};
 		class Item1103
 		{
@@ -16707,7 +16707,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_19""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_19"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_19""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_19"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1107
 		{
@@ -16718,7 +16718,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_19""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_19""];";
 		};
 		class Item1108
 		{
@@ -16728,8 +16728,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_19""];";
+			text="House_Schild_3_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_19""];";
 		};
 		class Item1109
 		{
@@ -17340,8 +17340,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_20""];";
+			text="House_Schild_1_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_20""];";
 		};
 		class Item1169
 		{
@@ -17352,7 +17352,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_20""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_20"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_20""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_20"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1170
 		{
@@ -17363,7 +17363,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_20""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_20""];";
 		};
 		class Item1171
 		{
@@ -17373,8 +17373,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_2_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_21""];";
+			text="House_Schild_1_1_1_1_1_1_2_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_21""];";
 		};
 		class Item1172
 		{
@@ -17385,7 +17385,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_21""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_21"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_21""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_21"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1173
 		{
@@ -17396,7 +17396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_21""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_21""];";
 		};
 		class Item1174
 		{
@@ -17406,8 +17406,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_2_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_22""];";
+			text="House_Schild_1_1_1_1_1_1_2_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_22""];";
 		};
 		class Item1175
 		{
@@ -17418,7 +17418,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_22""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_22"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_22""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_22"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1176
 		{
@@ -17429,7 +17429,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_22""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_22""];";
 		};
 		class Item1177
 		{
@@ -17974,8 +17974,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_2_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_23""];";
+			text="House_Schild_1_1_1_1_1_1_2_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_23""];";
 		};
 		class Item1236
 		{
@@ -17986,7 +17986,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_23""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_23"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_23""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_23"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1237
 		{
@@ -17997,7 +17997,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_23""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_23""];";
 		};
 		class Item1238
 		{
@@ -18007,8 +18007,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_2_2_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_24""];";
+			text="House_Schild_1_1_1_1_1_1_2_2_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_24""];";
 		};
 		class Item1239
 		{
@@ -18019,7 +18019,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_24""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_24"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_24""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_24"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item1240
 		{
@@ -18030,7 +18030,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_blue_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_24""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_24""];";
 		};
 		class Item1241
 		{
@@ -61240,7 +61240,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_91""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_91"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_91""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_91"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5174
 		{
@@ -61251,7 +61251,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_91""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_91""];";
 		};
 		class Item5175
 		{
@@ -61583,8 +61583,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_97""];";
+			text="House_Schild_1_1_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_97""];";
 		};
 		class Item5209
 		{
@@ -61594,8 +61594,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_54""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_54""];";
 		};
 		class Item5210
 		{
@@ -61606,7 +61606,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_54""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_54"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_54""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_54"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5211
 		{
@@ -61617,7 +61617,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_54""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_54""];";
 		};
 		class Item5212
 		{
@@ -61627,8 +61627,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_25""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_25""];";
 		};
 		class Item5213
 		{
@@ -61639,7 +61639,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_25""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_25"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_25""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_25"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5214
 		{
@@ -61650,7 +61650,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_25""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_25""];";
 		};
 		class Item5215
 		{
@@ -61679,7 +61679,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_26""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_26"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_26""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_26"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5218
 		{
@@ -61690,7 +61690,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_26""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_26""];";
 		};
 		class Item5219
 		{
@@ -61964,8 +61964,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_26""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_26""];";
 		};
 		class Item5247
 		{
@@ -61985,8 +61985,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_27""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_2_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_27""];";
 		};
 		class Item5249
 		{
@@ -61997,7 +61997,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_27""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_27"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_27""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_27"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5250
 		{
@@ -62008,7 +62008,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_27""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_27""];";
 		};
 		class Item5251
 		{
@@ -62343,7 +62343,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_28""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_28"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_28""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_28"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5288
 		{
@@ -62354,7 +62354,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_28""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_28""];";
 		};
 		class Item5289
 		{
@@ -62409,8 +62409,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_28""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_28""];";
 		};
 		class Item5295
 		{
@@ -62963,7 +62963,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_29""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_29"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_29""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_29"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5353
 		{
@@ -62974,7 +62974,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_29""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_29""];";
 		};
 		class Item5354
 		{
@@ -62984,8 +62984,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_29""];";
+			text="House_Schild_3_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_29""];";
 		};
 		class Item5355
 		{
@@ -64076,7 +64076,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5454
 		{
@@ -64087,7 +64087,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_30""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_30""];";
 		};
 		class Item5455
 		{
@@ -64124,8 +64124,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_30""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_30""];";
 		};
 		class Item5459
 		{
@@ -64159,7 +64159,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5462
 		{
@@ -64170,7 +64170,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5463
 		{
@@ -64181,7 +64181,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5464
 		{
@@ -64192,7 +64192,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_30""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_30"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item5465
 		{
@@ -76136,7 +76136,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_31""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_31"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_31""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_31"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6554
 		{
@@ -76147,7 +76147,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_31""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_31""];";
 		};
 		class Item6555
 		{
@@ -76157,8 +76157,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_4";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_31""];";
+			text="House_Schild_3_1_1_1_1_4";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_31""];";
 		};
 		class Item6556
 		{
@@ -76187,7 +76187,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_32""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_32"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_32""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_32"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6559
 		{
@@ -76198,7 +76198,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_32""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_32""];";
 		};
 		class Item6560
 		{
@@ -76208,8 +76208,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_1_1_1_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_32""];";
+			text="House_Schild_3_1_1_1_1_1_1_1_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_32""];";
 		};
 		class Item6561
 		{
@@ -76220,7 +76220,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_33""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_33"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_33""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_33"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6562
 		{
@@ -76231,7 +76231,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sun_chair_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_33""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_33""];";
 		};
 		class Item6563
 		{
@@ -76241,8 +76241,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_3_1_1_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_33""];";
+			text="House_Schild_3_1_1_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_33""];";
 		};
 		class Item6564
 		{
@@ -76823,8 +76823,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_60""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_60""];";
 		};
 		class Item6622
 		{
@@ -76835,7 +76835,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_60""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_60"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_60""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_60"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6623
 		{
@@ -76846,7 +76846,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_60""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_60""];";
 		};
 		class Item6624
 		{
@@ -76856,8 +76856,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_2_1";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_61""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_2_1";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_61""];";
 		};
 		class Item6625
 		{
@@ -76868,7 +76868,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_61""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_61"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_61""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_61"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6626
 		{
@@ -76879,7 +76879,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_61""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_61""];";
 		};
 		class Item6627
 		{
@@ -76889,8 +76889,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_2_2";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_62""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_2_2";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_62""];";
 		};
 		class Item6628
 		{
@@ -76901,7 +76901,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_62""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_62"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_62""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_62"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6629
 		{
@@ -76912,7 +76912,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_62""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_62""];";
 		};
 		class Item6630
 		{
@@ -76922,8 +76922,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_2_3";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_63""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_2_3";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_63""];";
 		};
 		class Item6631
 		{
@@ -76933,7 +76933,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_63""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_63"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_63""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_63"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6632
 		{
@@ -76944,7 +76944,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_63""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_63""];";
 		};
 		class Item6633
 		{
@@ -76954,8 +76954,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			text="Haus_Schild_1_1_1_1_1_1_1_1_1_1_2_4";
-			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""Haus ..."", life_fnc_houseMenu, ""house_64""];";
+			text="House_Schild_1_1_1_1_1_1_1_1_1_1_2_4";
+			init="this allowDamage false;  this enableSimulation false; this setObjectTexture [0,""House.jpg""]; this addAction [""House ..."", life_fnc_houseMenu, ""house_64""];";
 		};
 		class Item6634
 		{
@@ -76965,7 +76965,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ShelvesWooden_F";
 			skill=0.60000002;
-			init="this addAction [""Haus-Inventar"", life_fnc_houseInventory, ""house_64""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_64"",6,true,true,"""",' playerSide == west '];";
+			init="this addAction [""House Inventory"", life_fnc_houseInventory, ""house_64""]; this addAction [""Durchsuchen"", life_fnc_houseSearch, ""house_64"",6,true,true,"""",' playerSide == west '];";
 		};
 		class Item6635
 		{
@@ -76976,7 +76976,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sleeping_bag_F";
 			skill=0.60000002;
-			init="this addAction [""Ausruhen"", life_fnc_houseSleep, ""house_64""];";
+			init="this addAction [""sleep"", life_fnc_houseSleep, ""house_64""];";
 		};
 		class Item6636
 		{
@@ -97019,7 +97019,7 @@ class Mission
 		class Item225
 		{
 			position[]={3656.4983,10.307321,13119.282};
-			name="Schule";
+			name="School";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97264,7 +97264,7 @@ class Mission
 		class Item252
 		{
 			position[]={25842.594,20.732662,21469.367};
-			name="Schule_1";
+			name="School_1";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97778,7 +97778,7 @@ class Mission
 		class Item320
 		{
 			position[]={16858.297,19.162466,12499.681};
-			name="Schule_2";
+			name="School_2";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97788,7 +97788,7 @@ class Mission
 		{
 			position[]={14025.664,23.94207,18804.523};
 			name="Mining School";
-			text="Schule";
+			text="School";
 			type="c_unknown";
 			colorName="ColorBlue";
 			angle=-0.34670201;
@@ -97990,7 +97990,7 @@ class Mission
 		class Item347
 		{
 			position[]={3531.5437,8.6183596,13004.794};
-			name="Möbelhaus";
+			name="Furniture Store";
 			text="furniture";
 			type="mil_dot";
 			colorName="ColorPink";
@@ -99298,7 +99298,7 @@ class Mission
 			type="SWITCH";
 			age="UNKNOWN";
 			expCond="this && (local player) && (vehicle player in thisList)";
-			expActiv="hint ""ADAC Sperrzone Bitte verlassen sie augenblicklich diesen Bereich Ansonsten müssen sie mit Konsequenzen rechnen 5 min Knast""";
+			expActiv="hint ""This area is for AAA personnel only. Leave the area immediately or you may be subject to 5 minutes in the slammer."";
 			class Effects
 			{
 			};

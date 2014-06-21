@@ -15,9 +15,9 @@ _home_spawn_data = missionNamespace getVariable "spawn_home_list";
 _spawns = [];
 
 {
-	hint format ["Haus gefunden: %1", _x select 0];
+	hint format ["House gefunden: %1", _x select 0];
 
-	_spawns = _spawns + [ [_x select 0, "Haus", "icons\map_house.paa" ] ];
+	_spawns = _spawns + [ [_x select 0, "House", "icons\map_house.paa" ] ];
 }
 foreach (_home_spawn_data select 0) select 0;
 
