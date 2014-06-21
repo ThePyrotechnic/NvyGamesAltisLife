@@ -1,4 +1,5 @@
-//Designed by spookygnu & ported/modified by 5150 Joker
-//Nvy Games 2014 www.nvygames.com
+//Original design by spookygnu & ported/modified for NvyGames Altis Life by 5150 Joker
+//NvyGames 2014 www.nvygames.com
 #include "piers.sqf"
-#include "catbases.sqf"
+#include "cats.sqf"
+#include "extras.sqf"

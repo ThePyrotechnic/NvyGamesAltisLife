@@ -1,5 +1,5 @@
 //Designed by 5150 Joker
-//Nvy Games 2014 www.nvygames.com
+//NvyGames 2014 www.nvygames.com
 _pos = [15452.451172,15706.0732422,10.5158];
 _object = createVehicle ["Land_Pier_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 263;
