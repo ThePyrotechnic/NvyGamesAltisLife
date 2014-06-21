@@ -29,7 +29,7 @@ if(_funds > life_atmcash) then
 	}
 		else
 	{
-		hint format["Durch den letzten Überfall auf die Staatsbank hast du $%1 verloren, nächstes mal solltest du dir eine Bank Account Insurance kaufen!\n\nDiese erhähltst du am $Your Bank Account$en!",[_funds] call life_fnc_numberText];
+		hint format["Durch den letzten Überfall auf die Staatsbank hast du $%1 verloren, nächstes mal solltest du dir eine Bank Account Insurance buy!\n\nDiese erhähltst du am $Your Bank Account$en!",[_funds] call life_fnc_numberText];
 		life_atmcash = life_atmcash - _funds;
 	};
 };

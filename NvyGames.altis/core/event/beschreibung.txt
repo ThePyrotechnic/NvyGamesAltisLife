@@ -9,7 +9,7 @@ Es werden also 3 Npc und somit 3 Gegenstände gebraucht <--
 
 GEG ok<<
 
-Es wird nur mit Tazer geschossen! An jedem Trigger wird ein npc mit einer tazerwaffe(shop) benötigt, dieser muss die waffe(+magazine) ohne lizens verkaufen können und nur für 1 $
+Es wird nur mit Tazer geschossen! An jedem Trigger wird ein npc mit einer tazerwaffe(shop) benötigt, dieser muss die waffe(+magazine) ohne lizens verbuy können und nur für 1 $
 
 TAZ ok<<
 SHOP ok <<

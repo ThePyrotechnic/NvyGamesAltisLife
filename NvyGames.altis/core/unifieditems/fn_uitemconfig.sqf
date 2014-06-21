@@ -21,7 +21,7 @@ life_uitems = [
 	
 	//Output: life_uinv_NAME ||| uitem_NAME
 	
-	//M�bel f�r Hauserweiterungssystem
+	//M�bel f�r Houseerweiterungssystem
 	["furniture_01", "Holzregal", 10, false, 54000, 14000, 0, false],
 	["furniture_02", "Schrank", 20, false, 57000, 14000, 0, false],
 	["furniture_03", "Korb", 5, false, 51000, 14000, 0, false],
