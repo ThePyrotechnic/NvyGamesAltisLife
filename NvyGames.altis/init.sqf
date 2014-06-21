@@ -21,6 +21,7 @@ if(isNull player) then
 };
 */
 enableSaving[false,false];
+if (isServer) then {[] execVM "scripts\nvy.sqf";};
 
 life_versionInfo = "Altis Life RPG v3.1.2";
 /*
