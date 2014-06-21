@@ -2515,7 +2515,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_shorts_3_F_euro";
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Garage"",  life_fnc_openGarage, [""civ_ship_1"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Garage"",  life_fnc_openGarage, [""civ_ship_1"",""Ship""]];";
 				};
 				class Item12
 				{
@@ -2586,7 +2586,7 @@ class Mission
 					vehicle="B_Soldier_F";
 					skill=0.60000002;
 					text="Cop_boatshop";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""cop_ship_1""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_1"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""cop_ship_1""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_1"",""Ship""]];";
 				};
 				class Item18
 				{
@@ -2773,7 +2773,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_shorts_3_F_euro";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_3""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_3"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_3""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_3"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 				class Item34
 				{
@@ -2847,7 +2847,7 @@ class Mission
 					vehicle="C_man_shorts_3_F_euro";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn BIS_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn BIS_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }];";
 				};
 			};
 		};
@@ -2909,7 +2909,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Edelmetallhändler"",life_fnc_virt_menu,""pmetal""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Metal Dealer"",life_fnc_virt_menu,""pmetal""];";
 				};
 			};
 		};
@@ -2950,7 +2950,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal"",""oil"",""cement""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal"",""oil"",""cement""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -3193,7 +3193,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Delikatessen"",life_fnc_virt_menu,""turtledealer""];";
+					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Turtle Dealer"",life_fnc_virt_menu,""turtledealer""];";
 				};
 			};
 		};
@@ -3213,7 +3213,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Delikatessen"",life_fnc_virt_menu,""turtledealer""];";
+					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Turtle Dealer"",life_fnc_virt_menu,""turtledealer""];";
 				};
 			};
 		};
@@ -3863,7 +3863,7 @@ class Mission
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Behandeln lassen"",life_fnc_healHospital];";
+					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Get Treated"",life_fnc_healHospital];";
 				};
 			};
 		};
@@ -3904,7 +3904,7 @@ class Mission
 					vehicle="C_scientist_F";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Behandeln lassen"",life_fnc_healHospital];";
+					init="this enableSimulation false; this allowDamage false;  this addAction[""Medical Equipment"",life_fnc_weaponShopMenu,""medical""]; this addAction[""Get treated"",life_fnc_healHospital];";
 				};
 			};
 		};
@@ -4120,7 +4120,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_1";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -4284,7 +4284,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_2";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 			};
 		};
@@ -4305,7 +4305,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					text="license_shop_4_3";
-					init="this allowDamage false;   this enableSimulation false;   this addAction[""Schule"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
+					init="this allowDamage false;   this enableSimulation false;   this addAction[""School"",life_fnc_buyLicences_extended,[""diamond"",""salt"",""sand"",""copper"",""silver"",""gold"",""coal""],0,true,true,"""",' playerSide == civilian '];";
 				};
 				class Item1
 				{
@@ -4426,7 +4426,7 @@ class Mission
 					fuel=0;
 					ammo=0;
 					text="Tonimontana";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4447,7 +4447,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="Tonimontana_1";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4470,7 +4470,7 @@ class Mission
 					fuel=0;
 					ammo=0;
 					text="Tonimontana_1_1";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4491,7 +4491,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="Tonimontana_1_2";
-					init="this allowDamage false; this enableSimulation false; this addAction [""Geldwäscher"", life_fnc_launderAction];";
+					init="this allowDamage false; this enableSimulation false; this addAction [""Money Launderer"", life_fnc_launderAction];";
 				};
 			};
 		};
@@ -4857,7 +4857,7 @@ class Mission
 					skill=0.60000002;
 					fuel=0;
 					ammo=0;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""cop_ship_3""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_3"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""cop_ship_3""]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""Garage"",  life_fnc_openGarage, [""cop_ship_3"",""Ship""]];";
 				};
 				class Item1
 				{
@@ -5291,7 +5291,7 @@ class Mission
 					vehicle="B_Soldier_F";
 					leader=1;
 					skill=0.60000002;
-					init="this addAction[""ADAC-Ausrüstung"",life_fnc_virt_menu,""adac""]; this addAction[""ADAC-Clothing"",life_fnc_clothingMenu,""adac""]; this allowDamage false;";
+					init="this addAction[""ADAC Equipment"",life_fnc_virt_menu,""adac""]; this addAction[""ADAC-Clothing"",life_fnc_clothingMenu,""adac""]; this allowDamage false;";
 				};
 			};
 		};
@@ -8063,7 +8063,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
-			init="this attachTo [desknerd,[0,0,0.568]]; this addAction [""Shop"", life_fnc_itemShopInit, ""super_don""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""don_car"", ""garage_nerd""]]; this addAction [""Flugzeugladen"", life_fnc_vehicleInit, [""don_heli"", ""garage_nerd""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_nerd""]; this addAction [""<t color='#ADFF2F'>$Your Bank Account$</t>"", life_fnc_atmInit]; this addAction[""Bootsladen"",life_fnc_vehicleInit,[""civ_ship"",""nerd_boat""]]; this addAction [""Boat Garage"", life_fnc_garageInit, ""nerd_boat""]; this setVectorup [0,0,0.1]";
+			init="this attachTo [desknerd,[0,0,0.568]]; this addAction [""Shop"", life_fnc_itemShopInit, ""super_don""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""don_car"", ""garage_nerd""]]; this addAction [""Flugzeugladen"", life_fnc_vehicleInit, [""don_heli"", ""garage_nerd""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_nerd""]; this addAction [""<t color='#ADFF2F'>$Your Bank Account$</t>"", life_fnc_atmInit]; this addAction[""Boat Shop"",life_fnc_vehicleInit,[""civ_ship"",""nerd_boat""]]; this addAction [""Boat Garage"", life_fnc_garageInit, ""nerd_boat""]; this setVectorup [0,0,0.1]";
 		};
 		class Item225
 		{
@@ -97019,7 +97019,7 @@ class Mission
 		class Item225
 		{
 			position[]={3656.4983,10.307321,13119.282};
-			name="Schule";
+			name="School";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97264,7 +97264,7 @@ class Mission
 		class Item252
 		{
 			position[]={25842.594,20.732662,21469.367};
-			name="Schule_1";
+			name="School_1";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97778,7 +97778,7 @@ class Mission
 		class Item320
 		{
 			position[]={16858.297,19.162466,12499.681};
-			name="Schule_2";
+			name="School_2";
 			text="Mining School";
 			type="c_unknown";
 			colorName="ColorBlue";
@@ -97788,7 +97788,7 @@ class Mission
 		{
 			position[]={14025.664,23.94207,18804.523};
 			name="Mining School";
-			text="Schule";
+			text="School";
 			type="c_unknown";
 			colorName="ColorBlue";
 			angle=-0.34670201;
@@ -99298,7 +99298,7 @@ class Mission
 			type="SWITCH";
 			age="UNKNOWN";
 			expCond="this && (local player) && (vehicle player in thisList)";
-			expActiv="hint ""ADAC Sperrzone Bitte verlassen sie augenblicklich diesen Bereich Ansonsten müssen sie mit Konsequenzen rechnen 5 min Knast""";
+			expActiv="hint ""This area is for AAA personnel only. Leave the area immediately or you may be subject to 5 minutes in the slammer."";
 			class Effects
 			{
 			};

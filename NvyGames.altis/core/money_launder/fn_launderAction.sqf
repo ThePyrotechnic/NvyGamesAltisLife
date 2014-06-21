@@ -3,7 +3,7 @@
 
 	Show launder dialog
 	
-	 this addAction ["Geldwäscher", life_fnc_launderAction]; 
+	 this addAction ["Money Launderer", life_fnc_launderAction]; 
 
 */
 

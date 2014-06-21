@@ -24,7 +24,7 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Apples = player addAction['Äpfel sammeln',life_fnc_gatherApples,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Apples;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Apples = player addAction['pick apples',life_fnc_gatherApples,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Apples;"];
 } foreach _appleZones;
 
 //Create peach zones
@@ -32,7 +32,7 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Peaches = player addAction['Pfirsiche sammeln',life_fnc_gatherPeaches,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Peaches;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Peaches = player addAction['pick peaches',life_fnc_gatherPeaches,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Peaches;"];
 } foreach _peachZones;
 
 //Create heroin zones
