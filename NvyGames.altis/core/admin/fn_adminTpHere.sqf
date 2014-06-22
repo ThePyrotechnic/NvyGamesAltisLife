@@ -1,3 +1,4 @@
-object["_unit"];
+private["_unit"];
 _unit = lbData[1500,lbCurSel (1500)];
-[[player,_unit],"life_fnc_adminTpHereServer",false] call life_fnc_MP;
+[player, _unit] execVM "core\admin\fn_adminTpHereServer.sqf";
+hint "Teleported Player To You";
