@@ -268,7 +268,7 @@ if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 
 if(life_cash < _price) exitWith {hint "You do not have enough money."};
-hint "This may take a two seconds...";
+hint "This may take a few seconds...";
 sleep floor(random 3);
 
 if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};
@@ -333,4 +333,4 @@ if((life_veh_shop == "civ_air_1" OR life_veh_shop == "civ_air_2") && (typeOf _ve
 [1,false] call life_fnc_sessionHandle;
 
 //Add notation
-titleText ["Note: You only have rented the vehicle and can not park in the garage there.", "PLAIN"];
+titleText ["Note: You only have rented the vehicle and can not store it in a garage.", "PLAIN"];
