@@ -17,7 +17,10 @@ _dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
 _success = false; //Kraken Clean-up: set _success to false at the start of the script!
 
 if(vehicle player != _robber) exitWith { hint "You need to exit your vehicle!"; }; //If the player is in a vehicle, kill the script execution with a message to the player | Kraken CLeanup - Moved to above the other conditions 
-if (alive _robber && {currentWeapon _robber != ""} && {side _robber != west} && {_funds > 0}) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
+if(currentWeapon _robber == "") exitWith { hint "You need a weapon to rob this store!"; };
+if(side _robber == west) exitWith { hint "You are a cop!"; };
+if(_funds < 0) exitWith { hint "This store has no money!"; };
+if (alive _robber) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
 hint format ["Robbing the gas station!Please Wait %1 sec.",_timer];
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
