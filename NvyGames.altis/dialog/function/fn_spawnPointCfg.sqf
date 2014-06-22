@@ -50,22 +50,30 @@ switch (_side) do
 			["civ_adac_spawn","ADAC-Hauptquartier","icons\wrench.paa"]
 			];
 		};
-		
-		/*if(license_civ_rebel) then
+		if(life_faction == "civilian") then
 		{
 			_spawns = _spawns + [
-			["rebellen_1","Rebellenposten","icons\rebel.paa"],
-			["rebellen_2","Rebellenposten","icons\rebel.paa"],
-			["rebellen_3","Rebellenposten","icons\rebel.paa"]			
+				["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
-		};*/
+		};
 		
-		_spawns = _spawns + [
-			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
-		];
+		if(life_faction == "rebel") then
+		{
+			_spawns = _spawns + [
+			
+			];
+		};
+		
+		if(life_faction == "indy") then
+		{
+			_spawns = _spawns + [
+				
+			];
+		};
+		
 	};
 	
 	
