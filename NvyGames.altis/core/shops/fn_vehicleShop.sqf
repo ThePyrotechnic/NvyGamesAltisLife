@@ -25,8 +25,8 @@ switch (life_veh_shop) do
 {
 	case "civ_adac":
 	{
-		if((["adac"] call life_fnc_permLevel) < 1) exitWith {_kill = "You have no ADAC license."};
-		ctrlSetText[2301,"ADAC-Fahrzeuge"];
+		if(((["adac"] call life_fnc_permLevel) < 1) && !license_civ_adac) exitWith {_kill = "You have no AAA license."};
+		ctrlSetText[2301,"AAA Vehicle Shop"];
 	};
 
 	case "civ_car_1":
