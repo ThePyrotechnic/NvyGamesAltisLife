@@ -12,10 +12,10 @@ if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindO
 	    hint "The vehicle has no owner.";
 	};
 	
-	life_action_inUse = true;
+	life_action_in_use = true;
 	hint "Search Vehicle ...";
 	sleep 3;
-	life_action_inUse = false;
+	life_action_in_use = false;
 	if(player distance _vehicle > 10 || !alive player || !alive _vehicle) exitWith {hint "Could not search the vehicle!";};
 	//_inventory = [(_vehicle getVariable "vehicle_info_inv")] call fnc_veh_inv;
 	//if(isNil {_inventory}) then {_inventory = "Nothing in storage."};

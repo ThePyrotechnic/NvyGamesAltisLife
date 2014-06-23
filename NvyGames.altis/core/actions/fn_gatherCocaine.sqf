@@ -9,7 +9,7 @@ _sum = ["cocaine",1,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff
 
 if(_sum > 0) then
 {
-	life_action_inUse = true;
+	life_action_in_use = true;
 	
 	//##87
 	//player say3D "harvest";
@@ -24,4 +24,4 @@ if(_sum > 0) then
 	};
 };
 
-life_action_inUse = false;
+life_action_in_use = false;

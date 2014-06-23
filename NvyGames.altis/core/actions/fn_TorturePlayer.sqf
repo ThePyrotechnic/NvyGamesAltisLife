@@ -5,11 +5,11 @@ private["_unit","_rand","_damage", "_fatigue"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
 if(playerSide == west) exitWith {};
-if(life_action_inUse) exitWith {};
+if(life_action_in_use) exitWith {};
 
 if(player distance _unit > 5 || !alive player || !alive _unit) exitWith {hint "You can not torture the person."};
 
-life_action_inUse = true;
+life_action_in_use = true;
 
 _rand = [0,4] call life_fnc_randomRound;
 
@@ -121,6 +121,6 @@ switch(_rand) do
 };
 
 
-life_action_inUse = false;
+life_action_in_use = false;
 
 [[getPlayerUID player,name player,"",["Folter",800]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

@@ -7,12 +7,12 @@
 */
 disableSerialization;
 private["_search","_ui","_progress","_cP","_pgText"];
-if(life_action_inUse) exitWith {hint "You are already doing just what."};
+if(life_action_in_use) exitWith {hint "You are already doing just what."};
 _search = nearestObjects[getPos air_sp, ["Air"],5];
 if(count _search == 0) exitWith {hint "There is no helicopter on the landing pad!"};
 if(life_cash < 5000) exitWith {hint "You need $ 5,000 to await the helicopter."};
 life_cash = life_cash - 5000;
-life_action_inUse = true;
+life_action_in_use = true;
 5 cutRsc ["life_progress","PLAIN"];
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
@@ -30,7 +30,7 @@ while {true} do
 	if(_cP >= 1) exitWith {};
 };
 
-if(!alive (_search select 0) || (_search select 0) distance air_sp > 10) exitWith {life_action_inUse = false; hint "The vehicle is no longer on the landing pad!"};
+if(!alive (_search select 0) || (_search select 0) distance air_sp > 10) exitWith {life_action_in_use = false; hint "The vehicle is no longer on the landing pad!"};
 if(!local (_search select 0)) then
 {
 	[{(_search select 0) setFuel 1;},"BIS_fnc_spawn",(_search select 0),false] spawn life_fnc_MP;
@@ -43,4 +43,4 @@ if(!local (_search select 0)) then
 
 5 cutText ["","PLAIN"];
 titleText ["Your helicopter is now refueled and repaired.","PLAIN"];
-life_action_inUse = false;
+life_action_in_use = false;
