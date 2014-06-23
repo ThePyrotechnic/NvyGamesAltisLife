@@ -8,7 +8,7 @@
 
 _onScreenTime = 7; //<-- How long is the text on the screen for ? Recommended: 1 
 
-sleep 25; //Wait in seconds before the credits start after player is in-game
+sleep 4; //Wait in seconds before the credits start after player is in-game
 
 _role1 = "Welcome to";
 _role1names = ["Nvy Games Altis Life."];

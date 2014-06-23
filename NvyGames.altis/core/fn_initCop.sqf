@@ -37,3 +37,4 @@ waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be ope
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 
 hint "Players spawn!";
+[] execVM "intro.sqf";
