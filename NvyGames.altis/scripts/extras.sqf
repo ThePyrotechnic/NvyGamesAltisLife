@@ -174,3 +174,82 @@ _object setDir 62;
 _object setPosASL _pos;
 [_object, 0, 0] call BIS_fnc_setPitchBank;
 _object allowDamage false;
+
+//Wrecked cargo jet
+_pos = [15479.880859,15202.0273438,0.319504];
+_object = createVehicle ["Land_Wreck_Plane_Transport_01_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 179;
+_object setPosASL _pos;
+[_object, 0, -38] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Navilight near cargo jet
+
+
+//Wrecked catwalk on top of cargo jet
+_pos = [15486.52832,15206.796875,-2.90274];
+_object = createVehicle ["Land_IndPipe2_big_18_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 79.9999;
+_object setPosASL _pos;
+[_object, -20, -8.40424e-006] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+_pos = [15468.508789,15209.972656,-5.11819];
+_object = createVehicle ["Land_IndPipe2_big_18_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 300;
+_object setPosASL _pos;
+[_object, 0, -10] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Wrecked tower
+_pos = [15497.875,15348.652344,-10.2461];
+_object = createVehicle ["Land_spp_Tower_dam_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 261;
+_object setPosASL _pos;
+[_object, -5.08889e-014, 9.85794e-021] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Wrecked helicopter on tower
+_pos = [15499.564453,15346.598633,22.7069];
+_object = createVehicle ["Land_Wreck_Heli_Attack_02_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 166;
+_object setPosASL _pos;
+[_object, -20, -41.8769] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Wrecked Humvee near pier
+_pos = [15488.371094,15499.636719,12.0396];
+_object = createVehicle ["Land_Wreck_HMMWV_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 303;
+_object setPosASL _pos;
+[_object, -1, -0.0149219] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Dome ramp extension
+_pos = [15414.897461,15402.769531,-2.12287];
+_object = createVehicle ["Land_RampConcrete_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 80.9998;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+_pos = [15414.0957031,15407.704102,-2.14287];
+_object = createVehicle ["Land_RampConcrete_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 80.9999;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+_pos = [15325.27832,15393.991211,-1.95367];
+_object = createVehicle ["Land_RampConcrete_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 262.99;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+_pos = [15325.910156,15389.0332031,-1.964];
+_object = createVehicle ["Land_RampConcrete_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 262.7;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+_object allowDamage false;
