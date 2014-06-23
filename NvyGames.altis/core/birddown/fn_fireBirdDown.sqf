@@ -38,7 +38,7 @@ switch(_type) do
 	case "BDMK1":
 	{
         //set maxdistance here
-        _maxdistance = 80;
+        _maxdistance = 200;
         
 		{
 			__shrt = _x select 0;
