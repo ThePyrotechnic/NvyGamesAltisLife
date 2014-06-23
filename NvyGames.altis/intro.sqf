@@ -13,23 +13,29 @@ sleep 25; //Wait in seconds before the credits start after player is in-game
 _role1 = "Welcome to";
 _role1names = ["Nvy Games Altis Life."];
 _role2 = "Developers:";
-_role2names = ["BuddyTex", "Cl0ck", "Pyro"];
-_role3 = "Web Dev & Bank Design:";
+_role2names = ["Buddytex", "Clock", "Pyro"];
+_role3 = "Web Dev + Bank Port:";
 _role3names = ["5150 Joker"];
-_role4 = "Cinematography";
-_role4names = ["Capt Pie"];
-_role5 = "TeamSpeak Dev:";
-_role5names = ["The Babbs"];
-_role6 = "Rebel Faction Leaders:";
-_role6names = ["5150 Joker", "EmpireOps"];
-_role7 = "Military Police Leaders:";
-_role7names = ["Capt Kevin Pie", "The Babbs", "Marine By God"];
-_role8 = "Visit Us:";
-_role8names = ["www.nvygames.com"];
-_role9 = "TeamSpeak Channel:";
-_role9names = ["ts3.nvygames.com"];
-_role10 = "For Server Rules:"];
-_role10names = ["Press M To View"];
+_role4 = "Textures:";
+_role4names = ["EmpireOpsJT"];
+_role5 = "Cinematography";
+_role5names = ["Capt Pie"];
+_role6 = "TeamSpeak Dev:";
+_role6names = ["The Babbs"];
+_role7 = "Rebel Faction Leaders:";
+_role7names = ["5150 Joker", "EmpireOps"];
+_role8 = "Military Police Leaders:";
+_role8names = ["Capt Kevin Pie", "The Babbs", "Marine By God"];
+_role9 = "Independent Faction Leaders:";
+_role9names = ["Clock", "Buddytex"];
+_role10 = "Visit Us:";
+_role10names = ["www.nvygames.com"];
+_role11 = "TeamSpeak Channel:";
+_role11names = ["ts3.nvygames.com"];
+_role12 = "For Server Rules:";
+_role12names = ["Press M To View"];
+_role13 = "Original Bank Design by:";
+_role13names = ["Spookygnu"];
 
 {
 sleep 2;
@@ -59,5 +65,8 @@ sleep (_onScreenTime);
 [_role7, _role7names],
 [_role8, _role8names],
 [_role9, _role9names],
-[_role10,_role10names]
+[_role10,_role10names],
+[_role11,_role11names],
+[_role12,_role12names],
+[_role13,_role13names]
 ];
