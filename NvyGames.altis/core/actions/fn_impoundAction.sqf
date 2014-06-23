@@ -57,7 +57,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		[[0,format["%1, your %2 being seized by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	};
 	
-	life_action_inUse = true;
+	life_action_in_use = true;
 	
 	_upp = "Impounding Vehicle";
 	//Setup our progress bar.
@@ -81,14 +81,14 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	};
 	5 cutText ["","PLAIN"];
 	
-	if(player distance _vehicle > 10) exitWith {hint "Seizures stopped."; life_action_inUse = false;};
-	if(!alive player) exitWith {life_action_inUse = false;};
+	if(player distance _vehicle > 10) exitWith {hint "Seizures stopped."; life_action_in_use = false;};
+	if(!alive player) exitWith {life_action_in_use = false;};
 	//_time = _vehicle getVariable "time";
 	//if(isNil {_time}) exitWith {deleteVehicle _vehicle; hint "This vehicle was hacked in"};
 	//if((time - _time)  < 120) exitWith {hint "This is a freshly spawned vehicle, you have no right impounding it."};
 	if((count crew _vehicle) == 0) then
 	{
-		if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {life_action_inUse = false;};
+		if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {life_action_in_use = false;};
 		_type = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 		switch (true) do
 		{
@@ -120,4 +120,4 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		hint "Seizures stopped.";
 	};
 };
-life_action_inUse = false;
+life_action_in_use = false;

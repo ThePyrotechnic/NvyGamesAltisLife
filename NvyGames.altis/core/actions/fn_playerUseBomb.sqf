@@ -8,8 +8,8 @@ private["_done_struggle","_bomb"];
  
  _done_struggle = false;
  
- if(life_action_inUse) exitWith {};
- life_action_inUse = true;
+ if(life_action_in_use) exitWith {};
+ life_action_in_use = true;
  
  if(playerSide == west) then
  {
@@ -56,7 +56,7 @@ if(playerSide == civilian) then
 };
 
 //Boom
- life_action_inUse = false;
+ life_action_in_use = false;
  
  //alt: R_60mm_HE
  _bomb = "M_Mo_82mm_AT_LG" createVehicle (position player);

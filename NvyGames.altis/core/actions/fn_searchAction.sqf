@@ -12,4 +12,4 @@ hint "Search ...";
 sleep 2;
 if(player distance _unit > 5 || !alive player || !alive _unit) exitWith {hint "Can not Browse person."};
 [[player],"life_fnc_searchClient",_unit,false] spawn life_fnc_MP;
-life_action_inUse = true;
+life_action_in_use = true;
