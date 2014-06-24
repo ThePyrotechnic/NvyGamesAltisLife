@@ -8355,7 +8355,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0, ""icons\nvy.paa""];  this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmInit]; this addAction [""Ambulance Shop"", life_fnc_itemShopInit, ""medic""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""ambulance"", ""garage_medic""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_medic""]; this addAction [""Item Shop"", life_fnc_virtualShopInit, ""ambulance""];";
+			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmInit]; this addAction [""Ambulance Shop"", life_fnc_itemShopInit, ""medic""]; this addAction [""Fahrzeugladen"", life_fnc_vehicleInit, [""ambulance"", ""garage_medic""]]; this addAction [""Garage"", life_fnc_garageInit, ""garage_medic""]; this addAction [""Item Shop"", life_fnc_virtualShopInit, ""ambulance""];";
 		};
 		class Item269
 		{
@@ -8366,7 +8366,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0, ""icons\nvy.paa""];  this setVectorUp [0,0,0.1]; this addAction[""Rebel License($100,000)"",life_fnc_buyLicenseAction,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian && license_civ_gang'];  this addAction[""Rebellen-Shop"",life_fnc_itemShopInit,""reb"",0,false,false,"""",'playerSide == civilian'];  this addAction[""Donator Shop"",life_fnc_itemShopInit,""donator""];  this addAction[""Super Donator Shop"", life_fnc_itemShopInit, ""super_don""];  this addAction[""Rebel Car Shop"",life_fnc_vehicleInit,[""reb_car_wl"",""reb_car_wl""]];  this addAction[""Rebel Coffee Stand"",life_fnc_virtualShopInit,""coffee""];  this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmInit];";
+			init="this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction[""Rebel License($100,000)"",life_fnc_buyLicenseAction,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian && license_civ_gang'];  this addAction[""Rebellen-Shop"",life_fnc_itemShopInit,""reb"",0,false,false,"""",'playerSide == civilian'];  this addAction[""Donator Shop"",life_fnc_itemShopInit,""donator""];  this addAction[""Super Donator Shop"", life_fnc_itemShopInit, ""super_don""];  this addAction[""Rebel Car Shop"",life_fnc_vehicleInit,[""reb_car_wl"",""reb_car_wl""]];  this addAction[""Rebel Coffee Stand"",life_fnc_virtualShopInit,""coffee""];  this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmInit];";
 		};
 		class Item270
 		{
@@ -78357,7 +78357,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Device_assembled_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0, ""icons\nvy.paa""];   this addAction[""Process gold"",life_fnc_processAction,""gold"",0,false,false,"""",' life_inv_gold > 0 && !life_is_processing'];";
+			init="this allowDamage false; this enableSimulation false; this addAction[""Process gold"",life_fnc_processAction,""gold"",0,false,false,"""",' life_inv_gold > 0 && !life_is_processing'];";
 		};
 	};
 	class Markers

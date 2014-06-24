@@ -141,7 +141,7 @@ switch(_shop) do
 						["ToolKit",nil,250], //toolkit
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
-						["NVGoggles",nil,2000] //nightvision goggles
+						["NVGoggles",nil,2000], //nightvision goggles
 						["optic_Holosight",nil,1500],
 						["optic_Hamr",nil,2000],
 						["optic_MRCO",nil,3000]				
