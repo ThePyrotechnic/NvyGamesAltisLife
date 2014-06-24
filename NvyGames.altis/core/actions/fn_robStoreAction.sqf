@@ -1,58 +1,82 @@
 /*
-file: fn_robStoreAction.sqf
+file: fn_robShops.sqf
 Author: MrKraken
 Made from MrKrakens bare-bones shop robbing tutorial on www.altisliferpg.com forums
 Description:
 Executes the rob shob action!
-Modified by: KrisSerbia and clock
-
+Idea developed by PEpwnzya v1.0
 */
-private["_robber","_shop","_timer","_funds","_dist","_success"]; //Kraken Clean-up: added _dist and _success
+private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
+//_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
-_timer = 300;//Time for the robbery to be completed
-_funds = 10000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
-_dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
-_success = false; //Kraken Clean-up: set _success to false at the start of the script!
+_name = [_this,3] call BIS_fnc_param;//Shop Name  
 
-if(vehicle player != _robber) exitWith { hint "You need to exit your vehicle!"; }; //If the player is in a vehicle, kill the script execution with a message to the player | Kraken CLeanup - Moved to above the other conditions 
-if(currentWeapon _robber == "") exitWith { hint "You need a weapon to rob this store!"; };
-if(side _robber == west) exitWith { hint "You are a cop!"; };
-if(_funds < 0) exitWith { hint "This store has no money!"; };
-if (alive _robber) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
-hint format ["Robbing the gas station!Please Wait %1 sec.",_timer];
-_shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
-_shop removeAction _action;//Deleting the action,so it won't be spammed
-while {true} do{ //Kraken Clean-Up: changed to while true do:
+if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
+if(_robber distance _shop > 5) exitWith { hint "You need to be within 5m of the cashier to rob him!" };
 
-		hintsilent format ["%1 seconds remaining.Stay within 10 meters of a shop owner!",_timer];
-		sleep 1;
-		_timer = _timer - 1;
-		_dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
-		if (!alive _robber) exitwith
-			{
-				//If the robber dies, kill the script
-				hint "Robbery failed because you died!";
-				_shop switchMove "";
-				_action = _shop addAction["Rob the Gas Station",life_fnc_robShops];
-			};
-			if (_dist >= 11) exitwith {//Test if robber didn't stay within 10 meters of a shop owner
-			hint "Robbery failed, You moved too far away";
-			_shop switchMove "";
-			_action = _shop addAction["Rob the Gas Station",life_fnc_robShops];
-			
-			
-		};
-if(_timer < 1) exitWith { _success = true;}; //Kraken Cleanup - If the count-down has hit 0 (or -1..just in case) the robbery is a success!
+if (isNull _kassa) then { _kassa = 1000; };
+if (_rip) exitWith { hint "Robbery already in progress!" };
+if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
+
+if !(alive _robber) exitWith {};
+if (currentWeapon _robber == "") exitWith { hint "HaHa, you do not threaten me! Get out of here you hobo!" };
+if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
+
+_rip = true;
+_kassa = 3000 + round(random 12000);
+_shop removeAction _action;
+_shop switchMove "AmovPercMstpSsurWnonDnon";
+_chance = random(100);
+if(_chance >= 85) then 
+{ 
+	hint "The cashier hit the silent alarm, police has been alerted!"; 
+	[[format["ALARM! - %1 is being robbed!", _name],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
 };
-if(!_success) exitWith {}; //Kraken Cleanup -If success is false, kill it! They've already got their message
-life_cash = life_cash + _funds; //Self explanatory
-hint format["You have stolen $%1",_funds]; //Give them a nice message
-[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;//Add the robber to the wanted list,thanks to DimitryYuri
+ 
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = uiNameSpace getVariable "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["Robbery in Progress, stay close (3m) (1%1)...","%"];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+ 
+if(_rip) then
+{
+	while{true} do
+	{
+			sleep 0.85;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["Robbery in Progress, stay close (3m) (%1%2)...",round(_cP * 100),"%"];
 
-_shop switchMove "";//Reseting the shop owner
-_funds = 0;
-sleep 420;//Cooldown between the robberies
-_action = _shop addAction["Rob the Gas Station",life_fnc_robShops];//Adding action for the robbery
-};//Close the if statement
+		if(_cP >= 1) exitWith {};
+		if(_robber distance _shop > 3.5) exitWith { };
+		if!(alive _robber) exitWith {};
+	};
+
+	if!(alive _robber) exitWith { _rip = false; };
+	if(_robber distance _shop > 3.5) exitWith { _shop switchMove ""; hint "You need to stay within 3m to Rob register! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	5 cutText ["","PLAIN"];
+
+	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
+	life_cash = life_cash + _kassa;
+	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[format["%1 was just robbed by %2 for a total of $%3", _name,name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
+	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+
+	_rip = false;
+	life_use_atm = false;
+	sleep (30 + random(180));
+	life_use_atm = true;
+	if!(alive _robber) exitWith {};
+	[[1,format["NEWS: %1 was just robbed for a total of $%2", _name, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
+};
+
+sleep 300;
+_action = _shop addAction["Rob the Gas Station",life_fnc_robShops, _name];
+_shop switchMove "";

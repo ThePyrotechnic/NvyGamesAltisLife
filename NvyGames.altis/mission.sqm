@@ -3238,7 +3238,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.2;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Gas Station"",life_fnc_weaponShopMenu,""gas""];this allowDamage false; this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmMenu]; this addAction[""Bank Account Insurance ($1000)"",{if(life_atmcash > 1000) then {life_has_insurance = true};},"""",0,false,false,"""",'!life_has_insurance'];this addAction[""Market"",life_fnc_virt_menu,""gas""]; this addAction[""Rob Cash Register"",life_fnc_robStoreAction];";
+					init="this allowDamage false; this enableSimulation false;   this addAction[""Gas Station"",life_fnc_weaponShopMenu,""gas""];  this allowDamage false;   this addAction[""<t color='#ADFF2F'>$Your Bank Account$</t>"",life_fnc_atmMenu];   this addAction[""Bank Account Insurance ($1000)"",{if(life_atmcash > 1000) then {life_has_insurance = true};},"""",0,false,false,"""",'!life_has_insurance'];  this addAction[""Rob Cash Register"",life_fnc_robShops];";
 				};
 				class Item1
 				{
