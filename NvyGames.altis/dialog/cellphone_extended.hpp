@@ -32,7 +32,7 @@ class cellphone_extended {
 		class bClose: RscButtonMenu
 	    {
 	    	idc = 2400;
-	    	text = "close"; //--- ToDo: Localize;
+	    	text = "Close"; //--- ToDo: Localize;
 	    	x = 8 * GUI_GRID_W + GUI_GRID_X;
 	    	y = 20 * GUI_GRID_H + GUI_GRID_Y;
 	    	w = 24 * GUI_GRID_W;
@@ -60,13 +60,13 @@ class cellphone_extended {
 	    class bSend: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Senden"; //--- ToDo: Localize;
+			text = "Send"; //--- ToDo: Localize;
 			x = 25.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 			onButtonClick="[false] spawn life_fnc_cellex_sendClick;";
-			tooltip="Nachricht senden";
+			tooltip="Send Message";
 		};
 		class bSendAdmin: RscButtonMenu
 		{
@@ -78,7 +78,7 @@ class cellphone_extended {
 			h = 1 * GUI_GRID_H;
 			colorText[] = {1,0,0,1};
 			onButtonClick="[true] spawn life_fnc_cellex_sendClick;";
-			tooltip="Nachricht als Admin senden. Funktioniert nur bei privaten Nachrichten an einen Spieler.";
+			tooltip="Send message as an admin. Only works for sending private messages. ";
 		};
 	};
 };

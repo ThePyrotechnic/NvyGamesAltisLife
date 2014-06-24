@@ -13,10 +13,10 @@ _toFar = false;
 if(isNull _vault OR _funds == -1) exitWith {}; //Bad data
 if(player distance _vault > 10) exitWith {[[_vault,-1],"TON_fnc_robberyState",false,false] spawn life_fnc_MP; hint "You have to stay close to the vault!"};
 
-if(_funds < 50000) exitWith{[[_vault,-1],"TON_fnc_robberyState",false,false] spawn life_fnc_MP; hint "The bank has not enough credit ...";};
+if(_funds < 50000) exitWith{[[_vault,-1],"TON_fnc_robberyState",false,false] spawn life_fnc_MP; hint "The bank does not have enough money ...";};
 
-_timer = time + (10 * 60); //Default timer is 10 minutes to rob.
-titleText["Knacke den Safe ...","PLAIN"];
+_timer = time + (20 * 60); //Default timer is 10 minutes to rob.
+titleText["Crack the safe ...","PLAIN"];
 [[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 
 //##87
@@ -28,7 +28,7 @@ while {true} do
 {
 	//Timer display (TO BE REPLACED WITH A NICE GUI LAYER)
 	_countDown = if(round(_timer - time) > 60) then {format["%1 minute(s)",round(round(_timer - time) / 60)]} else {format["%1 second(s)",round(_timer - time)]};
-	hintSilent format["You have to keep up to 15m distance!\n\nRemaining time:\n %1\n\nDistanz: %2m",_countDown,round(player distance _vault)];
+	hintSilent format["You have to keep within 15 meters!\n\nRemaining time:\n %1\n\nDistance: %2m",_countDown,round(player distance _vault)];
 
 	if(player distance _vault > 15) exitWith {_toFar = true;};
 	if((round(_timer - time)) < 1) exitWith {};
@@ -40,7 +40,7 @@ switch(true) do
 {
 	case (_toFar):
 	{
-		hint "You've too far from safe! Bank robbery failed!";
+		hint "You've moved too far from the safe! Bank robbery failed!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
 	};
 	

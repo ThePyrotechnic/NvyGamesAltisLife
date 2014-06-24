@@ -11,7 +11,7 @@ _sum = ["apple",3,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_sum > 0) then
 {
 	life_action_in_use = true;
-	titleText["picking apples ...","PLAIN"];
+	titleText["Picking apples ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	sleep 2;
 	if(([true,"apple",_sum] call life_fnc_handleInv)) then

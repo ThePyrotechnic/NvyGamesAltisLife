@@ -43,7 +43,7 @@ class house_houseDialog
 		class house_value: RscStructuredText
 		{
 			idc = 1102;
-			text = "<t size='2' align='center'>Wert: $xxxxxxxx</t>"; //--- ToDo: Localize;
+			text = "<t size='2' align='center'>Worth: $xxxxxxxx</t>"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;
@@ -67,7 +67,7 @@ class house_houseDialog
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schließen"; //--- ToDo: Localize;
+			text = "Close"; //--- ToDo: Localize;
 			x = 2 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 36 * GUI_GRID_W;
@@ -77,7 +77,7 @@ class house_houseDialog
 		class bBuyHouse: RscButtonMenu
 		{
 			idc = 2401;
-			text = "buy"; //--- ToDo: Localize;
+			text = "Buy"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -86,7 +86,7 @@ class house_houseDialog
 		class bSellHouse: RscButtonMenu
 		{
 			idc = 2402;
-			text = "Verbuy"; //--- ToDo: Localize;
+			text = "Sell"; //--- ToDo: Localize;
 			x = 11.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -115,22 +115,22 @@ class house_houseDialog
 		class bKeyDialog: RscButtonMenu
 		{
 			idc = 2405;
-			text = "give key"; //--- ToDo: Localize;
+			text = "Give Key"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 6 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "give another player your house keys"; //--- ToDo: Localize;
+			tooltip = "Give another player your house keys."; //--- ToDo: Localize;
 		};
 		class bVehicleHeliOpenGarage: RscButtonMenu
 		{
 			idc = 2406;
-			text = "Pull out helicopter"; //--- ToDo: Localize;
+			text = "Pull out Helicopter"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Heli-Garage öffnen."; //--- ToDo: Localize;
+			tooltip = "Open heli garage."; //--- ToDo: Localize;
 		};
 	};
 };

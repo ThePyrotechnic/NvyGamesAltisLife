@@ -9,7 +9,7 @@ class house_houseSearchDlg
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Durchsuchungsergebnis</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Search Results</t>"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 1 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
@@ -31,7 +31,7 @@ class house_houseSearchDlg
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schließen"; //--- ToDo: Localize;
+			text = "Close"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
@@ -49,7 +49,7 @@ class house_houseSearchDlg
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "bMessage"; //--- ToDo: Localize;
+			text = "Message"; //--- ToDo: Localize;
 			x = 11.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 17 * GUI_GRID_W;
@@ -59,7 +59,7 @@ class house_houseSearchDlg
 		class bImpound: RscButtonMenu
 		{
 			idc = 2402;
-			text = "Beschlagnahmen"; //--- ToDo: Localize;
+			text = "Impund"; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 8.5 * GUI_GRID_W;
