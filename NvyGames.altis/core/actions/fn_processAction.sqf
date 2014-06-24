@@ -24,62 +24,62 @@ _itemInfo = switch (_type) do
 	case "diamond":
 	{
 		_sound="diamondcutting"; 
-		["diamond","diamondc",1350,"Schleife Diamant"]
+		["diamond","diamondc",1350,"Cutting Diamonds"]
 	};
 	case "heroin":
 	{
 		_sound="drugcooking"; 
-		["heroinu","heroinp",2100,"Verarbeite Schlafmohn"]
+		["heroinu","heroinp",2100,"Processing Poppy"]
 	};
 	case "copper":
 	{
 		_sound="smelting"; 
-		["copperore","copper_r",750,"Schmelze Kupfer"]
+		["copperore","copper_r",750,"Smelting Copper"]
 	};
 	case "iron":
 	{
 		_sound="smelting"; 
-		["ironore","iron_r",1120,"Schmelze Eisen"]
+		["ironore","iron_r",1120,"Smelting Iron"]
 	};
 	case "sand":
 	{
 		_sound="smelting";
-		["sand","glass",650,"Verarbeite Sand"]
+		["sand","glass",650,"Smelting Sand"]
 	};
 	case "salt":
 	{
 		_sound="saltprocess"; 
-		["salt","salt_r",450,"Verarbeite Salz"]
+		["salt","salt_r",450,"Processing Salt"]
 	};
 	case "cocaine":
 	{
 		_sound="drugcooking"; 
-		["cocaine","cocainep",1500,"Verarbeite Kokablätter"]
+		["cocaine","cocainep",1500,"Cooking Cocaine"]
 	};
 	case "marijuana":
 	{
 		_sound="drugcooking"; 
-		["cannabis","marijuana",500,"Verarbeite Hanf"]
+		["cannabis","marijuana",500,"Processing Marijuana"]
 	};
 	case "cement":
 	{
 		_sound="cementmix"; 
-		["rock","cement",350,"Brenne Zement"]
+		["rock","cement",350,"Mixing Cement"]
 	};
 	case "gold":
 	{
 		_sound="smelting"; 
-		["gold","goldr",1350,"Schmelze Gold"]
+		["gold","goldr",1350,"Smelting Gold"]
 	}; //##11
 	case "silver":
 	{
 		_sound="smelting"; 
-		["silver","silverr",1050,"Schmelze Silber"]
+		["silver","silverr",1050,"Smelting Silver"]
 	}; //##12
 	case "coal":
 	{
 		_sound="smelting"; 
-		["coal","coalr",350,"Verarbeite Kohle"]
+		["coal","coalr",350,"Processing Coal"]
 	}; //##10
 	default {[]};
 };
@@ -127,7 +127,7 @@ if(_hasLicense) then
 		if(player distance _vendor > 10) exitWith {};
 	};
 	
-	if(player distance _vendor > 10) exitWith {hint "You can not make yourself the further away than 10m."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(player distance _vendor > 10) exitWith {hint "You can not move further away than 10m."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
 	5 cutText ["","PLAIN"];
@@ -151,7 +151,7 @@ if(_hasLicense) then
 		if(player distance _vendor > 10) exitWith {};
 	};
 	
-	if(player distance _vendor > 10) exitWith {hint "You can not make yourself the further away than 10m."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(player distance _vendor > 10) exitWith {hint "You can not move further away than 10m."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(life_cash < _cost) exitWith {hint format["you need $%1, to further process something without ability!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
