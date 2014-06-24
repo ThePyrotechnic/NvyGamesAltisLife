@@ -9,14 +9,14 @@ switch (playerSide) do
 	case civilian:
 	{
 		//Drop fishing net
-		life_actions = [player addAction["Fischernetz auswerfen",life_fnc_dropFishingNet,"",0,false,false,"",'
+		life_actions = [player addAction["Drop fishing net",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Rob person
-		life_actions = life_actions + [player addAction["Ausrauben",life_fnc_robAction,"",0,false,false,"",'
+		life_actions = life_actions + [player addAction["rob",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
 		
 		//##90
-		life_actions = life_actions + [player addAction["Ausrauben",life_fnc_robAction,"",0,false,false,"",'
+		life_actions = life_actions + [player addAction["rob",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && !(cursorTarget getVariable["robbed",FALSE]) && (cursorTarget getVariable["restrained",FALSE]) ']];
 	};
 };
