@@ -57,7 +57,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Du bist kein Cop!"};
+			case (playerSide != west): {"You are not a cop!"};
 			default
 			{
 				["Altis Cop Shop",
@@ -195,8 +195,8 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Du bist kein Cop!"};
-			case (!license_cop_sniper): {"Du bist kein Sniper!"};
+			case (playerSide != west): {"You are not a cop!"};
+			case (!license_cop_sniper): {"You are not a sniper!"};
 			default
 			{
 				["Altis Sniper Shop",
@@ -271,7 +271,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"Du bist kein Cop!"};
+			case (playerSide != civilian): {"You are a cop!"};
 			case (!license_civ_gun): {"You do not have a firearms license"};
 			default
 			{
@@ -309,7 +309,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (__GETC__(life_donator) == 0): {"Du bist kein Donator!"};
+			case (__GETC__(life_donator) == 0): {"You are not a Donator!"};
 			case (__GETC__(life_donator) >= 1):
 			{
 				["Black Lagoon Donator Shop",

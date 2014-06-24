@@ -35,10 +35,10 @@ switch (_side) do
 			["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
-			["cop_spawn_5","HW Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_6","Neochori HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			//["cop_spawn_7","Telos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_8","Pyrsos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["cop_spawn_8","Pyrsos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_5","Checkpoint 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_9","Checkpoint 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 		];
 	};
 	
