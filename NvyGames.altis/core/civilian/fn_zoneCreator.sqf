@@ -16,7 +16,7 @@ _appleZones = ["apple_1","apple_2","apple_3","apple_4","apple_5","apple_6"];
 _peachZones = ["peaches_1","peaches_2","peaches_3","peaches_4","peaches_5","peaches_6"];
 _heroinZones = ["heroin_1"];
 _cocaineZones = ["cocaine_1"];
-_weedZones = ["weed_1"];
+_weedZones = ["weed_1","weed_2","weed_3"];
 _frogZones = ["frog_swamp1"];
 
 //Create apple zones

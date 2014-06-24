@@ -1,3 +1,8 @@
+//Bank import and modification by: 5150 Joker
+//Original bank design: SpookyGnu
+//For NvyGames
+//Copyright 2014
+
 //Front right bunker
 _pos = [15427.900391,15836.745117,6.00369];
 _object = createVehicle ["Land_BagBunker_Small_F", _pos, [], 0, "CAN_COLLIDE"];
@@ -252,4 +257,12 @@ _object = createVehicle ["Land_RampConcrete_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 262.7;
 _object setPosASL _pos;
 [_object, 0, 0] call BIS_fnc_setPitchBank;
+_object allowDamage false;
+
+//Stop killing people
+_pos = [15433.325195,15842.0341797,4.38144];
+_object = createVehicle ["Land_Graffiti_03_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 265;
+_object setPosASL _pos;
+[_object, -90, -90] call BIS_fnc_setPitchBank;
 _object allowDamage false;
