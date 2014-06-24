@@ -93,7 +93,7 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
-		class robStoreAction {};
+        class robShops {}; //Rob Gas Station & Shops Script
 		
 		//#2
 		class putToGarage {};
