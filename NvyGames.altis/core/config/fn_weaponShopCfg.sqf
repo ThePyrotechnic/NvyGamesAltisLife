@@ -52,8 +52,8 @@ switch(_shop) do
 			]
 		];
 	};
-	
-	case "cop_basic":
+//this is cop shop rank one.
+	case "cop_basic": //Private Equipment
 	{
 		switch(true) do
 		{
@@ -62,118 +62,133 @@ switch(_shop) do
 			{
 				["Altis Cop Shop",
 					[
-						["arifle_sdar_F","SDAR",10000],
-						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180],
-						//["30Rnd_556x45_Stanag","SDAR Magazin 556x45",250],
-						["hgun_P07_snds_F","taser pistol",5000],
-						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], 						
-						["hgun_P07_F",nil,2500],
-						["16Rnd_9x21_Mag",nil,50],
-						["Binocular",nil,150],
-						["Rangefinder",nil,500],
-						["ItemMap",nil,50],
-						["ItemGPS",nil,200],
-						["ToolKit",nil,250],
-						/*["FirstAidKit",nil,150],
-						["Medikit",nil,1000],*/
-						["NVGoggles",nil,2000],
-						["B_UAV_01_F",nil,100000],
-						["B_UAV_01_backpack_F",nil,50000]
+						["arifle_sdar_F","SDAR",10000], //sdar
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
+						["hgun_P07_snds_F","taser pistol",5000], //taser
+						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], //taser mags					
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+						["NVGoggles",nil,2000] //nightvision goggles
 					]
 				];
 			};
 		};
 	};
-
-	case "cop_patrol":
+//this is cop shop rank two.
+	case "cop_patrol": //Private First Class Equipment
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Du bist kein Cop!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not the required rank."};
+			case (playerSide != west): {"You are not a cop."};
+			case (__GETC__(life_coplevel) < 1): {"You are not the required rank."};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
-						//SDAR with UW ammo
-						["arifle_sdar_F","SDAR",10000],
-						["30Rnd_556x45_Stanag","SDAR Magazin 556x45",250], //SDAR scharfe Muni
-						["20Rnd_556x45_UW_mag","Underwater SDAR Magazin 556x45",200],
-						["arifle_MXC_Black_F",nil,10000],
-						["muzzle_snds_H",nil,2500],
-						["30Rnd_65x39_caseless_mag",nil,500],
-						["30Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",500],
-						["SMG_02_F",nil,7500],
-						["muzzle_snds_L",nil,2500],
-						["30Rnd_9x21_Mag",nil,250],
-						["SMG_01_F",nil,7500],
-						["muzzle_snds_acp",nil,2500],
-						["30Rnd_45ACP_Mag_SMG_01",nil,250],
-						["30Rnd_45ACP_Mag_SMG_01_tracer_green",".45 Gummigeschoss",250],
-						["hgun_PDW2000_F",nil,7500],
-						["muzzle_snds_L",nil,2500],
-						["30Rnd_9x21_Mag",nil,250],
-						["MineDetector",nil,1000],
-						["acc_flashlight",nil,750],
-						["acc_pointer_IR",nil,750],
-						["optic_Holosight",nil,1500],
-						["optic_Holosight_smg",nil,1500],
-						["optic_Hamr",nil,2000],
-						["optic_MRCO",nil,3000],
-						["MiniGrenade",nil,2500]
+						["SMG_02_F",nil,7500], //sting
+						["muzzle_snds_L",nil,2500], //9mm suppressor
+						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["optic_Holosight_smg",nil,1500], //smg holo
+						["arifle_sdar_F","SDAR",10000], //sdar
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
+						["hgun_P07_snds_F","taser pistol",5000], //taser
+						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], //taser mags					
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+						["NVGoggles",nil,2000] //nightvision goggles
+						//["30Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",500], 5.56 tracers
+						//["30Rnd_45ACP_Mag_SMG_01_tracer_green",".45 Gummigeschoss",250], 45 acp tracers
 					]
 				];
 			};
 		};
 	};
-
-	case "cop_sergeant":
+//this is cop shop rank three.
+	case "cop_sergeant": //Specialist Equipment
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Du bist kein Cop!"};
-			case (__GETC__(life_coplevel) < 5): {"You are not the required rank."};
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 2): {"You are not the required rank."};
 			default
 			{
 				["Altis Sergeant Officer Shop",
 					[
-						["hgun_Pistol_heavy_01_F",nil,5000],
-						["muzzle_snds_acp",nil,2500],
-						["11Rnd_45ACP_Mag",nil,200],
-						["optic_MRD",nil,2000],
-						["arifle_MX_Black_F",nil,15000],
-						["muzzle_snds_H",nil,2500],
-						["30Rnd_65x39_caseless_mag",nil,500],
-						["30Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",500],
-						["arifle_MX_SW_Black_F",nil,75000],
-						["muzzle_snds_H_MG",nil,5000],
-						["100Rnd_65x39_caseless_mag",nil,2000],
-						["100Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",2000],
-						["arifle_MXM_Black_F",nil,60000],
-						["muzzle_snds_H",nil,2500],
-						["30Rnd_65x39_caseless_mag",nil,500],
-						["30Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",500],
-						["srifle_EBR_F",nil,50000],
-						["20Rnd_762x51_Mag",nil,500],
-						["muzzle_snds_B",nil,2500],
-						["launch_B_Titan_F",nil,85000],
-						["Titan_AA",nil,10000],
-						["acc_flashlight",nil,750],
-						["acc_pointer_IR",nil,750],
+						["arifle_MXC_F",nil,20000], //mxc
+						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["SMG_02_F",nil,7500], //sting
+						["muzzle_snds_L",nil,2500], //9mm suppressor
+						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["optic_Holosight_smg",nil,1500], //smg holo
+						["arifle_sdar_F","SDAR",10000], //sdar
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
+						["hgun_P07_snds_F","taser pistol",5000], //taser
+						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], //taser mags					
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+						["NVGoggles",nil,2000], //nightvision goggles
 						["optic_Holosight",nil,1500],
-						["optic_Holosight_smg",nil,1500],
 						["optic_Hamr",nil,2000],
-						["optic_MRCO",nil,3000],
-						["optic_Arco",nil,4000],
-						["optic_SOS",nil,5000],
-						["optic_NVS",nil,6000],
-						["MiniGrenade",nil,2500],
-						["HandGrenade",nil,5000]						
+						["optic_MRCO",nil,3000]				
 					]
 				];
 			};
 		};
 	};
+	//NEW CLOCK SHIT MAY FUCK UP EVERYTHING *************************************************************************************************************************************
+	case "cop_corporal": //Corporal  Equipment
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 3): {"You are not the required rank."};
+			default
+			{
+				["Corporal Equipment",
+					[
+						["arifle_MX_F",nil,30000], //mx
+						["arifle_MXC_F",nil,20000], //mxc
+						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["SMG_02_F",nil,7500], //sting
+						["muzzle_snds_L",nil,2500], //9mm suppressor
+						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["optic_Holosight_smg",nil,1500], //smg holo
+						["arifle_sdar_F","SDAR",10000], //sdar
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
+						["hgun_P07_snds_F","taser pistol",5000], //taser
+						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], //taser mags					
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+						["NVGoggles",nil,2000] //nightvision goggles
+						["optic_Holosight",nil,1500],
+						["optic_Hamr",nil,2000],
+						["optic_MRCO",nil,3000]					
+					]
+				];
+			};
+		};
+	};
+	
 	
 	//##98
 	case "cop_sniper":
