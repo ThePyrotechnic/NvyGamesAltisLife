@@ -58,7 +58,7 @@ switch(true) do
 	
 	case ((round(_timer - time)) < 1):
 	{
-		hint format["You have successfully $%1 robbed!\n\nTo prevent tracing, you can use 8min long no ATMs.",[_funds] call life_fnc_numberText];
+		hint format["You have successfully $%1 robbed!\n\nTo prevent tracing, you can not use any ATM for 8 minutes!.",[_funds] call life_fnc_numberText];
 		[] spawn
 		{
 			life_use_atm = false;

@@ -64,30 +64,6 @@ life_perms = [
 	[], "images\Black_lagoon_Flame_256.paa",
 	["Kein Mitglied","Mitglied", "Helfer", "Leiter"]]
 	
-	/*
-	User requested groups
-	*/
-	//BloodZ User Group
-	/*["user_bloodz", "BloodZ", 7, [ 
-		[0, []],
-		[1, ["VIEW"]],
-		[2, ["VIEW"]],
-		[3, ["VIEW"]],
-		[4, ["VIEW"]],
-		[5, ["VIEW"]],		
-		[6, ["LEADER", "RANKUP", "RANKDOWN", "VIEW"]],
-		[7, ["LEADER", "RANKUP", "RANKDOWN", "VIEW"]]
-	],  
-	[], "images\logo_user\bloodz.paa",
-	["Kein Mitglied",
-	"Blood-Praktikant",
-	"Blood-Grünschnabel",
-	"Blood-Dealer",
-	"Blood-Hitman",
-	"Blood-Rechte Hand",
-	"Blood-CoLeader",
-	"Blood-Leader"]]*/
-
 ];
 
 life_dynperms = []; //Dynamic perms, loaded by database
