@@ -41,7 +41,7 @@ if(_ctrl == "money") then
 }
 	else
 {
-	if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "Das Fahrzeug ist entweder voll oder kann nicht so viel tragen."};
+	if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "The vehicle is either full or can not carry as much."};
 
 	if(!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "The vehicle is either full or can not carry as much.";};
 	_index = [_ctrl,_inv] call fnc_index;

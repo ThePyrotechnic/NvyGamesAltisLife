@@ -34,7 +34,7 @@ foreach playableUnits;
 
 if(_costful_impound) then
 {
-	hint "You haul from a vehicle that belongs to you or any other police officer. This cost $ 500!";
+	hint "You are impounding a vehicle that belongs to you or a fellow police officer. This costs $ 500!";
 	
 	sleep 1.5;
 	
@@ -54,7 +54,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	
 	if(!_costful_impound) then
 	{
-		[[0,format["%1, your %2 being seized by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,format["%1, your %2 is being impounded by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	};
 	
 	life_action_in_use = true;
@@ -81,7 +81,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	};
 	5 cutText ["","PLAIN"];
 	
-	if(player distance _vehicle > 10) exitWith {hint "Seizures stopped."; life_action_in_use = false;};
+	if(player distance _vehicle > 10) exitWith {hint "Impounding stopped."; life_action_in_use = false;};
 	if(!alive player) exitWith {life_action_in_use = false;};
 	//_time = _vehicle getVariable "time";
 	//if(isNil {_time}) exitWith {deleteVehicle _vehicle; hint "This vehicle was hacked in"};
@@ -109,7 +109,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		}
 		else
 		{
-			hint format["You have a %1 confiscated.\n\nYou have this $%2 get!",_type,_price];
+			hint format["You have impounded a %1.\n\nYou recieve $%2!",_type,_price];
 			[[0,format["%1 the vehicle %2 confiscated (vehicle: %3)",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 			
 			life_atmcash = life_atmcash + _price;
@@ -117,7 +117,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	}
 		else
 	{
-		hint "Seizures stopped.";
+		hint "Impounding stopped.";
 	};
 };
 life_action_in_use = false;
