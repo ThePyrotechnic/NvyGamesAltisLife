@@ -285,7 +285,7 @@ if(_veh == "serv_truck") then
 {
 	_name = getText(configFile >> "CfgVehicles" >> _veh >> "displayName");
 };
-hint format["You have a %1 for $%2 bought.",_name,[_price] call life_fnc_numberText];
+hint format["You have bought a %1 for $%2.",_name,[_price] call life_fnc_numberText];
 _vehicle = _veh createVehicle _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 if(_veh == "B_MRAP_01_hmg_F") then
