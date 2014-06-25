@@ -28,31 +28,25 @@ if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems 
 if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
 if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
 	
-if(primaryWeapon player != "") then
+if(count (primaryWeaponMagazine player) > 0) then
 {
-	player selectWeapon (primaryWeapon player);
-	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,currentMagazine player];
-	};
+		_magazines set[count _magazines,_x];
+	} foreach (primaryWeaponMagazine player);
 };
 		
-if(secondaryWeapon player != "") then
+if(count (secondaryWeaponMagazine player) > 0) then
 {
-	player selectWeapon (secondaryWeapon player);
-	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,currentMagazine player];
-	};
+		_magazines set[count _magazines,_x];
+	} foreach (secondaryWeaponMagazine player);
 };
 		
-if(handgunWeapon player != "") then
+if(count (handgunMagazine player) > 0) then
 {
-	player selectWeapon (handgunWeapon player);
-	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,currentMagazine player];
-	};
+		_magazines set[count _magazines,_x];
+	} foreach (handgunMagazine player);
 };
 player selectWeapon (primaryWeapon player);
 
