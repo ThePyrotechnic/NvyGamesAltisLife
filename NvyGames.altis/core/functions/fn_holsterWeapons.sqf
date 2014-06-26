@@ -33,7 +33,6 @@ if(_holster) then
 	//Set final vars
 	life_n_holstered = true;
 	
-<<<<<<< HEAD
 		A_mags = [];
 		B_mags = [];
 		_magazinesAmmoFull = magazinesAmmoFull _unit;
@@ -61,9 +60,7 @@ if(_holster) then
 		
 		sleep 0.5;
 		life_n_holstered = true;
-=======
 	hintSilent "Your Items are not going away! Shift + H to use to get them out again!";
->>>>>>> parent of 3fc0030... Fixed fishing (#61), sync on death (#50) and holstering revamped (#47). See files for misc.
 }
 else
 {

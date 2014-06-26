@@ -52,9 +52,7 @@ if("Laserdesignator" in assignedItems player) then
 
 player selectWeapon _curWep;
 
-<<<<<<< HEAD
 cop_gear = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems];
-=======
 if(life_n_holstered) then
 {
 	//load from holstered instead
@@ -65,4 +63,3 @@ else
 	cop_gear = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher];
 };
 
->>>>>>> parent of 3fc0030... Fixed fishing (#61), sync on death (#50) and holstering revamped (#47). See files for misc.
