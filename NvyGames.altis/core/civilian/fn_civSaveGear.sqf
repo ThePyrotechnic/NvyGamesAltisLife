@@ -52,9 +52,7 @@ player selectWeapon (primaryWeapon player);
 
 if(isNil "_handgunItems") then {_handgunItems = ["","",""];};
 
-<<<<<<< HEAD
 civ_gear = [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
-=======
 //using civ format for compatibility issues
 //uniform,backpack,goggles,headgear,assigneditems,uitems,bitems, |vest,primary,launcher,handgun,magazines,primitems,secitems,handgunitems,vitems
 //[_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
