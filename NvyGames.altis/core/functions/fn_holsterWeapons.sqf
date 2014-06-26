@@ -1,28 +1,39 @@
-//Holsters the unit's weapons.
-//Michael Manis (___Pyro___)
-//-----------------------------------------------------------------------------------------------
-private ["_unit","_holstered"];
+/*
 
-//_id = _this select 2;
-_unit = player;
-_holstered = _this select 0;
+	f [ BOOL holster]
 
-if(_holstered && life_n_holstered) exitWith {hint "Already Holstered/Unholstered?";};
-if  (player getVariable "restrained") exitWith {hint "You are restrained!";};
-if (vehicle player != player) exitWith {hint "You are in a car!";};
+*/
 
-if (_holstered) then
+private["_holster","_primary","_launcher","_handgun","_magazines","_primitems","_secitems","_handgunitems"];
+
+_holster = _this select 0;
+
+if(_holster && life_n_holstered) exitWith {systemChat "Holster: Status match!";}; //status match
+
+if(_holster) then
 {
-		[1,true] call life_fnc_sessionHandle;
-		if (currentWeapon player == "") exitWith {hint "No weapons!";};
-		A_weapon = primaryWeapon _unit;
-		B_weapon = handgunWeapon _unit;
-		
-		A_weaponAttach = primaryWeaponItems _unit;
-		B_weaponAttach = secondaryWeaponItems _unit;
-		
-		//_unit removeAction _id;
+	systemChat "You pack away your weapons.";
+
+	//Call holster save fnc
+	[] call life_fnc_holsterSaveGear;
 	
+	//Clear everything
+	RemoveAllWeapons player;
+	{player removeMagazine _x;} foreach (magazines player);
+	//removeUniform player;
+	//removeVest player;
+	//removeBackpack player;
+	//removeGoggles player;
+	//removeHeadGear player;
+	{
+		player unassignItem _x;
+		player removeItem _x;
+	} foreach (assignedItems player);
+	
+	//Set final vars
+	life_n_holstered = true;
+	
+<<<<<<< HEAD
 		A_mags = [];
 		B_mags = [];
 		_magazinesAmmoFull = magazinesAmmoFull _unit;
@@ -50,32 +61,17 @@ if (_holstered) then
 		
 		sleep 0.5;
 		life_n_holstered = true;
+=======
+	hintSilent "Your Items are not going away! Shift + H to use to get them out again!";
+>>>>>>> parent of 3fc0030... Fixed fishing (#61), sync on death (#50) and holstering revamped (#47). See files for misc.
 }
 else
 {
-	for "_i" from 0 to ((count A_mags)) do
-	{
-		_unit addMagazine (A_mags select _i);
-	};
-	for "_i" from 0 to ((count B_mags)-1) do
-	{
-		_unit addMagazine (B_mags select _i);
-	};
-		
-	_unit addWeapon A_weapon;
-	_unit setAmmo [primaryWeapon _unit, A_count];
-		
-	_unit addWeapon B_weapon;
-	_unit setAmmo [handgunWeapon _unit, B_count];
-		
-	for "_i" from 0 to ((count A_weaponAttach)-1) do
-	{
-		_unit addPrimaryWeaponItem (A_weaponAttach select _i);
-	};
-	for "_i" from 0 to ((count B_weaponAttach)-1) do
-	{
-		_unit addPrimaryWeaponItem (B_weaponAttach select _i);
-	};
-		
+	if(isNil("life_n_holster_data")) exitWith {};
+	if( count life_n_holster_data < 1) exitWith {}; 
+	
+	systemChat "You pack up your weapons again.";
 	life_n_holstered = false;
+	
+	[] call life_fnc_holsterLoadGear;
 };

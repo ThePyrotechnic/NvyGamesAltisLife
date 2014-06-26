@@ -52,4 +52,79 @@ player selectWeapon (primaryWeapon player);
 
 if(isNil "_handgunItems") then {_handgunItems = ["","",""];};
 
+<<<<<<< HEAD
 civ_gear = [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
+=======
+//using civ format for compatibility issues
+//uniform,backpack,goggles,headgear,assigneditems,uitems,bitems, |vest,primary,launcher,handgun,magazines,primitems,secitems,handgunitems,vitems
+//[_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
+
+if(life_n_holstered) then
+{
+	//Translate holster gear to civ gear
+	//_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher
+	_primary = life_n_holster_data select 0;
+	_handgun = life_n_holster_data select 1;
+	_magazines = life_n_holster_data select 2;
+	_uniform = life_n_holster_data select 3;
+	_vest = life_n_holster_data select 4;
+	_backpack = life_n_holster_data select 5;
+	_items = life_n_holster_data select 6;
+	_primitems = life_n_holster_data select 7;
+	_secitems = life_n_holster_data select 8;
+	_handgunItems = life_n_holster_data select 9;
+	_uitems = life_n_holster_data select 10;
+	_vitems = life_n_holster_data select 11;
+	_bItems = life_n_holster_data select 12;
+	_launcher = life_n_holster_data select 13;
+};
+
+civ_gear = [_uniform,_backpack,_goggles,_headgear,_items,_uitems,_bItems,_vest,_primary,_launcher,_handgun,_magazines,_primitems,_secitems,_handgunItems,_vitems];
+
+
+/*
+	File: fn_civFetchGear.sqf
+	Author: Bryan "Tonic" Boardwine
+	
+	Description:
+	Fetches specific key items from the civilian for a persistent state.
+*/
+/*private["_ret","_uItems","_bItems"];
+_ret = [];
+
+_ret set[count _ret,uniform player];
+_ret set[count _ret,backpack player];
+_ret set[count _ret,goggles player];
+_ret set[count _ret,headgear player];
+_ret set[count _ret,assignedItems player];
+
+_uItems = [];
+_bItems = [];
+
+if(uniform player != "") then
+{
+	{
+		_info = [_x] call life_fnc_fetchCfgDetails;
+		if((_info select 4) in [4096,131072]) then
+		{
+			_uItems set[count _uItems,_x];
+		};
+	} foreach (uniformItems player);
+};
+
+if(backpack player != "") then
+{
+	{
+		_info = [_x] call life_fnc_fetchCfgDetails;
+		if((_info select 4) in [4096,131072]) then
+		{
+			_uItems set[count _uItems,_x];
+		};
+	} foreach (backpackItems player);
+};
+
+_ret set[count _ret,_uItems];
+_ret set[count _ret,_bItems];
+
+civ_gear = _ret;*/
+>>>>>>> parent of 3fc0030... Fixed fishing (#61), sync on death (#50) and holstering revamped (#47). See files for misc.
