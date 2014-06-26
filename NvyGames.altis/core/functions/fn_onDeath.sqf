@@ -5,7 +5,7 @@ Author: Bryan "Tonic" Boardwine
 Description:
 Does whatever it needs to when a player dies.
 */
-private["_unit","_killer","_weapons","_handle"];
+private["_unit","_killer","_weapons","_handle","_nearcash"];
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _source = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
