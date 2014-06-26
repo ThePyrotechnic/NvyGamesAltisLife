@@ -125,4 +125,3 @@ _ret set[count _ret,_uItems];
 _ret set[count _ret,_bItems];
 
 civ_gear = _ret;*/
->>>>>>> parent of 3fc0030... Fixed fishing (#61), sync on death (#50) and holstering revamped (#47). See files for misc.
