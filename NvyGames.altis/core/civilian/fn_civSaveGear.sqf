@@ -1,11 +1,15 @@
 /*
-	File: fn_civFetchGear.sqf
+	File: fn_fetchGear.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
-	Fetches specific key items from the civilian for a persistent state.
+	Fetches the players current gear and returns it in the correct formatted array.
+
+	Using the FeatchGear of cops
+	Because tonics balance is crap
 */
 private["_primary,_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_headgear","_goggles"];
+
 _primitems = [];
 _secitems = [];
 _handgunitems = [];
@@ -27,32 +31,37 @@ _bitems = [];
 if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
 if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
 if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
-	
-if(count (primaryWeaponMagazine player) > 0) then
+
+if(primaryWeapon player != "") then
 {
+	player selectWeapon (primaryWeapon player);
+	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,_x];
-	} foreach (primaryWeaponMagazine player);
+		_magazines set[count _magazines,currentMagazine player];
+	};
 };
-		
-if(count (secondaryWeaponMagazine player) > 0) then
+
+if(secondaryWeapon player != "") then
 {
+	player selectWeapon (secondaryWeapon player);
+	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,_x];
-	} foreach (secondaryWeaponMagazine player);
+		_magazines set[count _magazines,currentMagazine player];
+	};
 };
-		
-if(count (handgunMagazine player) > 0) then
+
+if(handgunWeapon player != "") then
 {
+	player selectWeapon (handgunWeapon player);
+	if(currentMagazine player != "") then
 	{
-		_magazines set[count _magazines,_x];
-	} foreach (handgunMagazine player);
+		_magazines set[count _magazines,currentMagazine player];
+	};
 };
 player selectWeapon (primaryWeapon player);
 
 if(isNil "_handgunItems") then {_handgunItems = ["","",""];};
 
-civ_gear = [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
 //using civ format for compatibility issues
 //uniform,backpack,goggles,headgear,assigneditems,uitems,bitems, |vest,primary,launcher,handgun,magazines,primitems,secitems,handgunitems,vitems
 //[_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
@@ -83,7 +92,7 @@ civ_gear = [_uniform,_backpack,_goggles,_headgear,_items,_uitems,_bItems,_vest,_
 /*
 	File: fn_civFetchGear.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Fetches specific key items from the civilian for a persistent state.
 */
