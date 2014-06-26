@@ -91,7 +91,6 @@ setPlayerRespawnTime life_respawn_timer; //Set our default respawn time.
 
 //FIXES ##27
 onPlayerDisconnected { [_id, _name, _uid] call compile preProcessFileLineNumbers "core\functions\fn_onPlayerDisconnect.sqf" };
-player addEventHandler ["InventoryOpened", { [_unit, _container] execVM "core\functions\fn_onInventoryOpened.sqf" }];
 // Init automatically saving gear
 [] spawn life_fnc_autoSave;
 //##104 update clothing timer
