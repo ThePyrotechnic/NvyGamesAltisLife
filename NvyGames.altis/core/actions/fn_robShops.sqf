@@ -49,7 +49,7 @@ if(_rip) then
 {
 	while{true} do
 	{
-		if(_coolDown) exitWith {hint "You must wait "}
+		if(_coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
 			sleep 0.85;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
