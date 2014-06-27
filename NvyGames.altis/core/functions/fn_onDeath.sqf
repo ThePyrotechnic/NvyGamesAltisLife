@@ -74,7 +74,7 @@ waitUntil {scriptDone _handle};
 life_holster_magazine = [];
 life_holster_items = [];
 life_holster_weapon = "";
-life_holstered = !life_holstered;
+life_n_holstered = !life_n_holstered;
 life_carryWeight = 0;
 life_thirst = 100;
 life_hunger = 100;
