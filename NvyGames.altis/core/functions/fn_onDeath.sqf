@@ -71,18 +71,20 @@ if(playerSide == civilian) then
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
+
 _cash = position player nearObjects ["Land_Money_F",5];
 _nearCash = _cash select 0;
 deleteVehicle _nearCash;
 
 life_holster_magazine = [];
 life_holster_items = [];
-life_holster_weapon = nil;
+life_holster_weapon = "";
 life_holstered = !life_holstered;
 life_carryWeight = 0;
 life_thirst = 100;
 life_hunger = 100;
 life_use_atm = true;
 life_cash = 0;
+life_isSuicide = false;
 
 [1,true] call life_fnc_sessionHandle;

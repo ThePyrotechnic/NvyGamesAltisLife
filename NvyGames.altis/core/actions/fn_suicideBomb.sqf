@@ -6,7 +6,6 @@ if(vest player != "V_HarnessOGL_gry") exitWith {};
 
 sleep 2;
 life_isSuicide = true;
-if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
 
 removeVest player;
 _boom = "Bo_Mk82" createVehicle [0,0,9999];
