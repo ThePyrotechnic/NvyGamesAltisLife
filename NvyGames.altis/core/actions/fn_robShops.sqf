@@ -6,7 +6,7 @@ Description:
 Executes the rob shob action!
 Idea developed by PEpwnzya v1.0
 */
-private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos"];
+private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos","_coolDown"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
@@ -49,6 +49,7 @@ if(_rip) then
 {
 	while{true} do
 	{
+		if(_coolDown) exitWith {hint "You must wait "}
 			sleep 0.85;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
@@ -76,7 +77,11 @@ if(_rip) then
 	if!(alive _robber) exitWith {};
 	[[1,format["NEWS: %1 was just robbed for a total of $%2", _name, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
 };
-
-sleep 300;
+[] spawn
+{
+	_coolDown = true;
+	sleep 300;
+	_coolDown = false;
+};
 _action = _shop addAction["Rob the Gas Station",life_fnc_robShops, _name];
 _shop switchMove "";
