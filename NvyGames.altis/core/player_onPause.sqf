@@ -1,5 +1,5 @@
 if (isDedicated) exitWith {};
-private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_handle"];
+private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax",];
 		disableSerialization;
 		waitUntil {
 			_display = findDisplay 49;
@@ -34,8 +34,7 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_handle"];
 					
 					if (_timeOut == 5) then //When we think the layer is committed to logging out, sync their data automatically.
 					{
-						_handle = [1,true] spawn life_fnc_sessionHandle;
-						waitUntil {scriptDone _handle};
+						[1,true] spawn life_fnc_sessionHandle;
 					};
 				};
 				
