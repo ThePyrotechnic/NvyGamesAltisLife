@@ -36,6 +36,8 @@ life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKI 'Less
 //BD MK2
 life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKII 'Lethal Solution'</t>",life_fnc_fireBirdDown,"BDMK2",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
 
+life_actions = life_actions + [player addAction["Initiate Suicide Bomb",life_fnc_suicideBomb,"",0,false,false,"",
+        'vest player == "V_HarnessOGL_gry" && alive player && playerSide != west && !life_istazed && !life_isSuicide && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
 //##108
 /*life_actions = life_actions + [player addAction["<t color='#00FF00'>Hände hoch</t>",life_fnc_putHandsUp,true,1,false,true,"",' playerSide == civilian && !life_hands_up ']];*/
 /*life_actions = life_actions + [player addAction["<t color='#00FF00'>Hände runter</t>",life_fnc_putHandsUp,false,1,false,true,"",' playerSide == civilian && life_hands_up ']];*/
