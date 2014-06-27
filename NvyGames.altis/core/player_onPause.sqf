@@ -32,7 +32,7 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_handle"];
 					cutText [format ["You can abort/respawn in: %1",(_timeMax - _timeOut)], "PLAIN DOWN"];
 					_timeOut = _timeOut + 1;
 					
-					if (_timeOut == 10) then //When we think the layer is committed to logging out, sync their data automatically.
+					if (_timeOut == 5) then //When we think the layer is committed to logging out, sync their data automatically.
 					{
 						_handle = [1,true] spawn life_fnc_sessionHandle;
 						waitUntil {scriptDone _handle};
