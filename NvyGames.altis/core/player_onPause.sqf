@@ -32,12 +32,6 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax"];
 					_btnRespawn ctrlEnable false;
 					cutText [format ["You can abort/respawn in: %1",(_timeMax - _timeOut)], "PLAIN DOWN"];
 					_timeOut = _timeOut + 1;
-					
-					if (_timeOut == 10) then //When we think the player is committed to logging out, sync their data automatically.
- +					{
- +						_handle = [1,true] call (missionNamespace getVariable "life_fnc_sessionHandle");
- +						waitUntil {scriptDone _handle};
- +					};
 				};
 				
 				// case (player getVariable["combattimeout", 0] >= time) : { // _btnAbort ctrlEnable false; // cutText ["Cannot Abort while in combat!", "PLAIN DOWN"]; // };
