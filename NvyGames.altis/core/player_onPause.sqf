@@ -1,5 +1,5 @@
 if (isDedicated) exitWith {};
-private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax"];
+private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_handle"];
 		disableSerialization;
 		waitUntil {
 			_display = findDisplay 49;
