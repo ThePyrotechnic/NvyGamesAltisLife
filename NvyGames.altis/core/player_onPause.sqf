@@ -1,5 +1,6 @@
 if (isDedicated) exitWith {};
 private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax"];
+
 		disableSerialization;
 		waitUntil {
 			_display = findDisplay 49;
@@ -32,10 +33,11 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax"];
 					cutText [format ["You can abort/respawn in: %1",(_timeMax - _timeOut)], "PLAIN DOWN"];
 					_timeOut = _timeOut + 1;
 					
-					if (_timeOut == 10) then //When we think the layer is committed to logging out, sync their data automatically.
-					{
-						[1,true] call life_fnc_sessionHandle;
-					};
+					if (_timeOut == 10) then //When we think the player is committed to logging out, sync their data automatically.
+ +					{
+ +						_handle = [1,true] call (missionNamespace getVariable "life_fnc_sessionHandle");
+ +						waitUntil {scriptDone _handle};
+ +					};
 				};
 				
 				// case (player getVariable["combattimeout", 0] >= time) : { // _btnAbort ctrlEnable false; // cutText ["Cannot Abort while in combat!", "PLAIN DOWN"]; // };
