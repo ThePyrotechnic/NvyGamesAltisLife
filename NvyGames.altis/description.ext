@@ -258,8 +258,8 @@ class CfgDebriefing
 	class NotWhitelisted
 	{
 		title = "Mission Failed";
-		subtitle = "Du musst whitlisted sein um diesen Slot benutzen zu können.";
-		description = "Du kannst diesen Slot nicht benutzen da du nicht die entsprechenden Rechte besitzt. Probiere einen Anderen.";
+		subtitle = "You have to be whitelisted to play this slot.";
+		description = "You can not use this slot because you are not whitelisted. Try another slot.";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
@@ -268,8 +268,8 @@ class CfgDebriefing
 	class Blacklisted
 	{
 		title = "Mission Failed";
-		subtitle = "Du bist blacklisted von den Polizisten.";
-		description = "Du bist nicht länger Polizist, durch deine letzten Taten hat der Admin dich suspendiert oder gefeuert!";
+		subtitle = "You are blacklisted in the police force.";
+		description = "You are no longer a policeman, through your past deeds the Admin has you suspended or fired!";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
