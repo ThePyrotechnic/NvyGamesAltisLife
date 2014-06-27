@@ -5,9 +5,10 @@
 	Description:
 	Impounds the vehicle
 */
-private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_vehownerid","_costful_impound"];
+private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_vehownerid","_costful_impound","_seize"];
 _vehicle = cursorTarget;
-
+_seize = false;
+if (typeOf _vehicle in ['O_MRAP_02_F', 'B_G_Offroad_01_armed_F']) then {_seize = true};
 //ADD ##16
 _vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
@@ -54,12 +55,21 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	
 	if(!_costful_impound) then
 	{
-		[[0,format["%1, your %2 is being impounded by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		if (_seize) then
+		{
+			[[0,format["%1, your %2 is being seized by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+			_upp = "Seizing Vehicle";
+		}
+		else
+		{
+			[[0,format["%1, your %2 is being impounded by the police.",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+			_upp = "Impounding Vehicle";
+		};
 	};
 	
 	life_action_in_use = true;
 	
-	_upp = "Impounding Vehicle";
+	
 	//Setup our progress bar.
 	disableSerialization;
 	5 cutRsc ["life_progress","PLAIN"];
@@ -97,9 +107,16 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 			case (_vehicle isKindOf "Air"): {_price = life_impound_air;};
 		};
 		
-		life_impound_inuse = true;
-		[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
-		waitUntil {!life_impound_inuse};		
+		if (_seize) then
+		{
+			deleteVehicle _vehicle;
+		}
+		else
+		{
+			life_impound_inuse = true;
+			[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
+			waitUntil {!life_impound_inuse};		
+		};
 		
 		if(_costful_impound) then
 		{
