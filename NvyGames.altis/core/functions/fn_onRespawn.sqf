@@ -14,8 +14,8 @@ if(!isNull _corpse) then{deleteVehicle _corpse;};
 
 hideBody _corpse;
 deleteVehicle _corpse;
-//_handle = [] spawn life_fnc_setupActions;
-//waitUntil {scriptDone _handle};
+_handle = [] spawn life_fnc_setupActions;
+waitUntil {scriptDone _handle};
 
 switch(playerSide) do
 {
