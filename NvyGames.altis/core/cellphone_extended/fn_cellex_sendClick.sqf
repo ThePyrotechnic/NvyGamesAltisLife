@@ -24,10 +24,8 @@ _dstdata = lbData[1500,_index];
 
 if(_msgtype == -1) exitWith {};
 
-diag_log lastSender;
-if(_type == 1 && !(lastSender == "")) then
+if(_type == 1 && lastSender != objNull) then
 {
-	diag_log "We're in, cap";
 	[[_message,name player,0],"clientMessage",lastSender,false] spawn life_fnc_MP;
 }
 else
@@ -65,7 +63,7 @@ switch(_msgtype) do
 	
 		if(_type == 0) then //Msgtype 0
 		{
-			[[_message,name player,0,_dst],"clientMessage",_dst,false] spawn life_fnc_MP;
+			[[_message,name player,0,player],"clientMessage",_dst,false] spawn life_fnc_MP;
 		}
 		else //Msgtype 3
 		{
