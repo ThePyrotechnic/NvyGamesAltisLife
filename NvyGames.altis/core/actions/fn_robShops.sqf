@@ -31,7 +31,7 @@ _chance = random(100);
 if(_chance >= 85) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
-	["ALARM! A gas station is being robbed!",1],"clientMessage",true,false] spawn life_fnc_MP;
+	[["ALARM! A gas station is being robbed!",1],"clientMessage",true,false] spawn life_fnc_MP;
 	_marker = createMarker [format["Marker%1",_shop], _pos];
 	_marker setMarkerColor "ColorRed";
 	_marker setMarkerText "Robbery in progress!";
