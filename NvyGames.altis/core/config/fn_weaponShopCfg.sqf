@@ -283,6 +283,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "1"): {"You are not a Rebel Private. Head to our website to sign up! www.nvygames.com"}; 
 			if(life_faction == "rebel" && life_rank == "1") then //life faction rebel level 1
 			default //idk what this is
 			{
@@ -313,6 +314,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "2"): {"You are not a Rebel Private 1st Class."}; 
 			if(life_faction == "rebel" && life_rank == "2") then //life faction rebel level 2
 			default //idk what this is
 			{
@@ -346,6 +348,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "3"): {"You are not a Rebel Specialist."};
 			if(life_faction == "rebel" && life_rank == "3") then //life faction rebel level 3
 			default //idk what this is
 			{
@@ -355,6 +358,7 @@ switch(_shop) do
 						["optic_ACO_grn",nil,2000], //green dot
 						["optic_Arco",nil,2000], //arco
 						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
 						["30Rnd_65x39_caseless_green",nil,3000], //6.5
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp 9
@@ -385,6 +389,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "4"): {"You are not a Rebel Corporal."};
 			if(life_faction == "rebel" && life_rank == "4") then //life faction rebel level 4
 			default //idk what this is
 			{
@@ -395,11 +400,13 @@ switch(_shop) do
 						["optic_ACO_grn",nil,2000], //green dot
 						["optic_Arco",nil,2000], //arco
 						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
 						["30Rnd_65x39_caseless_green",nil,3000], //6.5
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp
 						["muzzle_snds_H",nil,4000], //supp 6.5
 						["hgun_PDW2000_F",nil,10000], //pdw
+						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
 						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
 						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
@@ -424,6 +431,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "5"): {"You are not a Rebel Sergeant."};
 			if(life_faction == "rebel" && life_rank == "5") then //life faction rebel level 5
 			default //idk what this is
 			{
@@ -434,11 +442,13 @@ switch(_shop) do
 						["optic_ACO_grn",nil,2000], //green dot
 						["optic_Arco",nil,2000], //arco
 						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
 						["30Rnd_65x39_caseless_green",nil,3000], //6.5
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp
 						["muzzle_snds_H",nil,4000], //supp 6.5
 						["hgun_PDW2000_F",nil,10000], //pdw
+						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
 						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
 						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
@@ -459,6 +469,202 @@ switch(_shop) do
 	};
 
 //---------------------------------Rebels
+
+//---------------------------------Indy
+	case "indy_private": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "1"): {"You are not a Independent Private. Head to our website to sign up! www.nvygames.com"}; 
+			if(life_faction == "indy" && life_rank == "1") then //life faction indy level 1
+			default //idk what this is
+			{
+				["Private Equipment", //add action name? 
+					[
+						["hgun_ACPC2_F",nil,5000], //acp 45
+						["muzzle_snds_acp",nil,4000], //supp 45
+						["9Rnd_45ACP_Mag",nil,1000], //45cal9rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+	
+	case "indy_privatefirstclass": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "2"): {"You are not a Independent Private 1st Class."}; 
+			if(life_faction == "indy" && life_rank == "2") then //life faction indy level 2
+			default //idk what this is
+			{
+				["Private 1st Class Equipment", //add action name? 
+					[
+						["SMG_01_F",nil,10000], //vermin
+						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
+						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
+						["optic_Holosight_smg",nil,3000], //holo smg sight
+						["hgun_ACPC2_F",nil,5000], //acp 45
+						["muzzle_snds_acp",nil,4000], //supp 45
+						["9Rnd_45ACP_Mag",nil,1000], //45cal9rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+	
+	case "indy_specialist": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "3"): {"You are not a Independent Specialist."}; 
+			if(life_faction == "indy" && life_rank == "3") then //life faction indy level 3
+			default //idk what this is
+			{
+				["Specialist Equipment", //add action name? 
+					[
+						["arifle_TRG20_F",nil,15000], //trg 20
+						["muzzle_snds_M",nil,10000], //556 supp
+						["30Rnd_556x45_Stanag",nil,3000], // 556 stanag
+						["30Rnd_556x45_Stanag_Tracer_Yellow",nil,3000], //556 stanag tracer yellow
+						["optic_Aco",nil,2000], //red dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
+						["SMG_01_F",nil,10000], //vermin
+						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
+						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
+						["optic_Holosight_smg",nil,3000], //holo smg sight
+						["hgun_ACPC2_F",nil,5000], //acp 45
+						["muzzle_snds_acp",nil,4000], //supp 45
+						["9Rnd_45ACP_Mag",nil,1000], //45cal9rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+	
+	case "indy_corporal": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "4"): {"You are not a Independent Corporal."}; 
+			if(life_faction == "indy" && life_rank == "4") then //life faction indy level 4
+			default //idk what this is
+			{
+				["Corporal Equipment", //add action name? 
+					[
+						["arifle_TRG21_F",nil,20000], //trg 21
+						["arifle_TRG20_F",nil,15000], //trg 20
+						["muzzle_snds_M",nil,10000], //556 supp
+						["30Rnd_556x45_Stanag",nil,3000], // 556 stanag
+						["30Rnd_556x45_Stanag_Tracer_Yellow",nil,3000], //556 stanag tracer yellow
+						["optic_Aco",nil,2000], //red dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
+						["SMG_01_F",nil,10000], //vermin
+						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
+						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
+						["optic_Holosight_smg",nil,3000], //holo smg sight
+						["hgun_ACPC2_F",nil,5000], //acp 45
+						["muzzle_snds_acp",nil,4000], //supp 45
+						["9Rnd_45ACP_Mag",nil,1000], //45cal9rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+	
+	case "indy_sergeant": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			case (life_rank != "5"): {"You are not a Independent Sergeant."}; 
+			if(life_faction == "indy" && life_rank == "5") then //life faction indy level 5
+			default //idk what this is
+			{
+				["Sergeant Equipment", //add action name? 
+					[
+						["arifle_Mk20_GL_F",nil,25000], //mk20gl
+						["1Rnd_SmokeGreen_Grenade_shell",nil,5000], //smoke for gl
+						["arifle_TRG21_F",nil,20000], //trg 21
+						["arifle_TRG20_F",nil,15000], //trg 20
+						["muzzle_snds_M",nil,10000], //556 supp
+						["30Rnd_556x45_Stanag",nil,3000], // 556 stanag
+						["30Rnd_556x45_Stanag_Tracer_Green",nil,3000], //556 stanag tracer yellow
+						["optic_Aco",nil,2000], //red dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["optic_MRCO",nil,2000], //mrco
+						["SMG_01_F",nil,10000], //vermin
+						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
+						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
+						["optic_Holosight_smg",nil,3000], //holo smg sight
+						["hgun_ACPC2_F",nil,5000], //acp 45
+						["muzzle_snds_acp",nil,4000], //supp 45
+						["9Rnd_45ACP_Mag",nil,1000], //45cal9rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+//---------------------------------Indy
 
 
 	case "gun":

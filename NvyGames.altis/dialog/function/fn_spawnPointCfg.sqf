@@ -69,7 +69,7 @@ switch (_side) do
 		if(life_faction == "indy") then
 		{
 			_spawns = _spawns + [
-				
+				["indy_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
 			];
 		};
 	};
