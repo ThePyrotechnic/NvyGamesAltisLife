@@ -12,6 +12,7 @@ _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alrig
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
 _pos = GetPos _shop;
+_coolDown = false;
 if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
 if(_robber distance _shop > 10) exitWith { hint "You need to be within 10m of the cashier to rob him!" };
 
@@ -27,16 +28,12 @@ _rip = true;
 _kassa = 3000 + round(random 12000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
-_chance = random(100);
-if(_chance >= 85) then 
-{ 
-	hint "The cashier hit the silent alarm, police has been alerted!"; 
-	["ALARM! A gas station is being robbed!",1],"clientMessage",true,false] spawn life_fnc_MP;
-	_marker = createMarker [format["Marker%1",_shop], _pos];
-	_marker setMarkerColor "ColorRed";
-	_marker setMarkerText "Robbery in progress!";
-	_marker setMarkerType "mil_warning";
-};
+hint "The cashier hit the silent alarm, police has been alerted!"; 
+[["ALARM! A gas station is being robbed!",1],"clientMessage",true,false] spawn life_fnc_MP;
+_marker = createMarker [format["Marker%1",_shop], _pos];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "Robbery in progress!";
+_marker setMarkerType "mil_warning";
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -52,7 +49,7 @@ if(_rip) then
 	while{true} do
 	{
 		if(_coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
-			sleep 0.85;
+			sleep 3;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["Robbery in Progress, stay close (10m) (%1%2)...",round(_cP * 100),"%"];
@@ -69,7 +66,7 @@ if(_rip) then
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash + _kassa;
 	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-	[[format["A gas station was just robbed by %1 for a total of $%2", name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
+	[[format["A gas station was just robbed by %1 for a total of $%2", name _robber, [_kassa] call life_fnc_numberText],1],"clientMessage",true,false] spawn life_fnc_MP;
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	deletemarker _marker;
 
@@ -86,5 +83,5 @@ if(_rip) then
 	sleep 300;
 	_coolDown = false;
 };
-_action = _shop addAction["Rob the Gas Station",life_fnc_robShops, _name];
+_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 _shop switchMove "";
