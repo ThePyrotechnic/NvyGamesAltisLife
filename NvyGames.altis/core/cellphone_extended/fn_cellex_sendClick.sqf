@@ -4,16 +4,16 @@
 
 */
 
-private["_index", "_message","_asadmin","_msgtype","_dstdata","_dst"];
+private["_index", "_message","_type","_msgtype","_dstdata","_dst"];
 
-_asadmin = _this select 0;
+_type = _this select 0;
 
 _index = lbCurSel 1500;
 _message = ctrlText 1400;
 
 if(_index == -1) exitWith {};
 if(_message == "") exitWith {};
-if(_asadmin && ((call life_adminlevel) < 1)) exitWith {};
+if(_type == 2 && ((call life_adminlevel) < 1)) exitWith {};
 
 ctrlSetText [1400, ""];
 
@@ -24,6 +24,16 @@ _dstdata = lbData[1500,_index];
 
 if(_msgtype == -1) exitWith {};
 
+diag_log lastSender;
+if(_type == 1 && !(lastSender == "")) then
+{
+	diag_log "We're in, cap";
+	[[_message,name player,0],"clientMessage",lastSender,false] spawn life_fnc_MP;
+}
+else
+{
+	hint "No last sender!";
+};
 //Send message
 switch(_msgtype) do 
 {
@@ -53,9 +63,9 @@ switch(_msgtype) do
 		if(isNull _dst) exitWith {};
 		if(isNil "_dst") exitWith {};
 	
-		if(!_asadmin) then //Msgtype 0
+		if(_type == 0) then //Msgtype 0
 		{
-			[[_message,name player,0],"clientMessage",_dst,false] spawn life_fnc_MP;
+			[[_message,name player,0,_dst],"clientMessage",_dst,false] spawn life_fnc_MP;
 		}
 		else //Msgtype 3
 		{
