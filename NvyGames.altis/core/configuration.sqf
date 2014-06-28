@@ -93,7 +93,7 @@ life_impound_air = 25000;
 life_istazed = false;
 life_my_gang = ObjNull;
 life_isSuicide = false;
-lastSender = "";
+lastSender = objNull;
 
 life_vehicles = [];
 bank_robber = [];
