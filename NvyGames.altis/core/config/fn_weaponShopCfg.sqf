@@ -71,8 +71,11 @@ switch(_shop) do
 						["ItemMap",nil,50], //map
 						["ItemGPS",nil,200], //gps
 						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
+						["acc_flashlight",nil,1000], //flashlight
+				        ["FirstAidKit",nil,150], //fak
 						["NVGoggles",nil,2000] //nightvision goggles
 					]
 				];
@@ -103,8 +106,10 @@ switch(_shop) do
 						["ItemMap",nil,50], //map
 						["ItemGPS",nil,200], //gps
 						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
 						["NVGoggles",nil,2000] //nightvision goggles
 						//["30Rnd_65x39_caseless_mag_Tracer","65x39 Gummigeschoss",500], 5.56 tracers
 						//["30Rnd_45ACP_Mag_SMG_01_tracer_green",".45 Gummigeschoss",250], 45 acp tracers
@@ -139,11 +144,13 @@ switch(_shop) do
 						["ItemMap",nil,50], //map
 						["ItemGPS",nil,200], //gps
 						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
 						["NVGoggles",nil,2000], //nightvision goggles
 						["optic_Holosight",nil,1500],
 						["optic_Hamr",nil,2000],
+				        ["FirstAidKit",nil,150], //fak
 						["optic_MRCO",nil,3000]				
 					]
 				];
@@ -177,11 +184,13 @@ switch(_shop) do
 						["ItemMap",nil,50], //map
 						["ItemGPS",nil,200], //gps
 						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
 						["NVGoggles",nil,2000], //nightvision goggles
 						["optic_Holosight",nil,1500],
 						["optic_Hamr",nil,2000],
+				        ["FirstAidKit",nil,150], //fak
 						["optic_MRCO",nil,3000]					
 					]
 				];
@@ -205,14 +214,15 @@ switch(_shop) do
 						["7Rnd_408_Mag",nil,2000],
 						["optic_Arco",nil,4000],
 						["optic_SOS",nil,5000],
+				        ["FirstAidKit",nil,150], //fak
 						["optic_NVS",nil,6000]					
 					]
 				];
 			};
 		};
 	};
-	
-	case "rebel":
+//old rebel shop below, use for reference.	
+/*	case "rebel":
 	{
 		switch(true) do
 		{
@@ -266,7 +276,191 @@ switch(_shop) do
 			};
 		};
 	};
+*/
+//---------------------------------Rebels
+	case "rebel_private": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			if(life_faction == "rebel" && life_rank == "1") then //life faction rebel level 1
+			default //idk what this is
+			{
+				["Private Equipment", //add action name? 
+					[
+						["hgun_Rook40_F",nil,5000], //rook
+						["muzzle_snds_L",nil,4000], //supp
+						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
+						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
 	
+		case "rebel_privatefirstclass": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			if(life_faction == "rebel" && life_rank == "2") then //life faction rebel level 2
+			default //idk what this is
+			{
+				["Private 1st Class Equipment", //add action name? 
+					[
+						["hgun_PDW2000_F",nil,1000], //pdw
+						["optic_ACO_grn_smg",nil,1000], //smg aco green
+						["hgun_Rook40_F",nil,5000], //rook
+						["muzzle_snds_L",nil,4000], //supp
+						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
+						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+						
+					]
+				];
+			};
+		};
+	};
+	
+			case "rebel_specialist": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			if(life_faction == "rebel" && life_rank == "3") then //life faction rebel level 3
+			default //idk what this is
+			{
+				["Specialist Equipment", //add action name? 
+					[
+						["arifle_Katiba_C_F",nil,15000], //katiba carbine
+						["optic_ACO_grn",nil,2000], //green dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["30Rnd_65x39_caseless_green",nil,3000], //6.5
+						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
+						["muzzle_snds_L",nil,4000], //supp 9
+						["muzzle_snds_H",nil,4000], //supp 6.5
+						["hgun_PDW2000_F",nil,10000], //pdw
+						["optic_ACO_grn_smg",nil,1000], //smg aco green
+						["hgun_Rook40_F",nil,5000], //rook
+						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
+						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+	
+			case "rebel_corporal": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			if(life_faction == "rebel" && life_rank == "4") then //life faction rebel level 4
+			default //idk what this is
+			{
+				["Corporal Equipment", //add action name? 
+					[
+						["arifle_Katiba_F",nil,20000], //katiba
+						["arifle_Katiba_C_F",nil,15000], //katiba carbine
+						["optic_ACO_grn",nil,2000], //green dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["30Rnd_65x39_caseless_green",nil,3000], //6.5
+						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
+						["muzzle_snds_L",nil,4000], //supp
+						["muzzle_snds_H",nil,4000], //supp 6.5
+						["hgun_PDW2000_F",nil,10000], //pdw
+						["hgun_Rook40_F",nil,5000], //rook
+						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
+						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+
+			case "rebel_sergeant": //case name add to init
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
+			if(life_faction == "rebel" && life_rank == "5") then //life faction rebel level 5
+			default //idk what this is
+			{
+				["Sergeant Equipment", //add action name? 
+					[
+						["arifle_Katiba_F",nil,20000], //katiba
+						["arifle_Katiba_C_F",nil,15000], //katiba carbine
+						["optic_ACO_grn",nil,2000], //green dot
+						["optic_Arco",nil,2000], //arco
+						["optic_Hamr",nil,2000], //rco
+						["30Rnd_65x39_caseless_green",nil,3000], //6.5
+						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
+						["muzzle_snds_L",nil,4000], //supp
+						["muzzle_snds_H",nil,4000], //supp 6.5
+						["hgun_PDW2000_F",nil,10000], //pdw
+						["hgun_Rook40_F",nil,5000], //rook
+						["16Rnd_9x21_Mag",nil,1000], //9mm16rd
+						["30Rnd_9x21_Mag",nil,2000],	//9mm30rd
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+				        ["FirstAidKit",nil,150], //fak
+						["NVGoggles",nil,2000] //nightvision goggles
+					]
+				];
+			};
+		};
+	};
+
+//---------------------------------Rebels
+
+
 	case "gun":
 	{
 		switch(true) do
