@@ -57,7 +57,7 @@ class cellphone_extended {
 	    	h = 12 * GUI_GRID_H;
 	    	text="";
 	    };
-	    class bSend: RscButtonMenu
+		class bSend: RscButtonMenu
 		{
 			idc = 2401;
 			text = "Send"; //--- ToDo: Localize;
@@ -65,8 +65,19 @@ class cellphone_extended {
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			onButtonClick="[false] spawn life_fnc_cellex_sendClick;";
+			onButtonClick="[0] spawn life_fnc_cellex_sendClick;";
 			tooltip="Send Message";
+		};
+		class bSendLast: RscButtonMenu
+		{
+			idc = 2403;
+			text = "Reply Last";
+			x = 31.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 6 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+			onButtonClick="[1] spawn life_fnc_cellex_sendClick;";
+			tooltip="Reply to last message";
 		};
 		class bSendAdmin: RscButtonMenu
 		{
@@ -77,7 +88,7 @@ class cellphone_extended {
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 			colorText[] = {1,0,0,1};
-			onButtonClick="[true] spawn life_fnc_cellex_sendClick;";
+			onButtonClick="[2] spawn life_fnc_cellex_sendClick;";
 			tooltip="Send message as an admin. Only works for sending private messages. ";
 		};
 	};
