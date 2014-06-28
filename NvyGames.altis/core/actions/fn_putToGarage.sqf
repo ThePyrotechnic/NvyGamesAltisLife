@@ -48,13 +48,13 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		
 		//if( _i % 5 == 0) then
 		//{
-			hintSilent format["The tow truck comes ... Still about %1seconds\n\nStay near the vehicle", _sec];
+			hintSilent format["The tow truck is on its way and is still about %1seconds out\n\nStay near the vehicle", _sec];
 		//};
 	};
 	
 	if(!life_action_in_use) exitWith { hint parseText "<t color='#ff0000'>Vehicle will be towed ... canceled!</t>"; }; //canceled
 	
-	hint "The tow truck is the same as ...\n\nStay near the vehicle";
+	hint "The tow truck is loading the vehicle now ...\n\nStay near the vehicle";
 	
 	sleep 5;	
 	
