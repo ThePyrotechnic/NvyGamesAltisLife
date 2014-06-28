@@ -38,6 +38,7 @@ if(_costful_impound) then
 	hint "You are impounding a vehicle that belongs to you or a fellow police officer. This costs $ 500!";
 	
 	sleep 1.5;
+	_upp = "Impounding Vehicle";
 	
 	if(life_atmcash - 500 < 0) exitWith
 	{
