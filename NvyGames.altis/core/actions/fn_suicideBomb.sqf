@@ -6,11 +6,15 @@ if(vest player != "V_HarnessOGL_gry") exitWith {};
 
 sleep 2;
 life_isSuicide = true;
+sleep 3;
 
 removeVest player;
-_boom = "Bo_Mk82" createVehicle [0,0,9999];
+_boom = "M_PG_AT" createVehicle [0,0,9999];
+_boom1 = "M_PG_AT" createVehicle [0,0,9999];
 _boom setPos (getPos player);
+_boom1 setPos (getPos player);
 _boom setVelocity [100,0,0];
+_boom1 setVelocity [100,0,0];
 
 if(alive player) then {player setDamage 1;};
 
