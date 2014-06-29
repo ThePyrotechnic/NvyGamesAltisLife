@@ -112,6 +112,7 @@ class house_houseDialog
 			h = 1 * GUI_GRID_H;
 			tooltip = "Open Garage and pull out vehicle."; //--- ToDo: Localize;
 		};
+/* Give key removed to stop duping.
 		class bKeyDialog: RscButtonMenu
 		{
 			idc = 2405;
@@ -122,12 +123,13 @@ class house_houseDialog
 			h = 1 * GUI_GRID_H;
 			tooltip = "Give another player your house keys."; //--- ToDo: Localize;
 		};
+*/
 		class bVehicleHeliOpenGarage: RscButtonMenu
 		{
 			idc = 2406;
 			text = "Pull out Helicopter"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
-			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
+			y = 6 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 			tooltip = "Open heli garage."; //--- ToDo: Localize;

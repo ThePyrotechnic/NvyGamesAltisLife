@@ -60,7 +60,7 @@ class cellphone_extended {
 		class bSend: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Send"; //--- ToDo: Localize;
+			text = "Send";
 			x = 25.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
@@ -82,7 +82,7 @@ class cellphone_extended {
 		class bSendAdmin: RscButtonMenu
 		{
 			idc = 2402;
-			text = "Admin Msg"; //--- ToDo: Localize;
+			text = "Admin Msg";
 			x = 18.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
