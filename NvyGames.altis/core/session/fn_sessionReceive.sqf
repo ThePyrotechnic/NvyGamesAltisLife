@@ -123,6 +123,7 @@ switch (playerSide) do
 		life_player_perms = call compile format["%1", life_player_perms];
 		life_faction = (_session select 13);
 		life_rank = (_session select 14);
+		life_position = (_session select 15);
 		
 	};
 };
