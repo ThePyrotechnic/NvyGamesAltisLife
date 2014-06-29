@@ -121,6 +121,18 @@ switch (life_veh_shop) do
 		if(playerSide == civilian) exitWith {_kill =  "You're not a cop."};
 		ctrlSetText[2301,"Cop Car Shop"];
 	};	
+	
+	case "indy_car_1":
+	{
+		if(life_faction != "indy") then exitWith {_kill =  "You're not of the independent faction."};
+		ctrlSetText[2301,"Independent Car and Heli Shop"];
+	};	
+	
+	case "rebel_car_1":
+	{
+		if(life_faction != "rebel") then exitWith {_kill =  "You're not of the rebel faction."};
+		ctrlSetText[2301,"Rebel Car and Heli Shop"];
+	};	
 //end added by clock========================================================
 	case "cop_car_2":
 	{

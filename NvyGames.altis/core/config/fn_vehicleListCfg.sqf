@@ -259,6 +259,35 @@ switch (_shop) do
 		};
 	};
 //========================================================================INDI=================================================================================	
+//========================================================================REBEL=================================================================================
+	case "rebel_car_1":
+	{
+		if(life_faction == "rebel") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
+		{
+			_return =
+			[
+				["I_Quadbike_01_F",3000], //quadbike
+				["I_G_Offroad_01_F",50000], //offroad truck
+				["I_Truck_02_transport_F",400000], //uncovered transport truck
+				["I_MRAP_03_F",1000000], //strider
+				["B_Heli_Light_01_F",600000], //Little bird
+				["O_Heli_Light_02_unarmed_F",1800000],
+				["I_G_Offroad_01_armed_F",4000000], //armed offroad
+				["O_Heli_Light_02_F",12000000]
+				//["B_Heli_Transport_01_F",5000000],
+			];
+		
+		
+			/*_return set[count _return,
+			["B_G_Offroad_01_armed_F",4000000]];
+			_return set[count _return,
+			["B_Heli_Transport_01_camo_F",5000000]];*/
+		};
+	};
+//========================================================================REBEL=================================================================================	
+
+
+
 	case "reb_car":
 	{
 		if(license_civ_rebel) then

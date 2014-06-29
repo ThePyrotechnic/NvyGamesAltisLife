@@ -129,6 +129,14 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "indy_car_1";
 		_dir = markerDir "indy_car_1";
 	};	
+	
+//Rebel============================
+	case "rebel_car_1":
+	{
+		_sp = getMarkerPos "rebel_car_1";
+		_dir = markerDir "rebel_car_1";
+	};	
+	
 //added by clock========================
 	case "fed_car":
 	{
