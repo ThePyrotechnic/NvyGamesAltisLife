@@ -35,9 +35,9 @@ onEachFrame
 				{
 					_icon = [((_x getVariable["coplevel", 0]) - 1),"texture"] call BIS_fnc_rankParams;
 				};
-				if (side _x == west) then {drawIcon3D ["",[0,0,1,1],_pos,0,0,0,name _x,0,0.04];}
+				if (side _x == west) then {drawIcon3D [_icon,[0,0,1,1],_pos,_width,_height,0,_name,0,0.04];}
 				else {drawIcon3D ["",[1,1,1,1],_pos,0,0,0,name _x,0,0.04];};
-                drawIcon3D [_icon,[1,1,1,1],_pos,_width,_height,0,_name,0,0.04];
+                
             };
         };
     } foreach _near;
