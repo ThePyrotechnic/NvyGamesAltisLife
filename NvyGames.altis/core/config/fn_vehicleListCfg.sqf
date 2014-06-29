@@ -236,7 +236,7 @@ switch (_shop) do
 //========================================================================INDI=================================================================================
 	case "indy_car_1":
 	{
-		if(life_faction == "indy") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
+		if(life_faction != "indy") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
 		{
 			_return =
 			[
