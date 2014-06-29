@@ -21,6 +21,7 @@ if(life_is_arrested) then
 }
 	else
 {
+	if(!([life_position,[]] call BIS_fnc_areEqual)) exitWith {player setPos life_position;};
 	//[] call life_fnc_spawnMenu;
 	//HOUSE RESPAWN
 	[[player], "HOUSE_fnc_requestSpawnMenu", false, false] spawn life_fnc_MP;

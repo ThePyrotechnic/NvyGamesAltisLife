@@ -61,7 +61,14 @@ _packet set[9,_inventory];
 //##119 perm
 _packet set[10, format["""%1""", str life_player_perms]];
 
-_pos = format["%1",getPos player];
+if(alive player) then
+{
+	_pos = format["%1",getPos player];
+}
+else
+{
+	_pos = "[]";
+};
 _packet set[count _packet,_pos];
 ///CIV COP gear setter
 /*_gear = cop_gear;

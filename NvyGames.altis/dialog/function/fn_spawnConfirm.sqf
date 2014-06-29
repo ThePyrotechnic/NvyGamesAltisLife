@@ -7,12 +7,11 @@
 */
 private["_spCfg","_sp","_spawnPos"];
 closeDialog 0;
+if((life_spawn_point select 1) == "Last Pos") exitWith {player setPos life_position};
 if(count life_spawn_point == 0) then
 {
-	private["_sp","_spCfg"];
 	_spCfg = [playerSide] call life_fnc_spawnPointCfg;
 	_sp = _spCfg select 0;
-	
 	if(playerSide == civilian) then
 	{
 		if(isNil {(call compile format["%1", _sp select 0])}) then {
