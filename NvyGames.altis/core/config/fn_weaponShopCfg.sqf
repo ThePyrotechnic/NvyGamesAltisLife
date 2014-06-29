@@ -283,7 +283,8 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
-			case (life_rank != "1"): {"You are not a Rebel Private. Head to our website to sign up! www.nvygames.com"}; 
+			case (life_rank != "1"): {"You are not a Rebel Private. Head to our website to sign up! www.nvygames.com"};
+			case (life_faction != "rebel"): {"You are not in the rebel faction."};
 			if(life_faction == "rebel" && life_rank == "1") then //life faction rebel level 1
 			default //idk what this is
 			{
@@ -315,6 +316,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "2"): {"You are not a Rebel Private 1st Class."}; 
+			case (life_faction != "rebel"): {"You are not in the rebel faction."};
 			if(life_faction == "rebel" && life_rank == "2") then //life faction rebel level 2
 			default //idk what this is
 			{
@@ -349,6 +351,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "3"): {"You are not a Rebel Specialist."};
+			case (life_faction != "rebel"): {"You are not in the rebel faction."};
 			if(life_faction == "rebel" && life_rank == "3") then //life faction rebel level 3
 			default //idk what this is
 			{
@@ -390,6 +393,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "4"): {"You are not a Rebel Corporal."};
+			case (life_faction != "rebel"): {"You are not in the rebel faction."};
 			if(life_faction == "rebel" && life_rank == "4") then //life faction rebel level 4
 			default //idk what this is
 			{
@@ -432,6 +436,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "5"): {"You are not a Rebel Sergeant."};
+			case (life_faction != "rebel"): {"You are not in the rebel faction."};
 			if(life_faction == "rebel" && life_rank == "5") then //life faction rebel level 5
 			default //idk what this is
 			{
@@ -476,7 +481,8 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
-			case (life_rank != "1"): {"You are not a Independent Private. Head to our website to sign up! www.nvygames.com"}; 
+			case (life_rank != "1"): {"You are not a Rebel Sergeant."};
+			case (life_faction != "indy"): {"You are not in the independent faction."};
 			if(life_faction == "indy" && life_rank == "1") then //life faction indy level 1
 			default //idk what this is
 			{
@@ -507,6 +513,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "2"): {"You are not a Independent Private 1st Class."}; 
+			case (life_faction != "indy"): {"You are not in the independent faction."};
 			if(life_faction == "indy" && life_rank == "2") then //life faction indy level 2
 			default //idk what this is
 			{
@@ -541,6 +548,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "3"): {"You are not a Independent Specialist."}; 
+			case (life_faction != "indy"): {"You are not in the independent faction."};
 			if(life_faction == "indy" && life_rank == "3") then //life faction indy level 3
 			default //idk what this is
 			{
@@ -583,6 +591,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "4"): {"You are not a Independent Corporal."}; 
+			case (life_faction != "indy"): {"You are not in the independent faction."};
 			if(life_faction == "indy" && life_rank == "4") then //life faction indy level 4
 			default //idk what this is
 			{
@@ -626,6 +635,7 @@ switch(_shop) do
 		{
 			case (playerSide != civilian): {"You are a cop!"}; //if your not a civ, fuck off
 			case (life_rank != "5"): {"You are not a Independent Sergeant."}; 
+			case (life_faction != "indy"): {"You are not in the independent faction."};
 			if(life_faction == "indy" && life_rank == "5") then //life faction indy level 5
 			default //idk what this is
 			{
