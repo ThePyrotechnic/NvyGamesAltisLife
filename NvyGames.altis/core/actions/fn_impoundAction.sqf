@@ -8,7 +8,7 @@
 private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_vehownerid","_costful_impound","_seize"];
 _vehicle = cursorTarget;
 _seize = false;
-if (typeOf _vehicle in ['O_MRAP_02_F', 'B_G_Offroad_01_armed_F']) then {_seize = true};
+if (typeOf _vehicle in ['O_MRAP_02_F', 'O_G_Offroad_01_armed_F']) then {_seize = true};
 //ADD ##16
 _vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
