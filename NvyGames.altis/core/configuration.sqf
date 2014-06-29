@@ -94,6 +94,7 @@ life_istazed = false;
 life_my_gang = ObjNull;
 life_isSuicide = false;
 lastSender = objNull;
+coolDown = false;
 
 life_vehicles = [];
 bank_robber = [];

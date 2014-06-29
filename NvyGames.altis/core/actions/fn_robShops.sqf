@@ -6,13 +6,12 @@ Description:
 Executes the rob shob action!
 Idea developed by PEpwnzya v1.0
 */
-private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos","_coolDown"];
+private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
 _pos = GetPos _shop;
-_coolDown = false;
 if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
 if(_robber distance _shop > 10) exitWith { hint "You need to be within 10m of the cashier to rob him!" };
 
@@ -48,7 +47,7 @@ if(_rip) then
 {
 	while{true} do
 	{
-		if(_coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
+		if(coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
 			sleep 3;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
@@ -79,9 +78,9 @@ if(_rip) then
 };
 [] spawn
 {
-	_coolDown = true;
+	coolDown = true;
 	sleep 300;
-	_coolDown = false;
+	coolDown = false;
 };
 _action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 _shop switchMove "";
