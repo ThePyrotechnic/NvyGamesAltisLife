@@ -72,9 +72,15 @@ switch (_side) do
 				["indy_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
 			];
 		};
+		/* Optional position saving
+		if(!([life_position,[0,0,0]] call BIS_fnc_areEqual)) then
+		{
+			_spawns = _spawns + [
+				[life_position,"Last Pos","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			];
+		};
+		*/
 	};
-	
-	
 };
 
 _spawns = _spawns + [ ["all_schiessplatz", "Deathmatch", "icons\schiessplatz.paa" ] ];
