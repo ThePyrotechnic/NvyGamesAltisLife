@@ -103,6 +103,25 @@ switch (life_veh_shop) do
 		ctrlSetText[2301,"Cop Car Shop"];
 	};
 	
+//added by clock=============================================================
+	case "cop_car_55":
+	{
+		if(playerSide == civilian) exitWith {_kill =  "You're not a cop."};
+		ctrlSetText[2301,"Cop Car Shop"];
+	};
+
+	case "cop_ship_55":
+	{
+		if(playerSide == civilian) exitWith {_kill =  "You're not a cop."};
+		ctrlSetText[2301,"Cop Car Shop"];
+	};
+	
+	case "cop_air_55":
+	{
+		if(playerSide == civilian) exitWith {_kill =  "You're not a cop."};
+		ctrlSetText[2301,"Cop Car Shop"];
+	};	
+//end added by clock========================================================
 	case "cop_car_2":
 	{
 		if(playerSide == civilian) exitWith {_kill =  "You're not a cop."};
