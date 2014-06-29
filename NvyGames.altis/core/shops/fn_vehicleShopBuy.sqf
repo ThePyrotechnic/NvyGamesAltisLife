@@ -221,6 +221,7 @@ switch(life_veh_shop) do
 		_dir = markerDir "cop_ship_1";
 	};
 //added by clock==========================
+//police==================================
 		case "cop_ship_55":
 	{
 		_sp = getMarkerPos "cop_ship_55";
@@ -236,8 +237,15 @@ switch(life_veh_shop) do
 	case "cop_car_55":
 	{
 		_sp = getMarkerPos "cop_car_55";
-		_dir = markerDir "cop_car_5";
+		_dir = markerDir "cop_car_55";
 	};
+//Independent============================
+	case "indy_car_1":
+	{
+		_sp = getMarkerPos "indy_car_1";
+		_dir = markerDir "indy_car_1";
+	};	
+	
 //end added by clock=====================
 	
 	case "donator_heli":

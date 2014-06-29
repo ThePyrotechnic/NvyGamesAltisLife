@@ -104,7 +104,32 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "cop_car_5";
 		_dir = markerDir "cop_car_5";
 	};
+//added by clock=========================
+//Police=================================
+		case "cop_ship_55":
+	{
+		_sp = getMarkerPos "cop_ship_55";
+		_dir = markerDir "cop_ship_55";
+	};
 	
+	case "cop_air_55":
+	{
+		_sp = getMarkerPos "cop_air_55";
+		_dir = markerDir "cop_air_55";
+	};
+	
+	case "cop_car_55":
+	{
+		_sp = getMarkerPos "cop_car_55";
+		_dir = markerDir "cop_car_55";
+	};
+//Independent============================
+	case "indy_car_1":
+	{
+		_sp = getMarkerPos "indy_car_1";
+		_dir = markerDir "indy_car_1";
+	};	
+//added by clock========================
 	case "fed_car":
 	{
 		_sp = getMarkerPos "fed_car_1";
