@@ -199,6 +199,48 @@ switch(_shop) do
 	};
 	
 	
+	case "cop_sergeant": //sergeant  Equipment
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 4): {"You are not the required rank."};
+			default
+			{
+				["Sergeant Equipment",
+					[
+						["arifle_MXM_F",nil,40000], //mxm
+						["optic_SOS",nil,20000], //sos scope
+						["arifle_MX_F",nil,30000], //mx
+						["arifle_MXC_F",nil,20000], //mxc
+						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["SMG_02_F",nil,7500], //sting
+						["muzzle_snds_L",nil,2500], //9mm suppressor
+						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["optic_Holosight_smg",nil,1500], //smg holo
+						["arifle_sdar_F","SDAR",10000], //sdar
+						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
+						["hgun_P07_snds_F","taser pistol",5000], //taser
+						["16Rnd_9x21_Mag","Taser Magazin 9x21",50], //taser mags					
+						["Binocular",nil,150], //binocular
+						["Rangefinder",nil,500], //rangerfinder
+						["ItemMap",nil,50], //map
+						["ItemGPS",nil,200], //gps
+						["ToolKit",nil,250], //toolkit
+						["acc_flashlight",nil,250], //flashlight
+						["MineDetector",nil,1000], //minedector
+						["acc_pointer_IR",nil,750], //ir pointer
+						["NVGoggles",nil,2000], //nightvision goggles
+						["optic_Holosight",nil,1500], //holo
+						["optic_Hamr",nil,2000], //rco
+				        ["FirstAidKit",nil,150], //fak
+						["optic_MRCO",nil,3000]		//mrco			
+					]
+				];
+			};
+		};
+	};
+	
 	//##98
 	case "cop_sniper":
 	{
@@ -210,12 +252,7 @@ switch(_shop) do
 			{
 				["Altis Sniper Shop",
 					[
-						["srifle_LRR_F",nil,80000],
-						["7Rnd_408_Mag",nil,2000],
-						["optic_Arco",nil,4000],
-						["optic_SOS",nil,5000],
-				        ["FirstAidKit",nil,150], //fak
-						["optic_NVS",nil,6000]					
+						["optic_NVS",nil,60000]					
 					]
 				];
 			};
@@ -674,6 +711,8 @@ switch(_shop) do
 			};
 		};
 	};
+	
+
 //---------------------------------Indy
 
 
