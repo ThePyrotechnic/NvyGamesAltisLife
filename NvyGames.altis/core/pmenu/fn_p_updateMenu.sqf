@@ -74,7 +74,7 @@ ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 		{
             if(_ispoliceonly && playerSide != west) then
             {
-                 _inv lbAdd format["%1x - %2 (Polizei)",_val,_str];
+                 _inv lbAdd format["%1x - %2 (Police)",_val,_str];
             }
             else
             {

@@ -29,7 +29,7 @@ life_uitems = [
 	["furniture_05", "Drawers", 15, false, 57000, 14000, 0, false],
 	
 	//##103
-	["handcuffs", "handcuffs", 1, false, 500, 300, 250, true],
+	["handcuffs", "handcuffs", 1, false, 500, 300, 250, false],
 	
 	//##106
 	["bd_mk1_bleachweapon", "BD-MKI 'Engine disable'", 25, false, 800000, 600000, true],
