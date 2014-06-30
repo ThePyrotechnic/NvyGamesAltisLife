@@ -16,12 +16,10 @@ if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { hint "Haha, you do not threaten me! Get out of here you hobo!" };
 if(coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
-if(_shop getVariable["rip",false]) exitWith {hint "This shop is already being robbed!"};
 
-_shop setVariable ["rip",true];
 _kassa = 3000 + round(random 12000);
 _shop removeAction _action;
-_shop switchMove "AmovPercMstpSsurWnonDnon";
+[[_shop,"AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
 hint "The cashier hit the silent alarm, police have been alerted!"; 
 [["ALARM! A gas station is being robbed!",1],"clientMessage",true,false] spawn life_fnc_MP;
 _marker = createMarker [format["Marker%1",_shop], _pos];
@@ -48,18 +46,24 @@ while{true} do
 	if(_cP >= 1) exitWith {};
 	if(_robber distance _shop > 10) exitWith {};
 	if!(alive _robber) exitWith {};
+	if(life_istazed) exitwith {};
 };
 
 if(!(alive _robber)) exitWith 
 {
 	deletemarker _marker; 
-	[] spawn
+	[_shop,_action] spawn
 	{
+		private ["_shop","_action"];
+		_shop = _this select 0;
+		_action = _this select 1;
 		coolDown = true;
 		sleep 300;
 		coolDown = false;
+		_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 	};
-	_shop setVariable ["rip",false];
+	[[_shop,""],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+
 };
 if(_robber distance _shop > 10) exitWith 
 { 
@@ -67,13 +71,34 @@ if(_robber distance _shop > 10) exitWith
 	hint "You need to stay within 10m to Rob register! - Now the register is locked."; 
 	5 cutText ["","PLAIN"]; 
 	deletemarker _marker;
-	[] spawn
+	[_shop,_action] spawn
 	{
+		private ["_shop","_action"];
+		_shop = _this select 0;
+		_action = _this select 1;
 		coolDown = true;
 		sleep 300;
 		coolDown = false;
+		_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 	};
-	_shop setVariable ["rip",false];
+	[[_shop,""],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+};
+
+if(life_istazed) exitwith
+{
+	    deleteMarker _marker;
+	[_shop,_action] spawn
+	{
+		private ["_shop","_action"];
+		_shop = _this select 0;
+		_action = _this select 1;
+		coolDown = true;
+		sleep 300;
+		coolDown = false;
+		_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
+	};
+    hint "You were tazed";
+	[[_shop,""],"life_fnc_animSync",true,false] spawn life_fnc_MP;
 };
 5 cutText ["","PLAIN"];
 
@@ -85,13 +110,14 @@ life_use_atm = false;
 sleep (30 + random(180));
 life_use_atm = true;
 [[1,format["NEWS: A gas station was just robbed for a total of $%1", [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
-	
-[] spawn
+[[_shop,""],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+[_shop,_action] spawn
 {
+	private ["_shop","_action"];
+	_shop = _this select 0;
+	_action = _this select 1;
 	coolDown = true;
 	sleep 300;
 	coolDown = false;
+	_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 };
-_action = _shop addAction["Rob Cash Register",life_fnc_robShops];
-_shop switchMove "";
-_shop setVariable ["rip",false];
