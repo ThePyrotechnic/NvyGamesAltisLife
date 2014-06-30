@@ -137,7 +137,7 @@ switch (_code) do
 		}
 		else
 		{
-			if(_shift && playerSide == civilian && (license_civ_rebel || ["RESTRAIN"] call life_fnc_permRuleG) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["Escorting", false]) && !(cursorTarget getVariable ["restrained", false]) && speed cursorTarget < 1 ) then
+			if(_shift && playerSide == civilian && (life_faction == "rebel" || ["RESTRAIN"] call life_fnc_permRuleG) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["Escorting", false]) && !(cursorTarget getVariable ["restrained", false]) && speed cursorTarget < 1 ) then
 			{
 				if([false,"uitem_handcuffs",1] call life_fnc_handleInv) then
 				{

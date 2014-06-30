@@ -42,7 +42,8 @@ if(!isNull _source) then
 					_istazer = true;
 					_distance = 35;
 					_impact = 15;
-				};				
+				};
+/*	Rubber bullets			
 				case (_projectile in ["B_65x39_Caseless","B_556x45_Ball_Tracer_Red"]):  //List of projectile types
 				//30Rnd_65x39_caseless_mag_Tracer, 30Rnd_45ACP_Mag_SMG_01_tracer_green, 100Rnd_65x39_caseless_mag_Tracer, 
 				{
@@ -50,6 +51,7 @@ if(!isNull _source) then
 					_distance = 2000;
 					_impact = 40;
 				};
+*/
 			};
 		};		
 		
