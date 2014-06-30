@@ -47,10 +47,7 @@ if (_holstered) then
 
 		_unit removeWeapon A_weapon;
 		_unit removeWeapon B_weapon;
-
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-		sleep 0.5;
+		
 		life_n_holstered = true;
 }
 else

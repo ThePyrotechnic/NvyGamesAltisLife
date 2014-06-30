@@ -336,10 +336,6 @@ class Life_Client_Core
 		
 		class showArrestDialog {};
 		class arrestDialog_Arrest {};
-		
-		//holster
-		class holsterSaveGear {};
-		class holsterLoadGear {};
 	};
 	
 	class Gangs
