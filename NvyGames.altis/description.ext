@@ -206,19 +206,19 @@ class CfgSounds
   {
 	name="punch";
 	sound[] = {"\sounds\punch.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag *"};
+	titles[] = {0, " "};
   };
   class punch_break
   {
 	name="punch_break";
 	sound[] = {"\sounds\punch_break.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag *"};
+	titles[] = {0, " "};
   };
   class punch_balls
   {
 	name="punch_balls";
 	sound[] = {"\sounds\punch_balls.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag in die Eier *"};
+	titles[] = {0, " "};
   };
   
   class target_beep

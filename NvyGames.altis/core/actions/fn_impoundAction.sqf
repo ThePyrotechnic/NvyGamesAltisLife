@@ -128,7 +128,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		else
 		{
 			hint format["You have impounded a %1.\n\nYou recieve $%2!",_type,_price];
-			[[0,format["%1 the vehicle %2 confiscated (vehicle: %3)",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+			[[0,format["%1 confiscated %2's %3",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 			
 			life_atmcash = life_atmcash + _price;
 		};
