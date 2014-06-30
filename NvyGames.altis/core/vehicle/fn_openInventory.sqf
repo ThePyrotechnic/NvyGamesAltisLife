@@ -16,7 +16,7 @@ if(locked _vehicle == 2) exitWith
 	hint "Vehicle is locked. Use U to unlock it.";
 };
 
-if((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint "The car trunk is used at the moment by someone else."};
+if((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint "The trunk is being used by someone else."};
 _vehicle setVariable["trunk_in_use",true,true];
 if(!createDialog "TrunkMenu") exitWith {"Failed Creating Dialog";}; //Couldn't create the menu?
 disableSerialization;
@@ -45,7 +45,7 @@ life_trunk_vehicle = _vehicle;
 	
 	//Call player sync because vehicle can save things to prevent cheating
 	[1,false] call life_fnc_sessionHandle;
-	hintSilent "Note: Illegal things are not saved when you einparkst it into the garage.";
+	hintSilent "Note: Illegal things are not saved when you park it into the garage.";
 	
 	sleep 5;
 	

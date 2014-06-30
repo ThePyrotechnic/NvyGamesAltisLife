@@ -18,7 +18,7 @@ switch(_rand) do
 {
 	case 0:
 	{
-		hintSilent "You have the players hit in the stomach.";
+		hintSilent "You punch him in the stomach.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -41,7 +41,7 @@ switch(_rand) do
 	};
 	case 1:
 	{
-		hintSilent "You have the players hit in the face.";
+		hintSilent "You punch him in the face.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -62,7 +62,7 @@ switch(_rand) do
 	};
 	case 2:
 	{
-		hintSilent "You've come to the player.";
+		hintSilent "You knee his gut.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -83,7 +83,7 @@ switch(_rand) do
 	};
 	case 3:
 	{
-		hintSilent "You have the players kicked in the balls.";
+		hintSilent "You kick him in the balls.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -99,7 +99,7 @@ switch(_rand) do
 	};
 	default
 	{
-		hintSilent "You have the players knocked out some teeth.";
+		hintSilent "You knocked out his teeth!";
 		//Play sound on _unit
 		
 		//Damage _unit

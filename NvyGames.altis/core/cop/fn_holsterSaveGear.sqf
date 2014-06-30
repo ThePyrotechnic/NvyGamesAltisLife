@@ -47,26 +47,32 @@ private["_launcher","_allowedItems","_primary","_handgun","_magazines","_uniform
 _primary = primaryWeapon player;
 _handgun = handGunWeapon player;
 _magazines = [];
+/*
 _uniform = uniform player;
 _vest = vest player;
 _backpack = backpack player;
 _items = assignedItems player;
+*/
 _primitems = primaryWeaponItems player;
 _secitems = secondaryWeaponItems player;
 _handgunitems = handGunItems player;
+/*
 _uitems = [];
 _vitems = [];
 _bitems = [];
+*/
 _launcher = secondaryWeapon player; //added
 
 //if(!(_primary in _allowedItems)) then {_primary = ""};
 //if(!(_handgun in _allowedItems)) then {_handgun = ""};
+/*
 if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
 if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
 if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
 
 if(goggles player != "") then { _items set[count _items, goggles player]; };
 if(headgear player != "") then { _items set[count _items, headgear player]; };
+*/
 if(count (primaryWeaponMagazine player) > 0) then
 {
 	{
@@ -90,5 +96,5 @@ if("Laserdesignator" in assignedItems player) then
 };
 
 player selectWeapon _curWep;
-
-life_n_holster_data = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher];
+//life_n_holster_data = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher];
+life_n_holster_data = [_primary,_handgun,_magazines,_primitems,_secitems,_handgunitems,_launcher];

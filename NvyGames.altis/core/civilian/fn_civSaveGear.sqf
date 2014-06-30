@@ -73,16 +73,20 @@ if(life_n_holstered) then
 	_primary = life_n_holster_data select 0;
 	_handgun = life_n_holster_data select 1;
 	_magazines = life_n_holster_data select 2;
+	/*
 	_uniform = life_n_holster_data select 3;
 	_vest = life_n_holster_data select 4;
 	_backpack = life_n_holster_data select 5;
 	_items = life_n_holster_data select 6;
+	*/
 	_primitems = life_n_holster_data select 7;
 	_secitems = life_n_holster_data select 8;
 	_handgunItems = life_n_holster_data select 9;
+	/*
 	_uitems = life_n_holster_data select 10;
 	_vitems = life_n_holster_data select 11;
 	_bItems = life_n_holster_data select 12;
+	*/
 	_launcher = life_n_holster_data select 13;
 };
 

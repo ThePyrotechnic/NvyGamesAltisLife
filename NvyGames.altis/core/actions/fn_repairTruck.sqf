@@ -56,7 +56,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_in_use = false;};
-		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it can!","PLAIN"];};
+		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it!","PLAIN"];};
 		player removeItem "ToolKit";
 		_veh setDamage 0;
 		titleText["Vehicle repaired.","PLAIN"];

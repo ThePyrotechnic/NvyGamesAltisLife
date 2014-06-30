@@ -19,13 +19,13 @@ if(_bool) then
 {
 	if(([true,_item,(parseNumber _val)] call life_fnc_handleInv)) then
 	{
-		hint format["You tried %1 %2 %3 to give but it could not be held so it was returned.",name _from,_val,_type];
+		hint format["%1 tried to give you %2 %3 but you could not hold it, so it was returned.",name _from,_val,_type];
 	};
 }
 	else
 {
 	if(([true,_item,(parseNumber _val)] call life_fnc_handleInv)) then
 	{
-		hint format["%1 get back %2 %3 because the number was not kept.",name _from,_val,_type];
+		hint format["%1 was given back %2 %3 because you could not hold all of it.",name _from,_val,_type];
 	};
 };

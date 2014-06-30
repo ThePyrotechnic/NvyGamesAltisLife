@@ -302,7 +302,7 @@ if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 _price = round(_price * 1.5); //It's a permanent vehicle, add some bank to it!
 if(life_cash < _price) exitWith {hint format["You do not have enough money. you need %1", [_price] call life_fnc_numberText]; };
-hint "This may take a two seconds...";
+hint "This may take a few seconds...";
 sleep floor(random 3);
 
 if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};

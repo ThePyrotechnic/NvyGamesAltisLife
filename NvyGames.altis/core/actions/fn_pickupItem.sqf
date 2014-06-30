@@ -45,7 +45,7 @@ if(_diff != _itemInfo select 1) then
 		player playmove "AinvPknlMstpSlayWrflDnon";
 		sleep 0.5;
 		_obj setVariable["item",[_itemInfo select 0,((_itemInfo select 1) - _diff)],true];
-		titleText[format["you %1 %2 repealed.",_diff,_itemName],"PLAIN"];
+		titleText[format["you picked up %1 %2.",_diff,_itemName],"PLAIN"];
 	};
 }
 	else
@@ -56,6 +56,6 @@ if(_diff != _itemInfo select 1) then
 		//waitUntil{isNull _obj};
 		player playmove "AinvPknlMstpSlayWrflDnon";
 		sleep 0.5;
-		titleText[format["you %1 %2 repealed.",_diff,_itemName],"PLAIN"];
+		titleText[format["you picked up %1 %2.",_diff,_itemName],"PLAIN"];
 	};
 };

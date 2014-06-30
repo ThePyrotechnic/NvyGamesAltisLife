@@ -16,7 +16,7 @@ _type = (_this select 3) select 1; //Air,Car,Ship
 
 if(player distance (getMarkerPos _spawn) > 30) exitWith
 {
-	hint "You are too far away from the garage point!";
+	hint "You are too far away from the garage!";
 };
 
 //////

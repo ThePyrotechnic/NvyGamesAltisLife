@@ -367,4 +367,4 @@ if((life_veh_shop == "civ_air_1" OR life_veh_shop == "civ_air_2") && (typeOf _ve
 [1,false] call life_fnc_sessionHandle;
 
 //Add notation
-titleText ["Note: You only have rented the vehicle and can not store it in a garage.", "PLAIN"];
+titleText ["Note: You have rented the vehicle and can not store it in a garage.", "PLAIN"];

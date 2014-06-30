@@ -16,7 +16,7 @@ _price = 0;
 	};
 } foreach life_clothing_purchase;
 
-if(_price > life_cash) exitWith {titleText["You do not have to be able to have enough money to buy you clothes.","PLAIN"];};
+if(_price > life_cash) exitWith {titleText["You do not have enough money.","PLAIN"];};
 life_cash = life_cash - _price;
 
 life_clothesPurchased = true;

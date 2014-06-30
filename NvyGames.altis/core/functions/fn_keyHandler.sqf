@@ -35,7 +35,7 @@ if(player getVariable ["restrained", false]) exitWith
 
 if(life_hands_up) exitWith
 {
-	hintSilent "You got your hands up!";
+	hintSilent "You have your hands up!";
 
 	_handled = false;
 	_handled;
@@ -132,7 +132,7 @@ switch (_code) do
 			}
 			else
 			{
-				hint "You have no Handcuffs there!";
+				hint "You have no Handcuffs!";
 			};
 		}
 		else
@@ -146,7 +146,7 @@ switch (_code) do
 				}
 				else
 				{
-					hint "You have no Handcuffs there!";
+					hint "You have no Handcuffs!";
 				};
 			};
 		};

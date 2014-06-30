@@ -5,12 +5,12 @@
 	Description:
 	Doesn't matter, will be revised later.
 */
-if(life_cash < 50) exitWith {hint "Du benötigst $50!"};
-titleText["The really trust values ​​Doctor Mabuse will treat you ...","PLAIN"];
+if(life_cash < 50) exitWith {hint "You need $50!"};
+titleText["Doctor Brian will treat you ...","PLAIN"];
 sleep 2;
-titleText["I goog * cough * ... look in the medical program by ...","PLAIN"];
+titleText["Just a few more seconds and you should be back on your feet ...","PLAIN"];
 sleep 5;
-titleText["It Works! I'm not incapable!","PLAIN"];
+titleText["Okay, I'm nearly finished now!","PLAIN"];
 sleep 2;
 if(player distance (_this select 0) > 5) exitWith {titleText["You have to stay close to the doctor.","PLAIN"]};
 titleText["You are now healed!","PLAIN"];

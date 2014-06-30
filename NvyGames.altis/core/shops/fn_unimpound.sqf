@@ -64,7 +64,7 @@ if(_veh distance impound_obj < 50) then
 	if(_price > life_cash) then
 	{
 		_price = _price + 200;
-		if(_price > life_atmcash) exitWith {hint "You did not get enough money in your bank account to your vehicle back."};
+		if(_price > life_atmcash) exitWith {hint "You do not have enough money in your bank account."};
 		life_atmcash = life_atmcash - _price;
 		life_cash = life_cash + _price;
 	};

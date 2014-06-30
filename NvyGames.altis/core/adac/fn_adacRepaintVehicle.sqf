@@ -77,6 +77,6 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 	}
 	else
 	{
-		hint "You do not have enough resist for the vehicle to be colored.";
+		hint "You do not have enough paint for the vehicle to be colored.";
 	};
 };

@@ -46,7 +46,7 @@ switch (true) do
 	
 	case (_item == "spikeStrip"):
 	{
-		if(!isNull life_spikestrip) exitWith {hint "You've already have a Spike Strip  in active use."};
+		if(!isNull life_spikestrip) exitWith {hint "You've already have a Spike Strip in active use."};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
