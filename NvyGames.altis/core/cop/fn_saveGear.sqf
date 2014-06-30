@@ -99,10 +99,10 @@ player selectWeapon _curWep;
 
 if(life_n_holstered) then
 {
-	//load from holstered instead
-	cop_gear = life_n_holster_data;
-}
-else
-{
-	cop_gear = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher];
+	_primary = A_weapon;
+	_handgun = B_weapon
+	_magazines = A_mags + B_mags;
+	_primitems = A_weaponAttach;
+	_handgunItems = B_weaponAttach;
 };
+	cop_gear = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher];
