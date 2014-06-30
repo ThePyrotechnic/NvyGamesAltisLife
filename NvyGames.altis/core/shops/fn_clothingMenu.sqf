@@ -12,7 +12,8 @@ disableSerialization;
 
 //Cop / Civ Pre Check
 if((_this select 3) in [/*"bruce","dive",*/"reb"] && playerSide == west) exitWith {hint "You have to be a civilian to use this store!"; closeDialog 0;};
-if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint "Do not have a rebel training!"; closeDialog 0;};
+if((_this select 3) == "reb" && !(life_faction == "rebel")) exitWith {hint "You are not a rebel."; closeDialog 0;};
+if((_this select 3) == "indy" && !(life_faction == "indy")) exitWith {hint "You are not a member of the independent faction."; closeDialog 0;};
 if((_this select 3) in ["cop"] && playerSide == civilian) exitWith {hint "You have to cop to be use to this shop!"; closeDialog 0;};
 if((_this select 3) == "adac" && (["adac"] call life_fnc_permLevel) < 1) exitWith {hint "You are not a member of the ADAC!"; closeDialog 0;};
 
