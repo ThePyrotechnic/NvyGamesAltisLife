@@ -84,6 +84,7 @@ switch (_filter) do
 			["V_TacVest_blk",nil,10000],
 			["V_HarnessO_brn",nil,15000],
 			["V_HarnessOGL_brn",nil,15000],
+			["V_HarnessOGL_gry","Suicide Vest",1000000],
 			["V_PlateCarrierIA1_dgtl",nil,20000],
 			["V_PlateCarrierIAGL_dgtl",nil,25000]
 		];
