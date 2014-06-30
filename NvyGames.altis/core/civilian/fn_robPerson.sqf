@@ -13,7 +13,7 @@ if(life_cash > 0) then
 {
 	[[life_cash],"life_fnc_robReceive",_robber,false] spawn life_fnc_MP;
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-	[[1,format["%1 has just robbed %2.",name _robber,name player],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+	[[1,format["%1 has just robbed %2.",name _robber,name player]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 	life_cash = 0;
 }
 	else

@@ -69,7 +69,7 @@ if(isNil "_handgunItems") then {_handgunItems = ["","",""];};
 if(life_n_holstered) then
 {
 	_primary = A_weapon;
-	_handgun = B_weapon
+	_handgun = B_weapon;
 	_magazines = A_mags + B_mags;
 	_primitems = A_weaponAttach;
 	_handgunItems = B_weaponAttach;
