@@ -7,6 +7,8 @@ _object = createVehicle ["Land_Sink_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 241;
 _object setPosATL _pos;
 _object allowDamage false;
+_object addAction ["Drink from fountain", {life_thirst = 100;}];
+
 
 //Shitter's Clogged
 _pos = [8569.786133,18482.296875,0.0292206];
@@ -108,3 +110,43 @@ _object = createVehicle ["Land_ScrapHeap_2_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 0;
 _object setPosATL _pos;
 
+//Food table
+_pos = [8594.28418,18433.433594,-0.0455322];
+_object = createVehicle ["Land_TablePlastic_01_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 240;
+_object setPosATL _pos;
+_object addAction ["Eat prison food", {life_hunger = 100;}];
+
+//Food on table
+_pos = [8594.472656,18433.814453,171.588];
+_object = createVehicle ["Land_BakedBeans_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 0;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+ _object addAction ["Eat prison food", {life_hunger = 100;}];
+ 
+ 
+_pos = [8593.936523,18433.544922,171.583];
+_object = createVehicle ["Land_BakedBeans_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 0;
+_object setPosASL _pos;
+[_object, 0, 0] call BIS_fnc_setPitchBank;
+ _object addAction ["Eat prison food", {life_hunger = 100;}];
+
+//Shade
+_pos = [8594.3125,18433.447266,0.0035553];
+_object = createVehicle ["Land_Sunshade_01_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 350;
+_object setPosATL _pos;
+
+//Chairs
+_pos = [8593.261719,18432.955078,0.00241089];
+_object = createVehicle ["Land_CampingChair_V2_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 240;
+_object setPosATL _pos;
+
+
+_pos = [8595.166016,18434.00585938,0.00335693];
+_object = createVehicle ["Land_CampingChair_V2_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 60;
+_object setPosATL _pos;
