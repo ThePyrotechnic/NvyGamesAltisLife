@@ -38,7 +38,7 @@ onEachFrame
 				if (side _x == west) then {drawIcon3D [_icon,[0,0,1,1],_pos,_width,_height,0,_name,0,0.04];}
 				else 
 				{
-					if (life_faction == "rebel") then
+					if (_x getVariable ["life_faction"," "] == "rebel") then
 					{
 						drawIcon3D ["",[1,0,0,1],_pos,0,0,0,format["-Æ- %1",name _x],0,0.04];
 					}
