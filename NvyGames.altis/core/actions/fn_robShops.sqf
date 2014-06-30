@@ -16,7 +16,9 @@ if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { hint "Haha, you do not threaten me! Get out of here you hobo!" };
 if(coolDown) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
+if(_shop getVariable["rip",false]) exitWith {hint "This shop is already being robbed!"};
 
+_shop setVariable ["rip",true];
 _kassa = 3000 + round(random 12000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
@@ -57,6 +59,7 @@ if(!(alive _robber)) exitWith
 		sleep 300;
 		coolDown = false;
 	};
+	_shop setVariable ["rip",false];
 };
 if(_robber distance _shop > 10) exitWith 
 { 
@@ -70,6 +73,7 @@ if(_robber distance _shop > 10) exitWith
 		sleep 300;
 		coolDown = false;
 	};
+	_shop setVariable ["rip",false];
 };
 5 cutText ["","PLAIN"];
 
@@ -90,3 +94,4 @@ life_use_atm = true;
 };
 _action = _shop addAction["Rob Cash Register",life_fnc_robShops];
 _shop switchMove "";
+_shop setVariable ["rip",false];
