@@ -22,20 +22,20 @@ _role5 = "Cinematography + Audio Specialist";
 _role5names = ["Capt Pie"];
 _role6 = "TeamSpeak Dev:";
 _role6names = ["The Babbs"];
-_role7 = "Rebel Faction Leaders:";
-_role7names = ["5150 Joker", "EmpireOps"];
-_role8 = "Military Police Leaders:";
-_role8names = ["Capt Kevin Pie", "The Babbs", "Marine By God"];
-_role9 = "Independent Faction Leaders:";
-_role9names = ["Clock", "Buddytex"];
-_role10 = "Visit Us:";
-_role10names = ["www.nvygames.com"];
-_role11 = "TeamSpeak Channel:";
-_role11names = ["ts3.nvygames.com"];
-_role12 = "For Server Rules:";
-_role12names = ["Press M To View"];
-_role13 = "Original Bank Design by:";
-_role13names = ["Spookygnu"];
+_role7 = "Faction Leaders:";
+_role7names = ["-Rebel-", "5150 Joker", "EmpireOps", "-Indy-","Clock", "BuddyTex", "-Military Police-", "Capt Pie", "The Babbs"];
+//_role8 = "Military Police Leaders:";
+//_role8names = ["Capt Kevin Pie", "The Babbs", "Marine By God"];
+//_role9 = "Independent Faction Leaders:";
+//_role9names = ["Clock", "Buddytex"];
+_role8 = "Visit Us:";
+_role8names = ["www.nvygames.com", "ts3.nvygames.com"];
+//_role11 = "TeamSpeak Channel:";
+//_role11names = ["ts3.nvygames.com"];
+_role9 = "For Server Rules:";
+_role9names = ["Press M To View"];
+_role10 = "Original Bank Design by:";
+_role10names = ["Spookygnu"];
 
 {
 sleep 2;
@@ -65,8 +65,8 @@ sleep (_onScreenTime);
 [_role7, _role7names],
 [_role8, _role8names],
 [_role9, _role9names],
-[_role10,_role10names],
-[_role11,_role11names],
-[_role12,_role12names],
-[_role13,_role13names]
+[_role10,_role10names]
+//[_role11,_role11names],
+//[_role12,_role12names],
+//[_role13,_role13names]
 ];
