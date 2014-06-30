@@ -12,7 +12,7 @@ if(_holster && life_n_holstered) exitWith {systemChat "Holster: Status match!";}
 
 if(_holster) then
 {
-	systemChat "Du packst deine Waffen weg.";
+	systemChat "You holster your weapons. (Shift+H to unholster)";
 
 	//Call holster save fnc
 	[] call life_fnc_holsterSaveGear;
@@ -32,15 +32,19 @@ if(_holster) then
 
 	//Set final vars
 	life_n_holstered = true;
-
-	hintSilent "Deine Items sind nicht weg! Shift+H benutzen, um sie wieder herauszuholen!";
+	[] spawn
+	{
+		while {life_n_holstered} do
+		{
+			hint "Reminder: You have holstered weapons."
+			sleep 180;
+		};
+	};
 }
 else
 {
 	if(isNil("life_n_holster_data")) exitWith {};
-	if( count life_n_holster_data < 1) exitWith {}; 
-
-	systemChat "Du packst deine Waffen wieder aus.";
+	if( count life_n_holster_data < 1) exitWith {};
 	life_n_holstered = false;
 
 	[] call life_fnc_holsterLoadGear;

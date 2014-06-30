@@ -67,9 +67,9 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 		}
 		else
 		{
-			hint "The other player must be tied up.";
+			hint "The other player must be restrained.";
 			sleep 3;
-			hint "Use the Shift + R to captivate the player.";
+			hint "Use the Shift + R to restrain the player.";
 		};
 	}
 	else
@@ -90,9 +90,9 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 			}
 			else
 			{
-				hint "The other player must be tied up.";
-				sleep 3;
-				hint "Use the Shift + R to captivate the player.";
+				hint "The other player must be restrained.";
+				sleep 2;
+				hint "Use the Shift + R to restrain the player.";
 			};
 		};
 	};

@@ -12,4 +12,4 @@ detach _unit;
 
 [true,"uitem_handcuffs",1] call life_fnc_handleInv;
 
-[[0,format["%1 was of %2 unleashed.",name _unit, name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;
+[[0,format["%1 was unrestrained by %2",name _unit, name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;

@@ -31,5 +31,5 @@ if(_index == -1) then
 	_vehicle setVariable["vehicle_info_owners",_owners,true];
 };
 
-hint format["You %1 Key to your %2 given.",name _unit,typeOf _vehicle];
+hint format["You gave %1 a key to your %2.",name _unit,typeOf _vehicle];
 [[_vehicle,_unit,name player], "clientGetKey",_unit,false] spawn life_fnc_MP;

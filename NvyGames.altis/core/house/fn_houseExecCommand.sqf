@@ -20,7 +20,7 @@ switch (_cmd) do
 {
 	case "life_fnc_execHouseMenu":
 	{
-		hintSilent "Gehe ins Housemenü";
+		hintSilent "House menu";
 		[_house, _args, _data] call life_fnc_execHouseMenu;
 	};
 	case "life_fnc_execBuyHouse":

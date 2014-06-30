@@ -25,7 +25,7 @@ if(!isNull _group) then
 	{
 		[player] join _group;
 		life_my_gang = _group;
-		hint format["You are not a member of the transition: %1",_gang select 0];
+		hint format["You are now a member of %1",_gang select 0];
 		
 		closeDialog 0;
 	}

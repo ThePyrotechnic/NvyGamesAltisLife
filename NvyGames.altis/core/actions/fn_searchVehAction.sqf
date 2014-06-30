@@ -23,7 +23,7 @@ if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindO
 	
 	if(_owners == "any<br/>") then
 	{
-		_owners = "No owner; Seizure it!<br/>";
+		_owners = "No owner: Seize it!<br/>";
 	};
 	hint parseText format["<t color='#FF0000'><t size='2'>Info</t></t><br/><t color='#FFD700'><t size='1.5'>owner</t></t><br/> %1",_owners];
 };

@@ -29,7 +29,7 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",_sp select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 	
 	//Show message if civilian spawned in spawnpoint to make it easier fro cops
-	[[0,format["%1 wurde in %2 gespawnt.", name player, _sp select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format["%1 has spawned at %2.", name player, _sp select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 }
 	else
 {

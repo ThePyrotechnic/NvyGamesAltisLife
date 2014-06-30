@@ -23,7 +23,7 @@ switch(_shop) do
 	//////////////////////Gas shop
 	case "gas":
 	{
-		["Tankstelle",
+		["general Supplies",
 			[
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],

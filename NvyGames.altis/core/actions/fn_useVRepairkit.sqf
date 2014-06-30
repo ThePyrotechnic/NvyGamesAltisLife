@@ -6,7 +6,7 @@
 
 */
 
-hint "Repair kit is unpacked ...";
+hint "You open the repair kit ...";
 sleep 2;
 
 if(player canAdd "ToolKit") then

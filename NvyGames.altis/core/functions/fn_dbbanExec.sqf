@@ -7,7 +7,7 @@ _reason = _this select 3;
 
 if((getPlayerUID player) != _uid) exitWith
 {
-	[[0,format["DBBAN >>> Something tried player '%1' to capture! Hack! <<<", name player]],"life_fnc_broadcast" ] call life_fnc_MP;
+	[[0,format["DBBAN >>> '%1' is a hacker and has been banned <<<", name player]],"life_fnc_broadcast" ] call life_fnc_MP;
 };
 
 _msg = format["You have been banned from this server (Reason: %1)! Got to our website @ www.nvygames.com", _reason];

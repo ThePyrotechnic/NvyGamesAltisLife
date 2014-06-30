@@ -7,17 +7,17 @@
 */
 disableSerialization;
 private["_search","_ui","_progress","_cP","_pgText"];
-if(life_action_in_use) exitWith {hint "You are already doing just what."};
+if(life_action_in_use) exitWith {hint "You are already performing an action."};
 _search = nearestObjects[getPos air_sp, ["Air"],5];
 if(count _search == 0) exitWith {hint "There is no helicopter on the landing pad!"};
-if(life_cash < 5000) exitWith {hint "You need $ 5,000 to await the helicopter."};
+if(life_cash < 5000) exitWith {hint "You need $ 5,000 to service the helicopter."};
 life_cash = life_cash - 5000;
 life_action_in_use = true;
 5 cutRsc ["life_progress","PLAIN"];
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["waiting helicopter (1%1)...","%"];
+_pgText ctrlSetText format["Servicing helicopter (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
 
@@ -26,7 +26,7 @@ while {true} do
 	sleep  0.2;
 	_cP = _cP + 0.01;
 	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["waiting helicopter (%1%2)...",round(_cP * 100),"%"];
+	_pgText ctrlSetText format["Servicing helicopter (%1%2)...",round(_cP * 100),"%"];
 	if(_cP >= 1) exitWith {};
 };
 

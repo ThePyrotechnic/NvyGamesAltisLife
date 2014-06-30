@@ -14,7 +14,7 @@ if(_funds < 0) exitWith
 {
 	hint "The Bank has no more money.";
 };
-hint "Attempts safe to open ...";
+hint "Attempting to open sink ...";
 sleep 1;
 bank_query_funds = nil;
 

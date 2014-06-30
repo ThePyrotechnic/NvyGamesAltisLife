@@ -19,7 +19,7 @@ if(! ([_count] call fnc_isnumber)) exitWith
 };
 if(life_house_current_inv_running) exitWith
 {
-	hint "Inventory just updated.";
+	hint "Inventory updated.";
 };
 
 _count = parseNumber _count; //requested number
