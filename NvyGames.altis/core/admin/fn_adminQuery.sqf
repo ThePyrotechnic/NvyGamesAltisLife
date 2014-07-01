@@ -15,4 +15,3 @@ _info = call compile format["%1", _info];
 if(isNil "_info") exitWith {_text ctrlSetText "Player no longer exists?";};
 if(isNull _info) exitWith {_text ctrlSetText "Player no longer exists?";};
 [[player],"fnc_player_query",_info,false] spawn life_fnc_MP;
-_text ctrlSetText "Question player from ...";
