@@ -233,24 +233,6 @@ class CfgSounds
 	sound[] = {"\sounds\target_shoot.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
-  class baby_cry
-  {
-	name="baby_cry";
-	sound[] = {"\sounds\baby_cry.ogg", 1.0, 1};
-	titles[] = {0, " "};
-  };
-  class baby_happy
-  {
-	name="baby_happy";
-	sound[] = {"\sounds\baby_happy.ogg", 1.0, 1};
-	titles[] = {0, " "};
-  };
-  class man_cry
-  {
-	name="man_cry";
-	sound[] = {"\sounds\man_cry.ogg", 1.0, 1};
-	titles[] = {0, " "};
-  };
 };
 
 class CfgDebriefing

@@ -75,7 +75,7 @@ if((count _invs) + (count _weapons) > 0) then
         
         
         //Add ui entry
-        _inv = _inv + format["(Polizei) %1 %2<br/>",_x select 1,[([_x select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr];
+        _inv = _inv + format["(Police) %1 %2<br/>",_x select 1,[([_x select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr];
        
     }
     foreach _policeitems;
@@ -83,7 +83,7 @@ if((count _invs) + (count _weapons) > 0) then
 	
 	{
 		__info = [_x] call life_fnc_fetchCfgDetails;
-		_inv = _inv + format["Waffe: %1<br/>", __info select 1]; 
+		_inv = _inv + format["Weapon: %1<br/>", __info select 1]; 
 		
 		_illegalwp = _illegalwp + 5000; //Pauschaler Betrag
 	}

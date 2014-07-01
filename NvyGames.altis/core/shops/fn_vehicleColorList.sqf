@@ -20,7 +20,7 @@ for "_i" from 0 to (count _c_arr)-1 do
 	switch(true) do
 	{
 		case (playerSide == west && !("cop" in _factions)): {}; //no!
-		case (!life_faction == "reb" && "reb" in _factions): {}; //no!
+		case (!(life_faction == "reb") && "reb" in _factions): {}; //no!
 		case (playerSide == civilian && "cop" in _factions): {}; //no!
 		case ((["adac"] call life_fnc_permLevel) < 1 && "adac" in _factions): {}; //no!
 		case ((call life_donator) < 1 && "donator" in _factions): {}; //no!
