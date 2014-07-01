@@ -16,7 +16,7 @@ cutText["Waiting to respawn....","BLACK FADED"];
 if(playerSide == west) then
 {
 	[1,true] call life_fnc_sessionHandle;
-}
+};
 removeAllContainers _unit;
 removeAllWeapons _unit;
 removeAllAssignedItems _unit;
