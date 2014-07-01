@@ -9,6 +9,7 @@ class Life_Client_Core
 		class setupEVH {};
 		class initCiv {};
 		class initCop {};
+		class initZeus {};
 		class welcomeNotification {};
 	};
 	

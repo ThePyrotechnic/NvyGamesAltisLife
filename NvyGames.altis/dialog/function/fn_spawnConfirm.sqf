@@ -7,7 +7,7 @@
 */
 private["_spCfg","_sp","_spawnPos"];
 closeDialog 0;
-if((life_spawn_point select 1) == "Last Pos") exitWith {player setPos life_position};
+if((life_spawn_point select 1) == "Last Pos") exitWith {player setPos [life_position select 0,life_position select 1,(life_position select 2) + 1]};
 if(count life_spawn_point == 0) then
 {
 	_spCfg = [playerSide] call life_fnc_spawnPointCfg;

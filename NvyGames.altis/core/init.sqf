@@ -49,6 +49,16 @@ switch (playerSide) do
 		waitUntil {scriptDone _handle};
 	};
 	
+	case sideLogic:
+
+    {
+
+        _handle = [] spawn life_fnc_initZeus;
+
+        waitUntil {scriptDone _handle};
+
+    };
+	
 	default  //Invalid side
 	{
 		["NotWhitelisted",false,true] call BIS_fnc_endMission;
