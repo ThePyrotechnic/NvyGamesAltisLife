@@ -57,10 +57,7 @@ life_uitems = [
 	["token_police", "Police Token", 0, false, 200, 150, 50, true],
 	
 	//Troll items
-	["troll_taschentuch", "Handkerchief", 0, false, 5, 3, 2, true],
-	["troll_nuckel", "Baby Cry One", 0, false, 5, 3, 2, true],
-	["troll_bitering", "Baby Cry Two", 0, false, 5, 3, 2, true],
-	["troll_money", "Troll Money", 0, false, 1, 1, 0, false]
+	["troll_money", "Fake Money", 0, false, 1, 1, 0, false]
 ];
 
 ///////////////Generated Config (WIRD GENERIERT)

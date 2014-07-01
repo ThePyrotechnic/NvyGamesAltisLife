@@ -18,6 +18,7 @@ switch (typeName life_fnc_MP_packet) do
 	{
 		if(count life_fnc_MP_packet == 0) exitWith
 		{
+			hint "Something went wrong, wait 5 minutes and try again.";
 			_exit = true;
 		};
 	};

@@ -14,7 +14,7 @@ if(isNull _cop) exitWith {};
 _inv = [];
 _weapons = [];
 _robber = false;
-
+_policeitems = [];
 _licenses = "";
 
 //Unholster weapons
@@ -86,7 +86,7 @@ if(currentWeapon player == "") then
 	_primary = getText(configFile >> "CfgWeapons" >> _primary >> "displayName");
 	_pistol = getText(configFile >> "CfgWeapons" >> _pistol >> "displayName");
 	_launcher = getText(configFile >> "CfgWeapons" >> _launcher >> "displayName");
-	[[format ["Successfuly removed \n%1\n%2\n%3",_primary,_pistol,_launcher]],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
+	[[format ["Successfuly removed<br/>%1<br/>%2<br/>%3",_primary,_pistol,_launcher]],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
 };
 
 

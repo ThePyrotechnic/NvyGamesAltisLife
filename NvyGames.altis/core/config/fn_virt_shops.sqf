@@ -24,7 +24,7 @@ switch (_shop) do
 	case "diamond": {["Diamond Trader",[/*"diamond",*/"diamondc"]]};
 	case "salt": {["Salt Trader",["salt_r"]]};
 	case "cop": {["Cop Market",["donuts","coffee","water","rabbit","apple","redgull"], ["cop"]]};
-	case "cop_gear": { ["Cop Gear", ["uitem_handcuffs","spikeStrip","fuelF","vitem_repairkit","vitem_firstaidkit","box","uitem_bd_mk1_bleachweapon","uitem_bd_mk1_ammo","uitem_bd_mk2_microemp","uitem_bd_mk2_ammo","uitem_token_police","uitem_troll_taschentuch","uitem_troll_nuckel","uitem_troll_bitering","uitem_troll_money"], ["cop"]] };
+	case "cop_gear": { ["Cop Gear", ["uitem_handcuffs","spikeStrip","fuelF","vitem_repairkit","vitem_firstaidkit","box","uitem_bd_mk1_bleachweapon","uitem_bd_mk1_ammo","uitem_bd_mk2_microemp","uitem_bd_mk2_ammo","uitem_token_police","uitem_troll_money"], ["cop"]] };
     case "cement": {["Cement: Zement",["cement"]]};
 	case "silver": {["Silver",["silver","silverr"]]}; //##12
 	case "gold": {["Gold Trader",[/*"gold",*/"goldr"]]}; //##11
