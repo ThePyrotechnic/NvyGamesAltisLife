@@ -233,6 +233,12 @@ class CfgSounds
 	sound[] = {"\sounds\target_shoot.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
+  class gas_rob
+  {
+	name="gas_rob";
+	sound[] = {"\sounds\gas_rob.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
 };
 
 class CfgDebriefing

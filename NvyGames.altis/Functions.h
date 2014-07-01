@@ -247,6 +247,7 @@ class Life_Client_Core
 		
 		class bagSound {};
 		
+		class playSound {};
 		class globalSound {};
 		class globalSoundClient {};
 		

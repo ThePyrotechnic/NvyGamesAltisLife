@@ -14,11 +14,12 @@ _pos = GetPos _shop;
 if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
-if (currentWeapon _robber == "") exitWith { hint "Haha, you do not threaten me! Get out of here you hobo!" };
+if (currentWeapon _robber == "") exitWith { hint "You cannot rob this gas station without a weapon!" };
 if(_shop getVariable ["coolDown",false]) exitWith {hint "You must wait 5 minutes before attempting to rob again!"};
 if(_shop getVariable["rip",false]) exitWith {hint "This shop is already being robbed!"};
 
 _shop setVariable ["rip",true,true];
+[[_shop,"gas_rob",150],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
 _kassa = 3000 + round(random 12000);
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 hint "The cashier hit the silent alarm, police have been alerted!"; 

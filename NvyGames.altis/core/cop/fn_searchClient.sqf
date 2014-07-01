@@ -83,9 +83,9 @@ if(currentWeapon player == "") then
 	if (_primary in life_illegalWeapons) then { player removeWeaponGlobal _primary; _weapons set [count _weapons,_primary]; };
 	if (_pistol in life_illegalWeapons) then { player removeWeaponGlobal _pistol; _weapons set [count _weapons,_pistol]; };
 	if (_launcher in life_illegalWeapons) then { player removeWeaponGlobal _launcher; _weapons set [count _weapons,_launcher]; };
-	_primary = getText(configFile >> "CfgWeapons" >> _primary >> "displayName");
-	_pistol = getText(configFile >> "CfgWeapons" >> _pistol >> "displayName");
-	_launcher = getText(configFile >> "CfgWeapons" >> _launcher >> "displayName");
+	if (_primary != "") then {_primary = getText(configFile >> "CfgWeapons" >> _primary >> "displayName");};
+	if (_primary != "") then {_pistol = getText(configFile >> "CfgWeapons" >> _pistol >> "displayName");};
+	if (_primary != "") then {_launcher = getText(configFile >> "CfgWeapons" >> _launcher >> "displayName");};
 	[[format ["Successfuly removed<br/>%1<br/>%2<br/>%3",_primary,_pistol,_launcher]],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
 };
 

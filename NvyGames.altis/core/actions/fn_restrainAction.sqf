@@ -10,7 +10,7 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((_unit getVariable "restrained")) exitWith {};
 if((side player == west) && (side _unit == west)) exitWith {}; //WEST-WEST nono
-if((side player == civilian) && !(life_faction in ["rebel","indy"]) && !(["RESTRAIN"] call life_fnc_permRuleG)) exitWith {}; //not a rebel or indy => nono
+if((side player == civilian) && !(life_faction in ["rebel","indy"])) exitWith {}; //not a rebel or indy => nono
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
 //Broadcast!

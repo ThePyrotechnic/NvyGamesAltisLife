@@ -108,16 +108,18 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 			case (_vehicle isKindOf "Air"): {_price = life_impound_air;};
 		};
 		
-		if (_seize) then
+		if (_seize) exitWIth
 		{
 			deleteVehicle _vehicle;
-		}
-		else
-		{
+			hint format["You have impounded a %1.\n\nYou recieve $%2!",_type,_price];
+			[[0,format["%1 confiscated %2's %3",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+			
+			life_atmcash = life_atmcash + _price;
+			life_action_in_use = false;
+		};
 			life_impound_inuse = true;
 			[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
 			waitUntil {!life_impound_inuse};		
-		};
 		
 		if(_costful_impound) then
 		{
