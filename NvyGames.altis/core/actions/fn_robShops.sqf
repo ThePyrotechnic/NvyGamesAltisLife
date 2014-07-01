@@ -19,7 +19,10 @@ if(_shop getVariable ["coolDown",false]) exitWith {hint "You must wait 5 minutes
 if(_shop getVariable["rip",false]) exitWith {hint "This shop is already being robbed!"};
 
 _shop setVariable ["rip",true,true];
+
 [[_shop,"gas_rob",150],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
+[["sounds\pol_gas_rob"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
+
 _kassa = 3000 + round(random 12000);
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 hint "The cashier hit the silent alarm, police have been alerted!"; 
@@ -70,6 +73,7 @@ if(_robber distance _shop > 10) exitWith
 	hint "You need to stay within 10m to Rob register! - Now the register is locked."; 
 	5 cutText ["","PLAIN"]; 
 	deletemarker _marker;
+	[["sounds\pol_gas_fail"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 	[_shop] spawn
 	{
 		private["_shop"];
@@ -86,6 +90,7 @@ if(life_isTazed) exitWith
 	hint "You were tazed, and the robbery failed!"; 
 	5 cutText ["","PLAIN"]; 
 	deletemarker _marker;
+	[["sounds\pol_gas_fail"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 	[_shop] spawn
 	{
 		private["_shop"];
