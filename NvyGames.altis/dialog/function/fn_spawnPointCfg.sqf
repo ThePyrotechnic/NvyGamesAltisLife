@@ -32,13 +32,13 @@ switch (_side) do
 	{
 		_spawns = _spawns + [
 			["cop_spawn_1","Kavala HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
+			//["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
 			["cop_spawn_6","Neochori HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_8","Pyrsos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_5","Checkpoint 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_9","Checkpoint 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["cop_spawn_8","Pyrsos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			//["cop_spawn_5","Checkpoint 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			//["cop_spawn_9","Checkpoint 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 		];
 	};
 	
@@ -54,9 +54,9 @@ switch (_side) do
 		{
 			_spawns = _spawns + [
 				["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				//["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				//["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
 // Factions
@@ -64,12 +64,15 @@ switch (_side) do
 		{
 			_spawns = _spawns + [
 				["rebel_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
+				["rebel_spawn_2","Sofia Graves","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //rebel sofia spawn
+				["rebel_spawn_3","Pyrgos Church","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //rebel pyrgos spawn
 			];
 		};	
 		if(life_faction == "indy") then
 		{
 			_spawns = _spawns + [
 				["indy_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
+				["indy_spawn_2","Zaros Graves","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
 			];
 		};
 		/* Optional position saving

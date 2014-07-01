@@ -32,7 +32,6 @@ switch(_shop) do
 				["Itemwatch",nil,100],
 				["ItemCompass",nil,50],
 				["ItemMap",nil,50],
-				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
 				["Chemlight_red",nil,300],
