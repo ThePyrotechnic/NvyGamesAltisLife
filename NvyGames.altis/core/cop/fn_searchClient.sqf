@@ -71,22 +71,22 @@ if(_handgun in life_illegalweapons) then
 	player removeWeaponGlobal _handgun; 
 };*/
 
-if(currentWeapon _unit == "") then
+if(currentWeapon player == "") then
 {
-	hint "Player has no weapons!";
+	[["Player has no weapons!"],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
 }
 	else 
 {
-	_primary = primaryWeapon _unit;
-	_launcher = secondaryWeapon _unit;
-	_pistol = handgunWeapon _unit;
-	if (_primary in life_illegalWeapons) then { _unit removeWeaponGlobal _primary; _weapons set [count _weapons,_primary]; };
-	if (_pistol in life_illegalWeapons) then { _unit removeWeaponGlobal _pistol; _weapons set [count _weapons,_pistol]; };
-	if (_launcher in life_illegalWeapons) then { _unit removeWeaponGlobal _launcher; _weapons set [count _weapons,_launcher]; };
+	_primary = primaryWeapon player;
+	_launcher = secondaryWeapon player;
+	_pistol = handgunWeapon player;
+	if (_primary in life_illegalWeapons) then { player removeWeaponGlobal _primary; _weapons set [count _weapons,_primary]; };
+	if (_pistol in life_illegalWeapons) then { player removeWeaponGlobal _pistol; _weapons set [count _weapons,_pistol]; };
+	if (_launcher in life_illegalWeapons) then { player removeWeaponGlobal _launcher; _weapons set [count _weapons,_launcher]; };
 	_primary = getText(configFile >> "CfgWeapons" >> _primary >> "displayName");
 	_pistol = getText(configFile >> "CfgWeapons" >> _pistol >> "displayName");
 	_launcher = getText(configFile >> "CfgWeapons" >> _launcher >> "displayName");
-	hint format ["Successfuly removed \n%1\n%2\n%3",_primary,_pistol,_launcher];
+	[[format ["Successfuly removed \n%1\n%2\n%3",_primary,_pistol,_launcher]],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
 };
 
 

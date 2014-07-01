@@ -27,7 +27,7 @@ switch (_filter) do
 		};
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["U_B_SpecopsUniform_sgg","SEK Uniform",550]];
+			_ret set[count _ret,["U_B_SpecopsUniform_sgg","DEA Uniform",550]];
 		};
 	};
 	
