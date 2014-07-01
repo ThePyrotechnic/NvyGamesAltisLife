@@ -13,10 +13,14 @@ if(isNull _unit) exitWith {};
 cutText["Waiting to respawn....","BLACK FADED"];
 0 cutFadeOut 9999999;
 
-if(playerSide == civilian) then
+if(playerSide == west) then
 {
+	[1,true] call life_fnc_sessionHandle;
+}
 removeAllContainers _unit;
-};
+removeAllWeapons _unit;
+removeAllAssignedItems _unit;
+
 
 hideBody _unit;
 //Make my killer wanted!
@@ -82,4 +86,4 @@ life_use_atm = true;
 life_cash = 0;
 life_isSuicide = false;
 
-[1,true] call life_fnc_sessionHandle;
+if(playerSide == civilian) then {[1,true] call life_fnc_sessionHandle;};

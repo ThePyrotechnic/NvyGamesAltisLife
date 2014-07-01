@@ -40,7 +40,7 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_heroin = player addAction['Schlafmohn sammeln',life_fnc_gatherHeroin,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Heroin;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_heroin = player addAction['Gather Heroin',life_fnc_gatherHeroin,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Heroin;"];
 } foreach _heroinZones;
 
 //Create Weed zones
@@ -48,7 +48,7 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Cannabis = player addAction['Hanf sammeln',life_fnc_gatherCannabis,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Cannabis;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Cannabis = player addAction['Gather Cannabis',life_fnc_gatherCannabis,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Cannabis;"];
 } foreach _weedZones;
 
 //Create cocaine zones
@@ -56,7 +56,7 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction['Kokablätter sammeln',life_fnc_gatherCocaine,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Coke;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction['Gather Cocaine',life_fnc_gatherCocaine,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Coke;"];
 } foreach _cocaineZones;
 
 //Create frog zones
@@ -64,5 +64,5 @@ _frogZones = ["frog_swamp1"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Frog = player addAction['Frösche fangen',life_fnc_CatchFrogAction,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Frog;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Frog = player addAction['Catch Frog',life_fnc_CatchFrogAction,'',6,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Frog;"];
 } foreach _frogZones;

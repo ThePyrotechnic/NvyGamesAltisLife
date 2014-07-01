@@ -126,7 +126,6 @@ life_vehicle_colors_new =
 	//////////////////////////////////////////////////////
 	["B_MRAP_01_hmg_F",["cop"]					,"Task Force",["vehskins\sek_hunter_01.paa","vehskins\sek_hunter_02.paa"], 16],
 	["B_MRAP_01_hmg_F",["cop"]					,"Police",["vehskins\police_hunter.paa"], 16],
-	["B_MRAP_01_hmg_F",["cop"]					,"Patrol",["vehskins\police_hunter_blau_weis_Bugfixed.paa"], 16],
 	
 	//I_Truck_02_covered_F
 	//////////////////////////////////////////////////////
