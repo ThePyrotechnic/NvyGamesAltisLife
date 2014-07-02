@@ -21,7 +21,8 @@ titleText["Crack the safe ...","PLAIN"];
 
 //##87
 //_vault say3D "bankalarm";
-[_vault,"bankalarm"] call life_fnc_globalSound;
+[[_shop,"bank_rob",150],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
+[["sounds\pol_bank_rob"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 
 
 while {true} do
@@ -42,18 +43,21 @@ switch(true) do
 	{
 		hint "You've moved too far from the safe! Bank robbery failed!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
+		[["sounds\pol_bank_fail"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 	};
 	
 	case (!alive player):
 	{
 		hint "You died! Bank robbery failed!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
+		[["sounds\pol_bank_fail"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 	};
 	
 	case (life_istazed):
 	{
 		hint "You were stunned! Bank robbery failed!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
+		[["sounds\pol_bank_fail"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 	};
 	
 	case ((round(_timer - time)) < 1):
