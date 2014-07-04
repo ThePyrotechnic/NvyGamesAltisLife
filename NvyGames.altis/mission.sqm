@@ -825,7 +825,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_shorts_3_F_euro";
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Garage"",  life_fnc_openGarage, [""civ_ship_1"",""Ship""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_1""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_1"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 				class Item11
 				{
@@ -1240,7 +1240,7 @@ class Mission
 					vehicle="C_man_shorts_3_F_euro";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Bootsladen"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn BIS_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShop,""civ_ship_2""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_ship_2"";  }]; this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
@@ -1577,9 +1577,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11847.373,12.538892,14150.384};
+					position[]={11846.386,12.5825,14146.64};
 					azimut=-417.33499;
-					offsetY=0.60000002;
 					special="NONE";
 					id=93;
 					side="CIV";
@@ -2579,7 +2578,7 @@ class Mission
 					skill=0.2;
 					fuel=0;
 					ammo=0;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Möbelhaus"",life_fnc_virt_menu,""furniture""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""furniture store"",life_fnc_virt_menu,""furniture""];";
 				};
 			};
 		};
@@ -5027,7 +5026,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=4262;
+		items=4274;
 		class Item0
 		{
 			position[]={25707.244,18.863813,21285.787};
@@ -5856,7 +5855,7 @@ class Mission
 		};
 		class Item80
 		{
-			position[]={11846.711,12.535271,14150.759};
+			position[]={11845.724,12.578506,14147.015};
 			azimut=-241.955;
 			offsetY=0.1;
 			id=338;
@@ -51035,6 +51034,138 @@ class Mission
 			skill=0.60000002;
 			description="   Land_dp_mainFactory_F";
 		};
+		class Item4262
+		{
+			position[]={16931.596,16.677507,15388.537};
+			azimut=114.98852;
+			special="NONE";
+			id=4520;
+			side="EMPTY";
+			vehicle="Land_Wreck_Van_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4263
+		{
+			position[]={16912.643,14.756646,15419.012};
+			azimut=-272.07135;
+			special="NONE";
+			id=4521;
+			side="EMPTY";
+			vehicle="Land_Wreck_Hunter_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4264
+		{
+			position[]={16942.764,18.248672,15336.557};
+			azimut=-96.346298;
+			special="NONE";
+			id=4522;
+			side="EMPTY";
+			vehicle="Land_Wreck_HMMWV_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4265
+		{
+			position[]={16945.742,17.976292,15353.749};
+			azimut=-157.63737;
+			special="NONE";
+			id=4523;
+			side="EMPTY";
+			vehicle="Land_Wreck_CarDismantled_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4266
+		{
+			position[]={16954.732,18.618845,15326.786};
+			azimut=50.61747;
+			special="NONE";
+			id=4524;
+			side="EMPTY";
+			vehicle="Land_Wreck_Slammer_hull_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4267
+		{
+			position[]={16933.141,17.35207,15365.516};
+			azimut=-34.819;
+			special="NONE";
+			id=4525;
+			side="EMPTY";
+			vehicle="Land_Wreck_Truck_dropside_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4268
+		{
+			position[]={16990.594,15.726709,15401.823};
+			azimut=32.037998;
+			special="NONE";
+			id=4526;
+			side="EMPTY";
+			vehicle="Land_Wreck_BRDM2_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4269
+		{
+			position[]={16974.588,15.167536,15415.816};
+			azimut=163.28581;
+			special="NONE";
+			id=4527;
+			side="EMPTY";
+			vehicle="Land_Wreck_Ural_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4270
+		{
+			position[]={16903.457,13.379031,15466.11};
+			azimut=-8.697793;
+			special="NONE";
+			id=4528;
+			side="EMPTY";
+			vehicle="Land_Wreck_T72_turret_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4271
+		{
+			position[]={17446.918,22.04459,16107.354};
+			azimut=32.037998;
+			special="NONE";
+			id=4529;
+			side="EMPTY";
+			vehicle="Land_Wreck_HMMWV_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4272
+		{
+			position[]={17428.26,21.740604,16089.247};
+			azimut=32.037998;
+			special="NONE";
+			id=4530;
+			side="EMPTY";
+			vehicle="Land_Wreck_Plane_Transport_01_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4273
+		{
+			position[]={17426.986,22.614326,16112.163};
+			azimut=85.724113;
+			special="NONE";
+			id=4531;
+			side="EMPTY";
+			vehicle="Land_Wreck_Offroad2_F";
+			leader=1;
+			skill=0.2;
+		};
 	};
 	class Markers
 	{
@@ -51782,7 +51913,7 @@ class Mission
 			name="heroin_p";
 			text="Heroin Processing";
 			type="mil_dot";
-			colorName="ColorRed";
+			colorName="Color1_FD_F";
 			angle=164.078;
 		};
 		class Item94
@@ -52069,11 +52200,10 @@ class Mission
 			text="Hospital";
 			type="loc_Hospital";
 			colorName="ColorRed";
-			angle=335.61499;
 		};
 		class Item129
 		{
-			position[]={11847.245,12.552729,14149.244};
+			position[]={11846.258,12.594659,14145.5};
 			name="gas_5";
 			text="Quick Mart";
 			type="group_1";
@@ -54220,7 +54350,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			position[]={20785.646,37.100281,16670.59};
@@ -54436,7 +54566,7 @@ class Mission
 			position[]={10778.837,6.89114,10753.067};
 			a=100;
 			b=60;
-			angle=-61.105236;
+			angle=-95.231071;
 			rectangular=1;
 			activationBy="CIV";
 			repeating=1;
@@ -54874,6 +55004,24 @@ class Mission
 			age="UNKNOWN";
 			expCond="this && (local player) && (vehicle player in thisList)";
 			expActiv="hint ""CAUTION this is an illegal kill on sight area. You may be approached by police and ticketed/arrested!""";
+			class Effects
+			{
+			};
+		};
+		class Item37
+		{
+			position[]={16821.619,10.554405,15456.412};
+			a=200;
+			b=100;
+			angle=-332.43509;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""I-I don't know what happened. I see wreckage up ahead. I wonder why there is a massive wall blocking the other half of the island?""";
 			class Effects
 			{
 			};

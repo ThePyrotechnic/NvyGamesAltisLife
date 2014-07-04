@@ -720,6 +720,8 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are a cop!"};
+			case (life_faction == "indy"): {"Independent faction members have no place here."};
+			case (life_faction == "rebel"): {"Get out of here rebel scum."};
 			case (!license_civ_gun): {"You do not have a firearms license"};
 			default
 			{
