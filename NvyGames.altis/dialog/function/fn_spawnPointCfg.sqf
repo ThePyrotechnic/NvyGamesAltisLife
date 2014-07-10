@@ -54,24 +54,24 @@ switch (_side) do
 		{
 			_spawns = _spawns + [
 				["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				//["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
-				//["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
 // Factions
 		if(life_faction == "rebel") then
 		{
 			_spawns = _spawns + [
-				["rebel_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
-				["rebel_spawn_2","Sofia Graves","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //rebel sofia spawn
+				["rebel_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"], //test spawn should take you to the ghost hotel.
+				["rebel_spawn_2","Sofia Graves","\a3\ui_f\data\map\MapControl\watertower_ca.paa"], //rebel sofia spawn
 				["rebel_spawn_3","Pyrgos Church","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //rebel pyrgos spawn
 			];
 		};	
 		if(life_faction == "indy") then
 		{
 			_spawns = _spawns + [
-				["indy_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
+				["indy_spawn_1","The HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"], //test spawn should take you to the ghost hotel.
 				["indy_spawn_2","Zaros Graves","\a3\ui_f\data\map\MapControl\watertower_ca.paa"] //test spawn should take you to the ghost hotel.
 			];
 		};
