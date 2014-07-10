@@ -60,7 +60,7 @@ _donator = [_exdata, "donator"] call life_fnc_houseExtractDataVal;
 if(!_canview) exitWith
 {
 	hint "The house does not belong to you!";
-	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
+	diag_log format [ "%1 tried to access %2 illegally", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
 if( [_house_name] call life_fnc_houseIsInuse ) exitWith

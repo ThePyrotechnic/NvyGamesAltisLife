@@ -69,7 +69,7 @@ class Life_vehicle_shop {
 		
 		class GetCar : life_RscButtonMenu {
 			idc = -1;
-			text = "Mieten";
+			text = "Rent";
 			onButtonClick = "[] spawn life_fnc_vehicleShopBuy";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);

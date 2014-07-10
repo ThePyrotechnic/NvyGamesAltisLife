@@ -46,7 +46,7 @@ if(!_usehouse) then
 		
 		hint "Money was delivered. The money washer retains a portion as a reward!";
 		sleep 3;
-		hint format["It is in about. %1 Been credited to your account minutes", 3 * 5];
+		hint format["In about %1 minutes it will be credited to your acoount.", 3 * 5];
 	}
 	else
 	{

@@ -18,19 +18,19 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["U_C_Poloshirt_blue","Poloshirt Blau",250],
+			["U_C_Poloshirt_blue","Poloshirt Blue",250],
 			["U_C_Poloshirt_burgundy","Poloshirt Burgundy",250],
-			["U_C_Poloshirt_redwhite","Poloshirt Rot/Weiss",250],
+			["U_C_Poloshirt_redwhite","Poloshirt Red & White",250],
 			["U_C_Poloshirt_salmon","Poloshirt Salmon",250],
-			["U_C_Poloshirt_stripped","Poloshirt Gestreift",250],
-			["U_C_Poloshirt_tricolour","Poloshirt Dreifarbig",250],
-			["U_IG_Guerilla2_2","Gruenes Hemd & weisse Hose",750],
-			["U_IG_Guerilla2_1","Schwarzes Hemd & beche Hose",750],
-			["U_IG_Guerilla3_1","Braune Jacke & Jeans",750],
-			["U_IG_Guerilla2_3","Graues Hemd & gruene Hose",750],
+			["U_C_Poloshirt_stripped","Poloshirt Striped",250],
+			["U_C_Poloshirt_tricolour","Poloshirt Tri-Color",250],
+			["U_IG_Guerilla2_2","Goon Shirt",750],
+			["U_IG_Guerilla2_1","Black Shirt",750],
+			["U_IG_Guerilla3_1","Brown jacket & jeans ",750],
+			["U_IG_Guerilla2_3","Gray and Green Shirt",750],
 			["U_C_HunterBody_grn","Beche Jacke & Jeans",1000],
 			["U_OrestesBody","Gay Outfit",1100],
-			["U_C_WorkerCoveralls","Mechaniker Outfit",1250]
+			["U_C_WorkerCoveralls","Mech Outfit",1250]
 		];
 	};
 	

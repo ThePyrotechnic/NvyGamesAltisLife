@@ -87,7 +87,7 @@ class perm_dlg
 		class bClose: RscButtonMenu
 		{
 			idc = 2401;
-			text = "close"; //--- ToDo: Localize;
+			text = "Close"; //--- ToDo: Localize;
 			x = 4 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 32 * GUI_GRID_W;
@@ -125,7 +125,7 @@ class perm_dlg
 		class bSetPerm: RscButtonMenu
 		{
 			idc = 2402;
-			text = "Ändern"; //--- ToDo: Localize;
+			text = "Change"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -135,7 +135,7 @@ class perm_dlg
 		class bThrowOut: RscButtonMenu
 		{
 			idc = 2403;
-			text = "Herauswerfen"; //--- ToDo: Localize;
+			text = "Remove"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;

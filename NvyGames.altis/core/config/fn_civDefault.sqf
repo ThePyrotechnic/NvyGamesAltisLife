@@ -9,30 +9,10 @@
 systemChat "Loading civilian default gear.";
 
 RemoveAllWeapons player;
-{player removeMagazine _x;} foreach (magazines player);
-removeUniform player;
-removeVest player;
-removeBackpack player;
-removeGoggles player;
-removeHeadGear player;
-{
-	player unassignItem _x;
-	player removeItem _x;
-} foreach (assignedItems player);
+removeAllContainers player;
+removeAllAssignedItems player;
 
-
-//Load player with default cop gear.
-/*player addUniform "U_Rangemaster";
-player addVest "V_Rangemaster_belt";
-player addMagazine "B_9x21_Ball";
-player addMagazine "B_9x21_Ball";
-player addMagazine "B_9x21_Ball";
-player addMagazine "B_9x21_Ball";
-player addMagazine "B_9x21_Ball";
-player addMagazine "B_9x21_Ball";
-player addWeapon "hgun_P07_snds_F";*/
 player addUniform "U_C_Poloshirt_blue";
-
 player additem "ItemCompass"; 
 player assignItem "ItemCompass";
 player additem "ItemMap"; 

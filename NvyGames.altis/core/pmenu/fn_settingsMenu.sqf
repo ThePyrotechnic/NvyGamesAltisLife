@@ -38,10 +38,10 @@ if(isNil "life_sidechat") then
 if(!life_sidechat) then
 {
 	_side ctrlSetTextColor [0,1,0,1];
-	_side ctrlSetText "Sidechat AN";
+	_side ctrlSetText "Sidechat On";
 }
 	else
 {
 	_side ctrlSetTextColor [1,0,0,1];
-	_side ctrlSetText "Sidechat AUS";
+	_side ctrlSetText "Sidechat Off";
 };

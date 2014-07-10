@@ -46,7 +46,7 @@ if( !([_permid, "VIEW"] call life_fnc_permRule) && !life_permmanager_admin) exit
 lbClear 1500; //clear it before using it
 lbClear 1500; //clear it before using it
 
-systemChat "Lade Liste ... Bitte warten!";
+systemChat "Loading list...please wait.";
 
 if(count life_permmanager_player_perms == 0) then
 {

@@ -42,7 +42,8 @@ if(!isNull _source) then
 					_istazer = true;
 					_distance = 35;
 					_impact = 15;
-				};				
+				};
+/*	Rubber bullets			
 				case (_projectile in ["B_65x39_Caseless","B_556x45_Ball_Tracer_Red"]):  //List of projectile types
 				//30Rnd_65x39_caseless_mag_Tracer, 30Rnd_45ACP_Mag_SMG_01_tracer_green, 100Rnd_65x39_caseless_mag_Tracer, 
 				{
@@ -50,6 +51,7 @@ if(!isNull _source) then
 					_distance = 2000;
 					_impact = 40;
 				};
+*/
 			};
 		};		
 		
@@ -71,37 +73,21 @@ if(!isNull _source) then
 				{
 					if(_isVehicle && _isQuad) then 
 					{
-						//sort out some vehicles
-						switch(typeOf (vehicle player)) do 
-						{
-							//List of sorted out
-							case "B_MRAP_01_gmg_F": {};
-							case "B_MRAP_01_F": {};
-							case "B_Truck_01_transport_F": {};
-							case "B_Truck_01_covered_F": {};
-							case "O_Heli_Attack_02_F": {};
-							case "O_Heli_Attack_02_black_F": {};
-							case "I_Heli_Transport_02_F": {};
-							case "I_MRAP_03_F": {};
-							case "I_MRAP_03_hmg_F": {};
-							
-							
-							//Taze here
-							default 
-							{
-								player action ["Eject",vehicle player];
-								[_unit,_source,_impact] spawn life_fnc_tazed;
-							};
-						};
+						//Taze here
+						player action ["Eject",vehicle player];
+						[_unit,_source,_impact] spawn life_fnc_tazed;
 					} 
 					else 
 					{
-							[_unit,_source,_impact] spawn life_fnc_tazed;
+						[_unit,_source,_impact] spawn life_fnc_tazed;
 					};
 					//////////////////////////^^^^^^^^^^ Will taze anyway
 						
 				};
 			};
+			if(playerSide == west && side _source == west) then {
+				_damage = false;
+			}
 		};
 		
 		/*if(_projectile in ["B_9x21_Ball","B_762x51_Ball"] && _curWep in ["hgun_P07_snds_F","srifle_EBR_F"]) then {

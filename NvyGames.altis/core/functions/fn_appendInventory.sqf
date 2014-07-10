@@ -11,7 +11,7 @@
 
 private ["_item", "_count","_longname"];
 
-hintSilent "Lade Inventar ...";
+hintSilent "Loading inventory ...";
 
 {
 	_item = _x select 0;

@@ -35,7 +35,7 @@ if(player getVariable ["restrained", false]) exitWith
 
 if(life_hands_up) exitWith
 {
-	hintSilent "You got your hands up!";
+	hintSilent "You have your hands up!";
 
 	_handled = false;
 	_handled;
@@ -80,8 +80,20 @@ switch (_code) do
 	//Map Key
 	case _mapKey:
 	{
-		if(playerSide == west && !visibleMap) then {
+		if(playerSide == west && !visibleMap) then 
+		{
 			[] spawn life_fnc_copMarkers;
+		}
+		else 
+		{ 
+			if (playerSide != west && !visibleMap) then
+			{
+				_index = [life_my_gang,life_gang_list] call fnc_index;
+				if(_index != -1) then
+				{
+					[] spawn life_fnc_gangMarkers;
+				};
+			};
 		};
 	};
 	
@@ -120,12 +132,12 @@ switch (_code) do
 			}
 			else
 			{
-				hint "You have no Handcuffs there!";
+				hint "You have no Handcuffs!";
 			};
 		}
 		else
 		{
-			if(_shift && playerSide == civilian && (license_civ_rebel || ["RESTRAIN"] call life_fnc_permRuleG) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["Escorting", false]) && !(cursorTarget getVariable ["restrained", false]) && speed cursorTarget < 1 ) then
+			if(_shift && playerSide == civilian && (life_faction == "rebel" || ["RESTRAIN"] call life_fnc_permRuleG) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["Escorting", false]) && !(cursorTarget getVariable ["restrained", false]) && speed cursorTarget < 1 ) then
 			{
 				if([false,"uitem_handcuffs",1] call life_fnc_handleInv) then
 				{
@@ -134,7 +146,7 @@ switch (_code) do
 				}
 				else
 				{
-					hint "You have no Handcuffs there!";
+					hint "You have no Handcuffs!";
 				};
 			};
 		};

@@ -99,7 +99,7 @@ class life_wanted_menu {
 		
 		class AddButton : Life_RscButtonMenu {
 			idc = 2406;
-			text = "Hinzufügen ...";
+			text = "Add ...";
 			onButtonClick = "closeDialog 0; [] spawn life_fnc_newwanted; ";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);

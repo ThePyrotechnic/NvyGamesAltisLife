@@ -20,7 +20,7 @@ _vid = lbValue[2801,(lbCurSel 2801)];
 _pid = getPlayerUID player;
 _unit = player;
 
-if(isNil "_vehicle") exitWith {hint "Die Auswahl hatte einen Fehler..."};
+if(isNil "_vehicle") exitWith {hint "There was a mistake with the selection..."};
 
 _price = [_vehicle,__GETC__(life_garage_prices)] call fnc_index;
 if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_prices) select _price) select 1;};
@@ -28,7 +28,7 @@ if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_pric
 if(_isfree) then
 {
   _price = 0;  
-  systemChat "Das Ausparken kostet dich nichts.";
+  systemChat "This one's on the house!";
 };
 
 if(life_atmcash < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};

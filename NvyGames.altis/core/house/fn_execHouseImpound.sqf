@@ -24,7 +24,7 @@ if(_datawritten) then
 {	
 	life_atmcash = life_atmcash + _illegal_value;
 	
-	hint format [ "You $%1 obtain wage.", _illegal_value ];
+	hint format [ "You recieve $%1.", _illegal_value ];
 	
 	///Write
 	sleep 10;

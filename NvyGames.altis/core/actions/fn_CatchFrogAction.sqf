@@ -15,7 +15,7 @@ _sum = ["frog",_count,life_carryWeight,life_maxWeight] call life_fnc_calWeightDi
 if(_sum > 0) then
 {
 	life_action_in_use = true;
-	titleText["Sammle Frösche ...","PLAIN"];
+	titleText["Collect Frogs...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	sleep 2;
 	if(([true,"frog",_sum] call life_fnc_handleInv)) then
@@ -27,7 +27,7 @@ if(_sum > 0) then
 }
 	else
 {
-	hint "Inventar voll.";
+	hint "Full Inventory.";
 };
 
 life_action_in_use = false;

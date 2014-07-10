@@ -100,8 +100,7 @@ switch (_shop) do
 			["O_Truck_03_covered_F",4000000],
 			["B_Heli_Light_01_F",500000],
 			["O_Heli_Light_02_unarmed_F",1500000],
-			["I_Heli_Transport_02_F",3500000],
-			["B_Heli_Transport_01_F",15000000]
+			["I_Heli_Transport_02_F",3500000]
 		];
 
 		/*if(__GETC__(life_donator) > 1) then
@@ -146,8 +145,7 @@ switch (_shop) do
 			["O_Truck_03_covered_F",4000000],
 			["B_Heli_Light_01_F",500000],
 			["O_Heli_Light_02_unarmed_F",1500000],
-			["I_Heli_Transport_02_F",3500000],
-			["B_Heli_Transport_01_F",15000000]
+			["I_Heli_Transport_02_F",3500000]
 			
 		];
 
@@ -235,20 +233,20 @@ switch (_shop) do
 			["B_Heli_Transport_01_camo_F",5000000]];*/
 		};
 	};
-	
-	case "reb_v_2":
+//========================================================================INDI=================================================================================
+	case "indy_car_1":
 	{
-		if(license_civ_rebel) then
+		if(life_faction == "indy") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
 		{
 			_return =
 			[
-				["B_Quadbike_01_F",3000],
-				["B_G_Offroad_01_F",50000],
-				["O_Truck_03_transport_F",400000],
-				["I_MRAP_03_F",1000000],
-				["B_Heli_Light_01_F",600000],
+				["I_Quadbike_01_F",3000], //quadbike
+				["I_G_Offroad_01_F",50000], //offroad truck
+				["I_Truck_02_transport_F",400000], //uncovered transport truck
+				["I_MRAP_03_F",1000000], //strider
+				["B_Heli_Light_01_F",600000], //Little bird
 				["O_Heli_Light_02_unarmed_F",1800000],
-				["B_G_Offroad_01_armed_F",4000000],
+				["I_G_Offroad_01_armed_F",4000000], //armed offroad
 				["O_Heli_Light_02_F",12000000]
 				//["B_Heli_Transport_01_F",5000000],
 			];
@@ -260,19 +258,48 @@ switch (_shop) do
 			["B_Heli_Transport_01_camo_F",5000000]];*/
 		};
 	};
-	
+//========================================================================INDI=================================================================================	
+//========================================================================REBEL=================================================================================
+	case "rebel_car_1":
+	{
+		if(life_faction == "rebel") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
+		{
+			_return =
+			[
+				["I_Quadbike_01_F",3000], //quadbike
+				["I_G_Offroad_01_F",50000], //offroad truck
+				["O_MRAP_02_F",300000], //ifrit
+				["I_Truck_02_transport_F",400000], //uncovered transport truck
+				["B_Heli_Light_01_F",600000], //Little bird
+				["O_Heli_Light_02_unarmed_F",1800000],
+				["O_G_Offroad_01_armed_F",4000000], //armed offroad
+				["O_Heli_Light_02_F",12000000]
+				//["B_Heli_Transport_01_F",5000000],
+			];
+			/*_return set[count _return,
+			["B_G_Offroad_01_armed_F",4000000]];
+			_return set[count _return,
+			["B_Heli_Transport_01_camo_F",5000000]];*/
+		};
+	};
+//========================================================================REBEL=================================================================================	
+
+
+
 	case "reb_car":
 	{
 		if(license_civ_rebel) then
 		{
 		_return set[count _return,
-		["B_Quadbike_01_F",3000]];
+		["O_G_Quadbike_01_F",3000]];
 		_return set[count _return,
-		["B_G_Offroad_01_F",50000]];
+		["O_G_Offroad_01_F",50000]];
+		_return set[count _return,
+		["C_SUV_01_F",50000]];
 		_return set[count _return,
 		["O_Truck_03_transport_F",400000]];
 		_return set[count _return,
-		["I_MRAP_03_F",1000000]];
+		["O_MRAP_02_F",400000]];
 		}
 	};
 	
@@ -281,13 +308,15 @@ switch (_shop) do
 		if(license_civ_rebel) then
 		{
 		_return set[count _return,
-		["B_Quadbike_01_F",3000]];
+		["O_G_Quadbike_01_F",3000]];
 		_return set[count _return,
-		["B_G_Offroad_01_F",50000]];
+		["O_G_Offroad_01_F",50000]];
+		_return set[count _return,
+		["C_SUV_01_F",50000]];
 		_return set[count _return,
 		["O_Truck_03_transport_F",400000]];
 		_return set[count _return,
-		["I_MRAP_03_F",1000000]];
+		["O_MRAP_02_F",400000]];
 		}
 	};
 	
@@ -303,31 +332,19 @@ switch (_shop) do
 		//["B_Heli_Transport_01_F",5000000]];
 		}
 	};
-	
+//changed below by clock
 	case "cop_car_1":
 	{
 		_return set[count _return,
 		["C_Offroad_01_F",10000]];
-		
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_return set[count _return,
-			["C_Hatchback_01_sport_F",20000]];
-		};
-		if(__GETC__(life_coplevel) > 2) then
-		{
-			_return set[count _return,
-			["C_SUV_01_F",30000]];
-		};
-		if(__GETC__(life_coplevel) > 3) then
+		_return set[count _return,
+		["C_Hatchback_01_sport_F",20000]];
+		_return set[count _return,
+		["C_SUV_01_F",30000]];
+		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return,
 			["B_MRAP_01_F",50000]];
-		};
-		if(__GETC__(life_coplevel) > 6) then
-		{
-			_return set[count _return,
-			["B_MRAP_01_hmg_F",500000]];
 		};
 	};
 	
@@ -384,6 +401,32 @@ switch (_shop) do
 	};
 	
 	case "cop_car_5":
+	{
+		_return set[count _return,
+		["C_Offroad_01_F",10000]];
+		if(__GETC__(life_coplevel) > 1) then
+		{
+			_return set[count _return,
+			["C_Hatchback_01_sport_F",20000]];
+		};
+		if(__GETC__(life_coplevel) > 2) then
+		{
+			_return set[count _return,
+			["C_SUV_01_F",30000]];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return set[count _return,
+			["B_MRAP_01_F",50000]];
+		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
+			_return set[count _return,
+			["B_MRAP_01_hmg_F",500000]];
+		};
+	};
+	
+	case "cop_car_55":
 	{
 		_return set[count _return,
 		["C_Offroad_01_F",10000]];
@@ -535,6 +578,25 @@ switch (_shop) do
 		
 	};
 	
+	case "cop_air_55":
+	{
+		_return set[count _return,
+		["B_Heli_Light_01_F",70000]];
+		if(__GETC__(life_coplevel) > 4) then
+		{
+			_return set[count _return,
+			["I_Heli_light_03_unarmed_F",200000]];
+		};
+		if(__GETC__(life_coplevel) > 7) then
+		{
+			_return set[count _return,
+			["I_Heli_light_03_F",1000000]];
+		};
+		
+		
+		
+	};
+	
 	case "cop_air_3":
 	{
 		_return set[count _return,
@@ -592,14 +654,25 @@ switch (_shop) do
 		];
 	};
 	
+	case "cop_ship_55":
+	{
+		_return =
+		[
+			["B_Boat_Transport_01_F",5000],
+			["C_Boat_Civil_01_police_F",20000],
+			["B_Boat_Armed_01_minigun_F",100000],
+			["B_SDV_01_F",150000]
+		];
+	};
+	
+	
 	case "donator_heli":
 	{
 		_return =
 		[
 			["B_Heli_Light_01_F",640000],
 			["O_Heli_Light_02_unarmed_F",2880000],
-			["I_Heli_Transport_02_F",14400000],
-			["B_Heli_Transport_01_F",8000000]
+			["I_Heli_Transport_02_F",14400000]
 		];
 	};
 	
@@ -631,7 +704,6 @@ switch (_shop) do
 			["O_Truck_03_covered_F",4000000],
 			["B_Heli_Light_01_F",640000],
 			["O_Heli_Light_02_unarmed_F",2880000],
-			["B_Heli_Transport_01_F",8000000],
 			["I_Heli_Transport_02_F",14400000],
 			["O_Heli_Light_02_F",10000000]
 		];

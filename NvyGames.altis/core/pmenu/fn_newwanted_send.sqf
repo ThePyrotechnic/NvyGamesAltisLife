@@ -42,11 +42,11 @@ _bounty = round _bounty;
 
 if(_bounty < 1) exitWith
 {
-	hint "For small amount given!";
+	hint "Too small of an amount given!";
 };
 
 //Execute
-hint format["The player %1 is now due %2 sought.", _name, _reason];
+hint format["%1 is now wanted for %2", _name, _reason];
 
 //Send DB
 [[_uid,_name,"",[_reason,_bounty]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

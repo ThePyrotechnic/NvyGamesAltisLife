@@ -1,9 +1,7 @@
-private["_unit","_pos"];
+private["_unit"];
 _unit = lbData[1500,lbCurSel (1500)];
-
+_unit = call compile format["%1", _unit];
+if(isNull _unit) exitWith {};
 if(isNil "_unit") exitWith {};
-
-_unit setPos (getPos player);
-
-
+[[player, _unit], "life_fnc_adminTpHereServer", false] spawn life_fnc_MP;
 hint "Teleported Player To You";

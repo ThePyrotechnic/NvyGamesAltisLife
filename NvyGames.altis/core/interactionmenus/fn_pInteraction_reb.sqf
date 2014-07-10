@@ -76,10 +76,3 @@ else
 _bPutInCar ctrlSetTooltip localize "STR_pInAct_PutInCar";
 _bPutInCar buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_putInCar;";
 
-if(!license_civ_rebel) then
-{
-    _bTorture ctrlShow false;
-    _bEscort ctrlShow false;
-    _bPutInCar ctrlShow false;
-};
-

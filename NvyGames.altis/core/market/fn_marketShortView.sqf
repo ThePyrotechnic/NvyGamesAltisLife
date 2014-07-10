@@ -12,7 +12,7 @@ _items = _this select 0;
 
 if(count _items == 0) exitWith {};
 
-_text = "<t size='1.5' color='#00FF00'>Altis Markt</t><br/>";
+_text = "<t size='1.5' color='#00FF00'>Altis Market</t><br/>";
 
 _didanything = false;
 

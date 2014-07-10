@@ -75,7 +75,7 @@ if((count _invs) + (count _weapons) > 0) then
         
         
         //Add ui entry
-        _inv = _inv + format["(Polizei) %1 %2<br/>",_x select 1,[([_x select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr];
+        _inv = _inv + format["(Police) %1 %2<br/>",_x select 1,[([_x select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr];
        
     }
     foreach _policeitems;
@@ -83,7 +83,7 @@ if((count _invs) + (count _weapons) > 0) then
 	
 	{
 		__info = [_x] call life_fnc_fetchCfgDetails;
-		_inv = _inv + format["Waffe: %1<br/>", __info select 1]; 
+		_inv = _inv + format["Weapon: %1<br/>", __info select 1]; 
 		
 		_illegalwp = _illegalwp + 5000; //Pauschaler Betrag
 	}
@@ -113,7 +113,7 @@ if((count _invs) + (count _weapons) > 0) then
 	
 	_illegal = _illegal + _illegalpolice + _illegalwp;	
 	
-	[[0,format["%1 has items worth $%2 there.",name _civ,[_illegal] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[0,format["%1 has illegal items worth $%2",name _civ,[_illegal] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	
 	
 	//Pay the cop 
@@ -127,7 +127,7 @@ if((count _invs) + (count _weapons) > 0) then
 if(!alive _civ || player distance _civ > 5) exitWith {hint format["Couldn't search %1", name _civ]};
 //hint format["%1",_this];
 hint parseText format["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='#FFD700'><t size='1.5'><br/>Illegal items</t></t><br/>%2<br/><br/><br/><br/><t color='#FF0000'>%3</t>"
-,name _civ,_inv,if(_robber) then {"If the bank has been robbed"} else {""}];
+,name _civ,_inv,if(_robber) then {"He is the bank robber!"} else {""}];
 
 if(_robber) then
 {

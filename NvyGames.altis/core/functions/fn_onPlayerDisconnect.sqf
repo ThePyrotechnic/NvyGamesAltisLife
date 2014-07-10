@@ -6,12 +6,12 @@
 	Description:
 	Deletes Weapon Holders within 5m of the disconnecting player.
 */
+private ["_handle"];
 _id = _this select 0; 
 _pname = _this select 1; 
 _puid  = _this select 2;
-
 call cleanNearItems;
-
+[1,true] call life_fnc_sessionUpdate
 cleanNearItems = {	
 	if (_pname != "__SERVER__") then {
 		
@@ -45,6 +45,7 @@ cleanNearItems = {
 		};
 	};
 };
+
 
 
 /*

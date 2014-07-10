@@ -4,7 +4,7 @@
 	
 	[_target,_caller,id,MARKER] parkVehicle
 	
-	this addAction[""Fahrzeug einparken"", life_fnc_parkVehicle,"""",0,false,false,"""",'!life_garage_store'];
+	this addAction[""Store Vehicle"", life_fnc_parkVehicle,"""",0,false,false,"""",'!life_garage_store'];
 
 */
 

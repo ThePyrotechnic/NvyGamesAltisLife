@@ -10,7 +10,7 @@ class cellphone_extended {
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Handy</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Mobile</t>"; //--- ToDo: Localize;
 			x = 8 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 24 * GUI_GRID_W;
@@ -32,7 +32,7 @@ class cellphone_extended {
 		class bClose: RscButtonMenu
 	    {
 	    	idc = 2400;
-	    	text = "close"; //--- ToDo: Localize;
+	    	text = "Close"; //--- ToDo: Localize;
 	    	x = 8 * GUI_GRID_W + GUI_GRID_X;
 	    	y = 20 * GUI_GRID_H + GUI_GRID_Y;
 	    	w = 24 * GUI_GRID_W;
@@ -57,28 +57,39 @@ class cellphone_extended {
 	    	h = 12 * GUI_GRID_H;
 	    	text="";
 	    };
-	    class bSend: RscButtonMenu
+		class bSend: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Senden"; //--- ToDo: Localize;
+			text = "Send";
 			x = 25.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			onButtonClick="[false] spawn life_fnc_cellex_sendClick;";
-			tooltip="Nachricht senden";
+			onButtonClick="[0] spawn life_fnc_cellex_sendClick;";
+			tooltip="Send Message";
+		};
+		class bSendLast: RscButtonMenu
+		{
+			idc = 2403;
+			text = "Reply Last";
+			x = 31.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 6 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+			onButtonClick="[1] spawn life_fnc_cellex_sendClick;";
+			tooltip="Reply to last message";
 		};
 		class bSendAdmin: RscButtonMenu
 		{
 			idc = 2402;
-			text = "Admin Msg"; //--- ToDo: Localize;
+			text = "Admin Msg";
 			x = 18.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 			colorText[] = {1,0,0,1};
-			onButtonClick="[true] spawn life_fnc_cellex_sendClick;";
-			tooltip="Nachricht als Admin senden. Funktioniert nur bei privaten Nachrichten an einen Spieler.";
+			onButtonClick="[2] spawn life_fnc_cellex_sendClick;";
+			tooltip="Send message as an admin. Only works for sending private messages. ";
 		};
 	};
 };

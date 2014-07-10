@@ -13,7 +13,7 @@ _level = _this select 1;
 
 
 _row = [];
-_name = "Kein Mitglied";
+_name = "No members";
 
 {
 	if ( (_x select 0) == _permid) exitWith

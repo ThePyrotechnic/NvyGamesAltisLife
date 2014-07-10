@@ -220,6 +220,40 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "cop_ship_1";
 		_dir = markerDir "cop_ship_1";
 	};
+//added by clock==========================
+//police==================================
+		case "cop_ship_55":
+	{
+		_sp = getMarkerPos "cop_ship_55";
+		_dir = markerDir "cop_ship_55";
+	};
+	
+	case "cop_air_55":
+	{
+		_sp = getMarkerPos "cop_air_55";
+		_dir = markerDir "cop_air_55";
+	};
+	
+	case "cop_car_55":
+	{
+		_sp = getMarkerPos "cop_car_55";
+		_dir = markerDir "cop_car_55";
+	};
+//Independent============================
+	case "indy_car_1":
+	{
+		_sp = getMarkerPos "indy_car_1";
+		_dir = markerDir "indy_car_1";
+	};	
+	
+//Rebel============================
+	case "rebel_car_1":
+	{
+		_sp = getMarkerPos "rebel_car_1";
+		_dir = markerDir "rebel_car_1";
+	};	
+	
+//end added by clock=====================
 	
 	case "donator_heli":
 	{
@@ -268,7 +302,7 @@ if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 
 if(life_cash < _price) exitWith {hint "You do not have enough money."};
-hint "This may take a two seconds...";
+hint "This may take a few seconds...";
 sleep floor(random 3);
 
 if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};
@@ -285,7 +319,7 @@ if(_veh == "serv_truck") then
 {
 	_name = getText(configFile >> "CfgVehicles" >> _veh >> "displayName");
 };
-hint format["You have a %1 for $%2 bought.",_name,[_price] call life_fnc_numberText];
+hint format["You have bought a %1 for $%2.",_name,[_price] call life_fnc_numberText];
 _vehicle = _veh createVehicle _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 if(_veh == "B_MRAP_01_hmg_F") then
@@ -333,4 +367,4 @@ if((life_veh_shop == "civ_air_1" OR life_veh_shop == "civ_air_2") && (typeOf _ve
 [1,false] call life_fnc_sessionHandle;
 
 //Add notation
-titleText ["Note: You only have rented the vehicle and can not park in the garage there.", "PLAIN"];
+titleText ["Note: You have rented the vehicle and can not store it in a garage.", "PLAIN"];

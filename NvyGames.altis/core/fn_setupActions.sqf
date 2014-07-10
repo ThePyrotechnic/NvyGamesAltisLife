@@ -9,32 +9,35 @@ switch (playerSide) do
 	case civilian:
 	{
 		//Drop fishing net
-		life_actions = [player addAction["Fischernetz auswerfen",life_fnc_dropFishingNet,"",0,false,false,"",'
+		life_actions = [player addAction["Drop fishing net",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Rob person
-		life_actions = life_actions + [player addAction["Ausrauben",life_fnc_robAction,"",0,false,false,"",'
+		life_actions = life_actions + [player addAction["rob",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
 		
 		//##90
-		life_actions = life_actions + [player addAction["Ausrauben",life_fnc_robAction,"",0,false,false,"",'
+		life_actions = life_actions + [player addAction["rob",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && !(cursorTarget getVariable["robbed",FALSE]) && (cursorTarget getVariable["restrained",FALSE]) ']];
 	};
 };
+life_actions = life_actions + [player addAction["Push Boat",life_fnc_pushVehicle,"",0,false,false,"",'player distance cursorTarget < 3.5 && cursorTarget isKindOf "Ship"']];
 
 //Action key link BUGGY //HACKFIX working?
 life_actions = life_actions + [player addAction["Action ...",life_fnc_actionKeyHandler,"",0,false,true]];
 
-life_actions = life_actions + [player addAction["<t color='#0000FF'>ADAC</t>",life_fnc_serviceTruck,"",99,false,false,"",' (["adac"] call life_fnc_permLevel) > 0 && (typeOf (vehicle player) == "C_Offroad_01_F") && ((vehicle player animationPhase "HideServices") == 0) && ((vehicle player) in life_vehicles) && (speed vehicle player) < 1 ']];
+life_actions = life_actions + [player addAction["<t color='#0000FF'>AAA</t>",life_fnc_serviceTruck,"",99,false,false,"",' (["adac"] call life_fnc_permLevel) > 0 && (typeOf (vehicle player) == "C_Offroad_01_F") && ((vehicle player animationPhase "HideServices") == 0) && ((vehicle player) in life_vehicles) && (speed vehicle player) < 1 ']];
 
 //##61 Cop license show
-life_actions = life_actions + [player addAction["<t color='#00FF00'>Polizeimarke zeigen</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
+life_actions = life_actions + [player addAction["<t color='#00FF00'>You show your police license.</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
 
 //##106
 //BD MK1
-life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKI 'Fuel Killer' abfeuern</t>",life_fnc_fireBirdDown,"BDMK1",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
+life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKI 'Less-Lethal Solution'</t>",life_fnc_fireBirdDown,"BDMK1",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
 //BD MK2
-life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKII 'Electrostatic' abfeuern</t>",life_fnc_fireBirdDown,"BDMK2",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
+life_actions = life_actions + [player addAction["<t color='#FF0000'>BD-MKII 'Lethal Solution'</t>",life_fnc_fireBirdDown,"BDMK2",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
 
+life_actions = life_actions + [player addAction["Initiate Suicide Bomb",life_fnc_suicideBomb,"",0,false,false,"",
+        'vest player == "V_HarnessOGL_gry" && alive player && playerSide != west && !life_istazed && !life_isSuicide && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
 //##108
 /*life_actions = life_actions + [player addAction["<t color='#00FF00'>Hände hoch</t>",life_fnc_putHandsUp,true,1,false,true,"",' playerSide == civilian && !life_hands_up ']];*/
 /*life_actions = life_actions + [player addAction["<t color='#00FF00'>Hände runter</t>",life_fnc_putHandsUp,false,1,false,true,"",' playerSide == civilian && life_hands_up ']];*/

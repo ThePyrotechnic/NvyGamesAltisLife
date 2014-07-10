@@ -47,10 +47,10 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Abgebrochen!","PLAIN"]; life_action_inUse = false;};
-		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it can!","PLAIN"];};
+		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it!","PLAIN"];};
 	
 		_veh setDamage 0;
 		[1,false] call life_fnc_sessionHandle;
-		titleText["Fahrzeug repariert.","PLAIN"];
+		titleText["Repaired vehicle.","PLAIN"];
 	};
 };

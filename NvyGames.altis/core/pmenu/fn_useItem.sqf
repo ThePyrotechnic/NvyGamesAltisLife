@@ -46,7 +46,7 @@ switch (true) do
 	
 	case (_item == "spikeStrip"):
 	{
-		if(!isNull life_spikestrip) exitWith {hint "You've already have a Spike Strip  in active use."};
+		if(!isNull life_spikestrip) exitWith {hint "You've already have a Spike Strip in active use."};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
@@ -154,30 +154,16 @@ switch (true) do
 			[] spawn life_fnc_playerUseBomb;
 		};
 	};
-	
-	//Troll items 
-	case (_item == "uitem_troll_taschentuch"):
+	case (_item == "uitem_troll_money"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
-		{		
-			[player,"man_cry"] call life_fnc_globalSound;
+		{
+			_pos = getpos player;
+			_pos = [_pos select 0, _pos select 1, 0];
+			_obj = "Land_Money_F" createVehicle _pos;
+			_obj setPos _pos;
 		};
 	};
-	case (_item == "uitem_troll_nuckel"):
-	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{		
-			[player,"baby_cry"] call life_fnc_globalSound;
-		};
-	};
-	case (_item == "uitem_troll_bitering"):
-	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{		
-			[player,"baby_happy"] call life_fnc_globalSound;
-		};
-	};
-	
 	default
 	{
 		hint "You cannot use this item.";

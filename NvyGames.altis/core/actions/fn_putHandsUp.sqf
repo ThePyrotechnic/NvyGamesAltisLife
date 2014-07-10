@@ -23,7 +23,7 @@ if(!life_hands_up) then //if hands are down => hands up
 	if(player getVariable ["restrained", false] || life_istazed || !(alive player) || player getVariable["Escorting",false] ) exitWith {};
 	
 	
-	systemChat "You take up his hands.";
+	systemChat "You put your hands behind your head.";
 	
 	if(currentWeapon player != "") then
 	{
