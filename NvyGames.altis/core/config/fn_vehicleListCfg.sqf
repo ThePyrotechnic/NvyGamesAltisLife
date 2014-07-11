@@ -243,11 +243,10 @@ switch (_shop) do
 				["I_Quadbike_01_F",3000], //quadbike
 				["I_G_Offroad_01_F",50000], //offroad truck
 				["I_Truck_02_transport_F",400000], //uncovered transport truck
-				["I_MRAP_03_F",1000000], //strider
-				["B_Heli_Light_01_F",600000], //Little bird
-				["O_Heli_Light_02_unarmed_F",1800000],
-				["I_G_Offroad_01_armed_F",4000000], //armed offroad
-				["O_Heli_Light_02_F",12000000]
+				["I_MRAP_03_F",5000000], //strider
+				["B_Heli_Light_01_F",350000], //Little bird
+				["O_Heli_Light_02_unarmed_F",500000], //unarmed orca
+				["I_G_Offroad_01_armed_F",1000000] //armed offroad
 				//["B_Heli_Transport_01_F",5000000],
 			];
 		
@@ -268,12 +267,11 @@ switch (_shop) do
 			[
 				["I_Quadbike_01_F",3000], //quadbike
 				["I_G_Offroad_01_F",50000], //offroad truck
-				["O_MRAP_02_F",300000], //ifrit
+				["O_MRAP_02_F",500000], //ifrit
 				["I_Truck_02_transport_F",400000], //uncovered transport truck
-				["B_Heli_Light_01_F",600000], //Little bird
-				["O_Heli_Light_02_unarmed_F",1800000],
-				["O_G_Offroad_01_armed_F",4000000], //armed offroad
-				["O_Heli_Light_02_F",12000000]
+				["B_Heli_Light_01_F",350000], //Little bird
+				["O_Heli_Light_02_unarmed_F",500000], //unarmed orca
+				["O_G_Offroad_01_armed_F",1000000] //armed offroad
 				//["B_Heli_Transport_01_F",5000000],
 			];
 			/*_return set[count _return,
@@ -514,9 +512,9 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_Heli_Light_01_F",800000],
-			["O_Heli_Light_02_unarmed_F",3600000],
-			["I_Heli_Transport_02_F",18000000]
+			["B_Heli_Light_01_F",350000],
+			["O_Heli_Light_02_unarmed_F",500000]
+			//["I_Heli_Transport_02_F",18000000] mohawk
 		];
 	};
 	
@@ -524,9 +522,9 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_Heli_Light_01_F",800000],
-			["O_Heli_Light_02_unarmed_F",3600000],
-			["I_Heli_Transport_02_F",18000000]
+			["B_Heli_Light_01_F",350000],
+			["O_Heli_Light_02_unarmed_F",500000]
+			//["I_Heli_Transport_02_F",18000000] mohawk
 		];
 	};
 	
@@ -534,9 +532,9 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_Heli_Light_01_F",800000],
-			["O_Heli_Light_02_unarmed_F",3600000],
-			["I_Heli_Transport_02_F",18000000]
+			["B_Heli_Light_01_F",350000],
+			["O_Heli_Light_02_unarmed_F",500000]
+			//["I_Heli_Transport_02_F",18000000] mohawk
 		];
 	};
 	
