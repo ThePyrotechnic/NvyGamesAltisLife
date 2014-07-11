@@ -60,7 +60,7 @@ if(_veh distance impound_obj < 50) then
 		};
 	};
 	_check = nearestObjects[_pos,["LandVehicle","Air"],4];
-	if(count _check > 0) exitWith {hint "There is currently a vehicle.";};
+	if(count _check > 0) exitWith {hint "There is currently a vehicle on the spawn.";};
 	if(_price > life_cash) then
 	{
 		_price = _price + 200;

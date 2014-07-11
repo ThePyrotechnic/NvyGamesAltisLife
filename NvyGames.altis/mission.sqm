@@ -4853,7 +4853,7 @@ class Mission
 					vehicle="I_engineer_F";
 					leader=1;
 					skill=0.2;
-					init="this enableSimulation false;             this allowDamage false;                     removeallWeapons this;                  this addAction[""Independent Vehicle Supply"",life_fnc_vehicleShop,""indy_car_1""];";
+					init="this enableSimulation false;             this allowDamage false;                     removeallWeapons this;                  this addAction[""Independent Vehicle Supply"",life_fnc_vehicleShop,""reb_v_2""];";
 				};
 			};
 		};
@@ -4872,7 +4872,7 @@ class Mission
 					vehicle="O_engineer_F";
 					leader=1;
 					skill=0.60000002;
-					init="removeAllWeapons this;                 this enableSimulation false;             this allowDamage false;                 this addAction[""Rebel Vehicle Supply"",life_fnc_vehicleShop,""rebel_car_1""];";
+					init="removeAllWeapons this;                 this enableSimulation false;             this allowDamage false;                 this addAction[""Rebel Vehicle Supply"",life_fnc_vehicleShop,""reb_v_1""];";
 				};
 			};
 		};
@@ -4892,7 +4892,7 @@ class Mission
 					vehicle="O_engineer_F";
 					leader=1;
 					skill=0.2;
-					init="if (side player == west) exitWith {};  removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""Rebel Car Shop"",life_fnc_vehicleShop,""reb_v_1"",0,false,false,"""",'playerSide == civilian']; this addAction[""Garage (Heli)"",  life_fnc_openGarage, [""reb_v_1"",""Air""]]; this addAction[""Garage (Auto)"",  life_fnc_openGarage, [""reb_v_1"",""Car""]];  this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+					init="if (side player == west) exitWith {};  removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""Garage (Heli)"",  life_fnc_openGarage, [""reb_v_1"",""Air""]]; this addAction[""Garage (Auto)"",  life_fnc_openGarage, [""reb_v_1"",""Car""]];  this addAction[""Store Vehicle"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
@@ -51273,7 +51273,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=395;
+		items=393;
 		class Item0
 		{
 			position[]={15181.817,17.872564,17329.824};
@@ -53638,7 +53638,7 @@ class Mission
 		};
 		class Item296
 		{
-			position[]={11585.426,76.396027,7036.5933};
+			position[]={11581.651,76.773758,7041.9858};
 			name="reb_v_2";
 			type="Empty";
 			angle=-82.235039;
@@ -54200,20 +54200,6 @@ class Mission
 		};
 		class Item370
 		{
-			position[]={11585.015,77.35302,7048.2822};
-			name="indy_car_1";
-			type="Empty";
-			angle=-86.610954;
-		};
-		class Item371
-		{
-			position[]={20963.549,16.289637,19271.143};
-			name="rebel_car_1";
-			type="Empty";
-			angle=508.6507;
-		};
-		class Item372
-		{
 			position[]={20957.359,16.85,19286.158};
 			name="afdf";
 			text="Motorized Armor";
@@ -54221,7 +54207,7 @@ class Mission
 			colorName="ColorRed";
 			angle=766.60522;
 		};
-		class Item373
+		class Item371
 		{
 			position[]={11599.169,76.858353,7040.3018};
 			name="afdf_1";
@@ -54229,7 +54215,7 @@ class Mission
 			type="o_armor";
 			colorName="ColorBrown";
 		};
-		class Item374
+		class Item372
 		{
 			position[]={18872.08,0.62398684,18429.41};
 			name="wall_1";
@@ -54239,7 +54225,7 @@ class Mission
 			b=130;
 			angle=2.2073696;
 		};
-		class Item375
+		class Item373
 		{
 			position[]={18836.117,15.547426,18183.842};
 			name="wall_1_1";
@@ -54249,7 +54235,7 @@ class Mission
 			b=130;
 			angle=-161.53615;
 		};
-		class Item376
+		class Item374
 		{
 			position[]={18754.379,27.624336,17937.813};
 			name="wall_1_1_1";
@@ -54259,7 +54245,7 @@ class Mission
 			b=130;
 			angle=-161.53615;
 		};
-		class Item377
+		class Item375
 		{
 			position[]={18670.961,24.172323,17691.059};
 			name="wall_1_1_2";
@@ -54269,7 +54255,7 @@ class Mission
 			b=130;
 			angle=-161.53615;
 		};
-		class Item378
+		class Item376
 		{
 			position[]={18566.143,21.396885,17468.963};
 			name="wall_1_1_3";
@@ -54279,7 +54265,7 @@ class Mission
 			b=130;
 			angle=-147.69371;
 		};
-		class Item379
+		class Item377
 		{
 			position[]={18418.443,20.455933,17297.535};
 			name="cp_1111";
@@ -54287,7 +54273,7 @@ class Mission
 			type="loc_Ruin";
 			colorName="ColorWEST";
 		};
-		class Item380
+		class Item378
 		{
 			position[]={18306.832,30.216454,17182.709};
 			name="wall_1_1_4";
@@ -54297,7 +54283,7 @@ class Mission
 			b=130;
 			angle=-497.19894;
 		};
-		class Item381
+		class Item379
 		{
 			position[]={18131.893,38.831329,16991.406};
 			name="wall_1_1_5";
@@ -54307,7 +54293,7 @@ class Mission
 			b=130;
 			angle=-137.64943;
 		};
-		class Item382
+		class Item380
 		{
 			position[]={17666.119,41.132744,16327.409};
 			name="wall_1_1_6";
@@ -54317,7 +54303,7 @@ class Mission
 			b=700;
 			angle=-326.68301;
 		};
-		class Item383
+		class Item381
 		{
 			position[]={17354.555,16.744181,15848.698};
 			name="wall_1_1_7";
@@ -54327,7 +54313,7 @@ class Mission
 			b=300;
 			angle=-146.813;
 		};
-		class Item384
+		class Item382
 		{
 			position[]={17048.25,20.735493,15329.541};
 			name="wall_1_1_7_1";
@@ -54337,7 +54323,7 @@ class Mission
 			b=300;
 			angle=-152.58772;
 		};
-		class Item385
+		class Item383
 		{
 			position[]={16850.43,11.240067,14863.619};
 			name="wall_1_1_7_2";
@@ -54347,7 +54333,7 @@ class Mission
 			b=300;
 			angle=17.213877;
 		};
-		class Item386
+		class Item384
 		{
 			position[]={8591.9863,170.685,18462.744};
 			name="JAIL_!!!";
@@ -54355,7 +54341,7 @@ class Mission
 			type="mil_warning";
 			colorName="ColorRed";
 		};
-		class Item387
+		class Item385
 		{
 			position[]={15243.737,0,15302.834};
 			name="ASDFGSSGGSD";
@@ -54363,28 +54349,28 @@ class Mission
 			type="KIA";
 			colorName="ColorRed";
 		};
-		class Item388
+		class Item386
 		{
 			position[]={25622.816,24.896994,21450.285};
 			name="rebel_spawn_2";
 			type="Empty";
 			angle=168.82036;
 		};
-		class Item389
+		class Item387
 		{
 			position[]={16843.988,24,12662.002};
 			name="rebel_spawn_3";
 			type="Empty";
 			angle=88.242149;
 		};
-		class Item390
+		class Item388
 		{
 			position[]={8807.1582,33.905685,12031.632};
 			name="indy_spawn_2";
 			type="Empty";
 			angle=-315.03403;
 		};
-		class Item391
+		class Item389
 		{
 			position[]={13582.417,15.630425,12195.767};
 			name="ToniMontana_2";
@@ -54393,7 +54379,7 @@ class Mission
 			colorName="ColorRed";
 			angle=4.8077774;
 		};
-		class Item392
+		class Item390
 		{
 			position[]={9210.9648,272.18262,19277.021};
 			name="Police HQ_0_1";
@@ -54401,7 +54387,7 @@ class Mission
 			type="mil_box";
 			colorName="ColorBlue";
 		};
-		class Item393
+		class Item391
 		{
 			position[]={8227.3975,14.227146,10876.606};
 			name="Raw Material Processing";
@@ -54413,7 +54399,7 @@ class Mission
 			a=150;
 			b=150;
 		};
-		class Item394
+		class Item392
 		{
 			position[]={15449.732,0,15284.928};
 			name="asdfsf";
@@ -54528,8 +54514,7 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			expCond="this && (local player) && (vehicle player in thisList)";
-			expActiv="hint ""VORSICHT Geschwindigkeitsbegrenzung fahren sie bitte 50 """;
+			expCond="";
 			class Effects
 			{
 			};

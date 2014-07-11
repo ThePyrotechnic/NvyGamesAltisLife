@@ -21,7 +21,7 @@ titleText["Crack the safe ...","PLAIN"];
 
 //##87
 //_vault say3D "bankalarm";
-[[_shop,"bank_rob",150],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
+[[_vault,"bank_rob",150],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
 [["sounds\pol_bank_rob"],"life_fnc_clientSound",west,false] spawn BIS_fnc_MP;
 
 
