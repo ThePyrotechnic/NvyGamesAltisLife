@@ -181,7 +181,7 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["C_Offroad_01_F",60000] //Service Truck
+			["C_Offroad_01_F",10000] //Service Truck
 		];
 	};
 	
@@ -193,7 +193,7 @@ switch (_shop) do
 			["I_Truck_02_transport_F",130000],
 			["I_Truck_02_covered_F",170000],
 			["B_Truck_01_transport_F",340000],
-			["B_Truck_01_covered_F",4500000]
+			["B_Truck_01_covered_F",450000]
 		];	
 	};
 	
@@ -205,7 +205,7 @@ switch (_shop) do
 			["I_Truck_02_transport_F",130000],
 			["I_Truck_02_covered_F",170000],
 			["B_Truck_01_transport_F",340000],
-			["B_Truck_01_covered_F",4500000]
+			["B_Truck_01_covered_F",450000]
 		];	
 	};
 	
