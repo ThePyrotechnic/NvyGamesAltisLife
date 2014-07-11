@@ -5,7 +5,7 @@
 	Description:
 	Creates an intro on the bottom-right hand corner of the screen.
 */
-
+playSound ["wastelands",true];
 _onScreenTime = 7; //<-- How long is the text on the screen for ? Recommended: 1 
 
 sleep 4; //Wait in seconds before the credits start after player is in-game
