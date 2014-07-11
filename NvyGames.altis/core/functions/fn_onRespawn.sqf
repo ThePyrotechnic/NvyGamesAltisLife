@@ -6,7 +6,7 @@
 	Description:
 	Execute various actions when the _unit respawns.
 */
-private["_unit","_corpse","_handle","_spawn","_getRank","_getFaction"];
+private["_unit","_corpse","_handle","_spawn","_getFaction"];
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _corpse = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
@@ -40,11 +40,6 @@ switch(playerSide) do
 		[] call life_fnc_civLoadGear; //update civ gear 
 		_getFaction = switch (life_faction) do {case ("rebel"): {"rebel"}; case ("indy"): {"indy"}; default {"civilian"};};
 		player setVariable["faction",_getFaction,TRUE];
-		if(life_faction in ["rebel","indy"]) then
-		{
-			_getRank = switch (__GETC__(life_rank)) do {case 1: {1}; case 2: {2}; case 3: {3}; case 4: {4}; case 5: {5}; default {0};};
-			player setVariable["rank",_getRank,TRUE];
-		};
 	};
 };
 
