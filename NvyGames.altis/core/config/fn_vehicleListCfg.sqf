@@ -208,33 +208,8 @@ switch (_shop) do
 			["B_Truck_01_covered_F",450000]
 		];	
 	};
-	
-	case "reb_v_1":
-	{
-		if(license_civ_rebel) then
-		{
-			_return =
-			[
-				["B_Quadbike_01_F",3000],
-				["B_G_Offroad_01_F",50000],
-				["O_Truck_03_transport_F",400000],
-				["I_MRAP_03_F",1000000],
-				["B_Heli_Light_01_F",600000],
-				["O_Heli_Light_02_unarmed_F",1800000],
-				["B_G_Offroad_01_armed_F",4000000],
-				["O_Heli_Light_02_F",12000000]
-				//["B_Heli_Transport_01_F",5000000],
-			];
-		
-		
-			/*_return set[count _return,
-			["B_G_Offroad_01_armed_F",4000000]];
-			_return set[count _return,
-			["B_Heli_Transport_01_camo_F",5000000]];*/
-		};
-	};
 //========================================================================INDI=================================================================================
-	case "indy_car_1":
+	case "reb_v_2":
 	{
 		if(life_faction == "indy") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
 		{
@@ -259,7 +234,7 @@ switch (_shop) do
 	};
 //========================================================================INDI=================================================================================	
 //========================================================================REBEL=================================================================================
-	case "rebel_car_1":
+	case "reb_v_1":
 	{
 		if(life_faction == "rebel") then //case (life_faction != "indy"): {"You are not in the independent faction."}; |o|l|d| if(license_civ_rebel) then
 		{
