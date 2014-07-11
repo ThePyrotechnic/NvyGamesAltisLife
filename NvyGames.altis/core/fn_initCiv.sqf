@@ -5,7 +5,7 @@
 	Description:
 	Initializes the civilian.
 */
-private["_spawnPos"];
+private["_spawnPos","_getFaction"];
 
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", ["Land_i_House_Big_01_V1_F","Land_i_House_Small_01_V2_F","Land_i_House_Small_03_V1_F"],250];
 civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", ["Land_i_House_Big_01_V1_F","Land_i_House_Small_01_V2_F","Land_i_House_Small_03_V1_F"],250];
@@ -34,6 +34,8 @@ if(life_is_arrested) then
 	hint "spawn player!";
 };
 player addRating 9999999;
+_getFaction = switch (life_faction) do {case ("rebel"): {"rebel"}; case ("indy"): {"indy"}; default {"civilian"};};
+player setVariable["faction",_getFaction,TRUE];
 
 [] call life_fnc_zoneCreator;
 [] execVM "intro.sqf";

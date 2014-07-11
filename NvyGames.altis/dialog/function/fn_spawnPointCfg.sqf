@@ -47,7 +47,7 @@ switch (_side) do
 		if((["adac"] call life_fnc_permLevel) > 0) then
 		{
 			_spawns = _spawns + [
-			["civ_adac_spawn","ADAC-Hauptquartier","icons\wrench.paa"]
+			["civ_adac_spawn","AAA HQ","icons\wrench.paa"]
 			];
 		};
 		if(life_faction == "civilian") then

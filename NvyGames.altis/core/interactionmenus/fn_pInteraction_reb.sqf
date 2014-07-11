@@ -5,7 +5,7 @@
 
 */
 
-private["_display","_curTarget","_bUnrestrain","_bArrest","_bTicket","_bEscort","_bPutInCar","_bSearch","_bShowLicenses","_bTorture"];
+private["_display","_curTarget","_bUnrestrain","_bArrest","_bTicket","_bEscort","_bPutInCar","_bSearch","_bShowLicenses","_bTorture","_dist"];
 if(!dialog) then 
 {
     createDialog "pInteraction_Reb";
@@ -15,10 +15,7 @@ _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
 if(!isPlayer _curTarget) exitWith {hint "The target is not a player."; closeDialog 0; };
-//if(!license_civ_rebel) exitWith {hint "Du bist kein Rebelle"; closeDialog 0;}; //Bad side check?
-/*
- * Converted rebInteraction to civInteraction
- * */
+_dist = player distance _curTarget;
 
 
 _display = findDisplay 37400;
@@ -32,11 +29,13 @@ _bTorture = _display displayCtrl 2406;
 //_bShowLicenses = _display displayCtrl 2407;
 
 life_pInact_curTarget = _curTarget;
+if(_dist > 4) exitWith {hint "You must be within 3 meters to interact with this player!"};
 
 ///////////////////////////////////////////////////////
 /////////////Set actions
 
 //Set Unrestrain Button
+
 _bUnrestrain ctrlSetTooltip localize "STR_pInAct_Unrestrain";
 _bUnrestrain buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 /*

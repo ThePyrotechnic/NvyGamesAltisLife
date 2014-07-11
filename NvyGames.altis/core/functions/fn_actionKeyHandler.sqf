@@ -74,7 +74,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 	}
 	else
 	{
-		if(playerSide == civilian) then
+		if(playerSide == civilian && (life_faction in ["rebel","indy"])) then
 		{
 			if(_curTarget getVariable["restrained",false]) then
 			{
@@ -94,6 +94,10 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 				sleep 2;
 				hint "Use the Shift + R to restrain the player.";
 			};
+		}
+		else
+		{
+			hint "You need to be a member of a whitelisted faction!";
 		};
 	};
 } 
