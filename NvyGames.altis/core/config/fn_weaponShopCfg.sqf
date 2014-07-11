@@ -210,6 +210,7 @@ switch(_shop) do
 					[
 						["arifle_MXM_F",nil,40000], //mxm
 						["optic_SOS",nil,20000], //sos scope
+						["optic_NVS",nil,6000], //NVS added (joker 7/10/14)
 						["arifle_MX_F",nil,30000], //mx
 						["arifle_MXC_F",nil,20000], //mxc
 						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
@@ -457,6 +458,7 @@ switch(_shop) do
 						["ToolKit",nil,250], //toolkit
 						["acc_flashlight",nil,250], //flashlight
 						["MineDetector",nil,1000], //minedector
+						["HandGrenade",nil,25000], //rebel hand grenade (joker 7/10/14)
 						["acc_pointer_IR",nil,750], //ir pointer
 				        ["FirstAidKit",nil,150], //fak
 						["NVGoggles",nil,2000] //nightvision goggles
@@ -484,6 +486,8 @@ switch(_shop) do
 						["optic_Arco",nil,2000], //arco
 						["optic_Hamr",nil,2000], //rco
 						["optic_MRCO",nil,2000], //mrco
+						["optic_SOS",nil,5000], //SOS added (joker 7/10/14)
+						["optic_NVS",nil,6000], //NVS added (joker 7/10/14)
 						["30Rnd_65x39_caseless_green",nil,3000], //6.5
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp
@@ -688,6 +692,7 @@ switch(_shop) do
 						["optic_Arco",nil,2000], //arco
 						["optic_Hamr",nil,2000], //rco
 						["optic_MRCO",nil,2000], //mrco
+						["optic_NVS",nil,6000], //NVS added (joker 7/10/14)
 						["SMG_01_F",nil,10000], //vermin
 						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
 						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
@@ -704,6 +709,7 @@ switch(_shop) do
 						["MineDetector",nil,1000], //minedector
 						["acc_pointer_IR",nil,750], //ir pointer
 				        ["FirstAidKit",nil,150], //fak
+						["SatchelCharge_Remote_Mag",nil,1500000], //gave indy's satchel charge (Joker 7/10/14)
 						["NVGoggles",nil,2000] //nightvision goggles
 					]
 				];
@@ -736,12 +742,8 @@ switch(_shop) do
 						["hgun_Rook40_F",nil,10000],
 						["16Rnd_9x21_Mag",nil,250],
 						["30Rnd_9x21_Mag",nil,500],
-						["hgun_ACPC2_F",nil,10000],
-						["9Rnd_45ACP_Mag",nil,250],
 						["hgun_PDW2000_F",nil,40000],
 						["30Rnd_9x21_Mag",nil,1000],
-						["SMG_01_F",nil,40000],
-						["30Rnd_45ACP_Mag_SMG_01",nil,1000],
 						["SMG_02_F",nil,40000],
 						["30Rnd_9x21_Mag",nil,1000],
 						["optic_Aco",nil,2500],
