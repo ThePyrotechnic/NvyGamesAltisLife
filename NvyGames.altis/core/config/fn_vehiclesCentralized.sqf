@@ -21,6 +21,7 @@ life_vehicle_config_new = [
 	
 	["C_Offroad_01_F", 150, 20000, 10000, 5000, false, 0],
 	["B_G_Offroad_01_F", 150, 50000, 15000, 5000, false, 0],
+	["I_G_Offroad_01_F", 150, 50000, 15000, 5000, false, 0],
 	["B_G_Offroad_01_armed_F", 100, 4000000, 1000000, 1000000, true, 500000],
 	
 	["C_SUV_01_F", 100, 50000, 15000, 8000, false, 0],
