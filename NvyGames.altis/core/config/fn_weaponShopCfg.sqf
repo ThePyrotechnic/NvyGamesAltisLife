@@ -92,9 +92,9 @@ switch(_shop) do
 			{
 				["Altis Patrol Officer Shop",
 					[
-						["SMG_02_F",nil,7500], //sting
+						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
-						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
 						["optic_Holosight_smg",nil,1500], //smg holo
 						["arifle_sdar_F","SDAR",10000], //sdar
 						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
@@ -129,10 +129,10 @@ switch(_shop) do
 				["Altis Sergeant Officer Shop",
 					[
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
-						["SMG_02_F",nil,7500], //sting
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
+						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
-						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
 						["optic_Holosight_smg",nil,1500], //smg holo
 						["arifle_sdar_F","SDAR",10000], //sdar
 						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
@@ -169,10 +169,10 @@ switch(_shop) do
 					[
 						["arifle_MX_F",nil,30000], //mx
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
-						["SMG_02_F",nil,7500], //sting
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
+						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
-						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
 						["optic_Holosight_smg",nil,1500], //smg holo
 						["arifle_sdar_F","SDAR",10000], //sdar
 						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
@@ -213,10 +213,10 @@ switch(_shop) do
 						["optic_NVS",nil,6000], //NVS added (joker 7/10/14)
 						["arifle_MX_F",nil,30000], //mx
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
-						["SMG_02_F",nil,7500], //sting
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
+						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
-						["30Rnd_9x21_Mag",nil,250], //30rd 9mm mag					
+						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
 						["optic_Holosight_smg",nil,1500], //smg holo
 						["arifle_sdar_F","SDAR",10000], //sdar
 						["30Rnd_556x45_Stanag_Tracer_Red","SDAR Rubber Bullets 556x45",180], //sdar rubber bullets
@@ -733,6 +733,8 @@ switch(_shop) do
 			{
 				["Billy Joe's Firearms",
 					[
+						["arifle_TRG20_F",nil,40000],
+						["30Rnd_556x45_Stanag_Tracer_Red",nil,1000],
 						["hgun_Pistol_heavy_02_F",nil,28000],
 						["optic_Yorris",nil,2500],
 						["6Rnd_45ACP_Cylinder",nil,250],
