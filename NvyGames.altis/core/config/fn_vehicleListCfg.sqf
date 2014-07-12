@@ -25,8 +25,8 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["C_Offroad_01_F",40000],
-			["B_Truck_01_transport_F",340000]
+			["C_Offroad_01_F",2000],
+			["B_Truck_01_transport_F",100000]
 		];
 	}; 
 	
@@ -34,7 +34,7 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["B_Heli_Light_01_F",500000]
+			["B_Heli_Light_01_F",100000]
 		];
 	}; 
 	
@@ -516,11 +516,11 @@ switch (_shop) do
 	case "cop_air_1":
 	{
 		_return set[count _return,
-		["B_Heli_Light_01_F",70000]];
-		if(__GETC__(life_coplevel) > 4) then
+		["B_Heli_Light_01_F",350000]];
+		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,
-			["I_Heli_light_03_unarmed_F",200000]];
+			["I_Heli_light_03_unarmed_F",400000]];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
@@ -535,11 +535,11 @@ switch (_shop) do
 	case "cop_air_2":
 	{
 		_return set[count _return,
-		["B_Heli_Light_01_F",70000]];
-		if(__GETC__(life_coplevel) > 4) then
+		["B_Heli_Light_01_F",350000]];
+		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,
-			["I_Heli_light_03_unarmed_F",200000]];
+			["I_Heli_light_03_unarmed_F",400000]];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
@@ -554,11 +554,11 @@ switch (_shop) do
 	case "cop_air_55":
 	{
 		_return set[count _return,
-		["B_Heli_Light_01_F",70000]];
-		if(__GETC__(life_coplevel) > 4) then
+		["B_Heli_Light_01_F",350000]];
+		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,
-			["I_Heli_light_03_unarmed_F",200000]];
+			["I_Heli_light_03_unarmed_F",400000]];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
@@ -573,11 +573,11 @@ switch (_shop) do
 	case "cop_air_3":
 	{
 		_return set[count _return,
-		["B_Heli_Light_01_F",70000]];
-		if(__GETC__(life_coplevel) > 4) then
+		["B_Heli_Light_01_F",350000]];
+		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,
-			["I_Heli_light_03_unarmed_F",200000]];
+			["I_Heli_light_03_unarmed_F",400000]];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
