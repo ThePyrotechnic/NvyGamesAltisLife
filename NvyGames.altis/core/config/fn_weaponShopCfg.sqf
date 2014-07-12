@@ -129,7 +129,7 @@ switch(_shop) do
 				["Altis Sergeant Officer Shop",
 					[
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
 						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
 						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
@@ -169,7 +169,7 @@ switch(_shop) do
 					[
 						["arifle_MX_F",nil,30000], //mx
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
 						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
 						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
@@ -213,7 +213,7 @@ switch(_shop) do
 						["optic_NVS",nil,6000], //NVS added (joker 7/10/14)
 						["arifle_MX_F",nil,30000], //mx
 						["arifle_MXC_F",nil,20000], //mxc
-						["30Rnd_65x39_caseless_mag",nil,20000], //6.5 mm mags
+						["30Rnd_65x39_caseless_mag",nil,2000], //6.5 mm mags
 						["SMG_02_F",nil,20000], //sting
 						["muzzle_snds_L",nil,2500], //9mm suppressor
 						["30Rnd_9x21_Mag",nil,1000], //30rd 9mm mag					
