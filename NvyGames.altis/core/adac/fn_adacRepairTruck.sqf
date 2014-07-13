@@ -12,11 +12,11 @@ if((["adac"] call life_fnc_permLevel) < 1) exitWith
 
 if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) then
 {
-	if(([false,"uitem_adac_toolkit",1] call life_fnc_handleInv)) then
+	if(uitem_adac_toolkit > 0) then
 	{
 		life_action_inUse = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
-		_upp = format["Repariere %1",_displayName];
+		_upp = format["Repairing %1",_displayName];
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];
@@ -46,9 +46,9 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		life_action_inUse = false;
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
-		if(life_interrupted) exitWith {life_interrupted = false; titleText["Abgebrochen!","PLAIN"]; life_action_inUse = false;};
+		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_inUse = false;};
 		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it!","PLAIN"];};
-	
+		[false,"uitem_adac_toolkit",1] call life_fnc_handleInv;
 		_veh setDamage 0;
 		[1,false] call life_fnc_sessionHandle;
 		titleText["Repaired vehicle.","PLAIN"];

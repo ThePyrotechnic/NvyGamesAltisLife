@@ -269,7 +269,7 @@ class CfgSounds
 	sound[] = {"\sounds\pol_bank_fail.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
-
+};
 class CfgDebriefing
 {
 	class NotWhitelisted

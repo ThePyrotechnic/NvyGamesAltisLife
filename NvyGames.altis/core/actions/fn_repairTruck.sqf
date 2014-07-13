@@ -17,7 +17,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 	
 	if(_damage > 0.5) exitWith
 	{
-		hint "The vehicle is too damaged! You can not repair it on! But you can call the ADAC.";
+		hint "The vehicle is too damaged! You can not repair it! But you can call the ADAC.";
 	};
 
 
@@ -25,7 +25,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 	{
 		life_action_in_use = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
-		_upp = format["Repariere %1",_displayName];
+		_upp = format["Repairing... %1",_displayName];
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];

@@ -17,6 +17,7 @@ if(isNull _unit) exitWith {ctrlShow[2001,true];};
 
 //A series of checks *ugh*
 if(!life_use_atm) exitWith {hint "You've just robbed a bank! You can not give money now.";ctrlShow[2001,true];};
+if(life_LIP) exitWith {hint "You have illegal money being laundered!";ctrlShow[2001,true];};
 if(!([_amount] call fnc_isnumber)) exitWith {hint "Invalid number";ctrlShow[2001,true];};
 if(parseNumber(_amount) <= 0) exitWith {hint "Invalid number";ctrlShow[2001,true];};
 if(parseNumber(_amount) > life_cash) exitWith {hint "You do not have that much money!";ctrlShow[2001,true];};
