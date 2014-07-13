@@ -7,7 +7,7 @@
 	
 	But this balance is shit and is overwritten by default gear functions
 */
-private["_allowedItems","_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle","_append","__restwp"];
+private["_allowedItems","_headgear","_goggles","_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle","_append","__restwp"];
 
 //systemChat "civLoadGear 1";
 
@@ -113,6 +113,9 @@ if(_backpack != "") then {_handle = [_backpack,true,false,false,false] spawn lif
 if(_primary != "") then {[_primary,true,false,false,false] spawn life_fnc_handleItem;};
 if(_launcher != "") then {[_launcher,true,false,false,false] spawn life_fnc_handleItem;};
 if(_handgun != "") then {[_handgun,true,false,false,false] spawn life_fnc_handleItem;};
+
+if(_goggles != "") then {[_goggles,true,false,false,false] spawn life_fnc_handleItem;};
+if(_headgear != "") then {[_headgear,true,false,false,false] spawn life_fnc_handleItem;};
 
 //if(__restwp) then
 //{
