@@ -95,6 +95,7 @@ class Life_Client_Core
 		class robAction {};
 		class sellTurtle {};
         class robShops {}; //Rob Gas Station & Shops Script
+		class confiscateWeapons {}:
 		
 		//#2
 		class putToGarage {};

@@ -27,6 +27,7 @@ _bEscort = _display displayCtrl 2404;
 _bPutInCar = _display displayCtrl 2405;
 _bTorture = _display displayCtrl 2406;
 //_bShowLicenses = _display displayCtrl 2407;
+_bConfiscateWeapons = _display displayCtrl 2407;
 
 life_pInact_curTarget = _curTarget;
 if(_dist > 4) exitWith {hint "You must be within 3 meters to interact with this player!"};
@@ -50,7 +51,8 @@ _bUnrestrain buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_f
 _bTorture ctrlSetTooltip "Torture";
 _bTorture buttonSetAction "[life_pInact_curTarget] spawn life_fnc_TorturePlayer; closeDialog 0;";
 
-
+_bConfiscateWeapons ctrlSetToolTip localize "STR_pInAct_Confiscate";
+_bConfiscateWeapons buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 //Set Escort Button
 if((_curTarget getVariable["Escorting",false])) then 
 {
@@ -74,4 +76,8 @@ else
 
 _bPutInCar ctrlSetTooltip localize "STR_pInAct_PutInCar";
 _bPutInCar buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_putInCar;";
+if ((!(_curTarget getVariable ["life_n_holstered",true])) && currentWeapon _curTarget == "") then
+{
+	_bConfiscateWeapons ctrlEnable false;
+};
 

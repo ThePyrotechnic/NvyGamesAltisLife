@@ -25,6 +25,7 @@ _bEscort = _display displayCtrl 2404;
 _bPutInCar = _display displayCtrl 2405;
 _bSearch = _display displayCtrl 2406;
 _bShowLicenses = _display displayCtrl 2407;
+_bConfiscateWeapons = _display displayCtrl 2408;
 
 life_pInact_curTarget = _curTarget;
 
@@ -41,7 +42,10 @@ _bShowLicenses buttonSetAction "closeDialog 0; [[player],""life_fnc_licenseCheck
 
 //Set Search Button
 _bSearch ctrlSetTooltip localize "STR_pInAct_SearchPlayer";
-_bSearch buttonSetAction "closeDialog 0; [life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
+_bSearch buttonSetAction "closeDialog 0; [life_pInact_curTarget] spawn life_fnc_confiscateWeapons; closeDialog 0;";
+
+_bConfiscateWeapons ctrlSetToolTip localize "STR_pInAct_Confiscate";
+_bConfiscateWeapons buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 
 //Set Escort Button
 if((_curTarget getVariable["Escorting",false])) then 
@@ -90,4 +94,8 @@ if(!((player distance (getMarkerPos "police_hq_1") < 30) OR
 		sleep 2;
 		systemChat "Du musst in der Nähe einer Polizeistation sein.";
 	};*/
+};
+if ((!(_curTarget getVariable ["life_n_holstered",true])) && currentWeapon _curTarget == "") then
+{
+	_bConfiscateWeapons ctrlEnable false;
 };

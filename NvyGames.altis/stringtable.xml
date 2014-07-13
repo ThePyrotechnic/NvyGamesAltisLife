@@ -380,6 +380,9 @@
 		<Key ID="STR_pInAct_Arrest">
 			<Original>Send to Jail</Original>
 		</Key>
+		<Key ID="STR_pInAct_Confiscate">
+			<Original>Confiscate Weapons</Original>
+		</Key>
 	</Package>
 	<Package name="Vehicle_Interaction">
 		<Key ID="STR_vInAct_Title">

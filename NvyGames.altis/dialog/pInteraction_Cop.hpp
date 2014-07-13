@@ -103,6 +103,16 @@ class pInteraction_Cop
 			h = 3 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.7};
 		};
+		class picConfiscateWeapons: RscPicture
+		{
+			idc = 1207;
+			text = "icons\interaction\confiscate_weapon.paa";
+			x = 16 * GUI_GRID_W + GUI_GRID_X;
+			y = 17 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 3 * GUI_GRID_H;
+			colorBackground[] = {0,0,0,0.7};
+		};
 	};
 	
 	class controls
@@ -187,6 +197,15 @@ class pInteraction_Cop
 			w = 4 * GUI_GRID_W;
 			h = 3 * GUI_GRID_H;
 			
+		};
+		class bConfiscateWeapons: Life_PictureButtonMenu
+		{
+			idc = 2408;
+			text = ""; //--- ToDo: Localize;
+			x = 11 * GUI_GRID_W + GUI_GRID_X;
+			y = 17 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 3 * GUI_GRID_H;
 		};
 	};
 };
