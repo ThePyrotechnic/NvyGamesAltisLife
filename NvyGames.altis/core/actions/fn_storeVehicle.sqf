@@ -30,8 +30,8 @@ if(vehicle player != player) then
 	};
 };
 
-if(isNil "_vehicle") exitWith {hint "There is no vehicle in the vicinity of"};
+if(isNil "_vehicle") exitWith {hint "There is no vehicle nearby"};
 if(isNull _vehicle) exitWith {};
 [[_vehicle,false,(_this select 1)],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
-hint "Save vehicle ...";
+hint "Storing vehicle ...";
 life_garage_store = true;

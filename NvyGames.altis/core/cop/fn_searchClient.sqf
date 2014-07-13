@@ -8,20 +8,20 @@
 	
 	+ ##57 Entfernt illegale Waffen
 */
-private["_cop","_inv","_var","_val","_robber","_primary","_launcher","_handgun","_weapons","_policeitems"];
+private["_cop","_inv","_var","_val","_robber","_primary","_launcher","_pistol","_weapons","_policeitems"];
 _cop = [_this,0,Objnull,[objNull]] call BIS_fnc_param;
 if(isNull _cop) exitWith {};
 _inv = [];
 _weapons = [];
 _robber = false;
-
+_policeitems = [];
 _licenses = "";
 
 //Unholster weapons
 //Unholster ##112
 if(life_n_holstered) then
 {
-	[false] call life_fnc_holsterWeapons;	
+	[false] call life_fnc_holsterWeapons;
 };
 
 //Illegal items
@@ -71,19 +71,23 @@ if(_handgun in life_illegalweapons) then
 	player removeWeaponGlobal _handgun; 
 };*/
 
+if(currentWeapon player == "") then
 {
-	if(_x in life_illegalweapons) then
-	{
-		_weapons set [count _weapons, _x];
-	};
+	[["Player has no weapons!"],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
 }
-foreach weapons player;
-
+	else 
 {
-	systemChat format["Weapon away: %1", _x];
-	player removeWeapon _x; 
-}
-foreach _weapons;
+	_primary = primaryWeapon player;
+	_launcher = secondaryWeapon player;
+	_pistol = handgunWeapon player;
+	if (_primary in life_illegalWeapons) then { player removeWeaponGlobal _primary; _weapons set [count _weapons,_primary]; };
+	if (_pistol in life_illegalWeapons) then { player removeWeaponGlobal _pistol; _weapons set [count _weapons,_pistol]; };
+	if (_launcher in life_illegalWeapons) then { player removeWeaponGlobal _launcher; _weapons set [count _weapons,_launcher]; };
+	if (_primary != "") then {_primary = getText(configFile >> "CfgWeapons" >> _primary >> "displayName");};
+	if (_primary != "") then {_pistol = getText(configFile >> "CfgWeapons" >> _pistol >> "displayName");};
+	if (_primary != "") then {_launcher = getText(configFile >> "CfgWeapons" >> _launcher >> "displayName");};
+	[[format ["Successfuly removed<br/>%1<br/>%2<br/>%3",_primary,_pistol,_launcher]],"BIS_fnc_guiMessage",_cop,false] spawn BIS_fnc_MP;
+};
 
 
 //End illegal weapons block

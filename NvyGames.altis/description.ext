@@ -5,7 +5,7 @@ joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 10;
 disabledAI = true;
-disableChannels[]={0,1,2};
+disableChannels[]={0,2};
 enableDebugConsole = 1;
 loadScreen = "images\loading.jpg";
 
@@ -206,19 +206,19 @@ class CfgSounds
   {
 	name="punch";
 	sound[] = {"\sounds\punch.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag *"};
+	titles[] = {0, " "};
   };
   class punch_break
   {
 	name="punch_break";
 	sound[] = {"\sounds\punch_break.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag *"};
+	titles[] = {0, " "};
   };
   class punch_balls
   {
 	name="punch_balls";
 	sound[] = {"\sounds\punch_balls.ogg", 1.0, 1};
-	titles[] = {0, "* Schlag in die Eier *"};
+	titles[] = {0, " "};
   };
   
   class target_beep
@@ -233,33 +233,50 @@ class CfgSounds
 	sound[] = {"\sounds\target_shoot.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
-  class baby_cry
+  class gas_rob
   {
-	name="baby_cry";
-	sound[] = {"\sounds\baby_cry.ogg", 1.0, 1};
+	name="gas_rob";
+	sound[] = {"\sounds\gas_rob.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
-  class baby_happy
+    class bank_rob
   {
-	name="baby_happy";
-	sound[] = {"\sounds\baby_happy.ogg", 1.0, 1};
+	name="bank_rob";
+	sound[] = {"\sounds\bank_rob.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
-  class man_cry
+  class pol_bank
   {
-	name="man_cry";
-	sound[] = {"\sounds\man_cry.ogg", 1.0, 1};
+	name="pol_bank";
+	sound[] = {"\sounds\pol_bank.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
+  class pol_gas
+  {
+	name="pol_gas";
+	sound[] = {"\sounds\pol_gas.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
+  class pol_gas_fail
+  {
+	name="pol_gas_fail";
+	sound[] = {"\sounds\pol_gas_fail.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
+  class pol_bank_fail
+  {
+	name="pol_bank_fail";
+	sound[] = {"\sounds\pol_bank_fail.ogg", 1.0, 1};
 	titles[] = {0, " "};
   };
 };
-
 class CfgDebriefing
 {
 	class NotWhitelisted
 	{
 		title = "Mission Failed";
-		subtitle = "Du musst whitlisted sein um diesen Slot benutzen zu können.";
-		description = "Du kannst diesen Slot nicht benutzen da du nicht die entsprechenden Rechte besitzt. Probiere einen Anderen.";
+		subtitle = "You have to be whitelisted to play this slot.";
+		description = "You can not use this slot because you are not whitelisted. Try another slot.";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
@@ -268,8 +285,8 @@ class CfgDebriefing
 	class Blacklisted
 	{
 		title = "Mission Failed";
-		subtitle = "Du bist blacklisted von den Polizisten.";
-		description = "Du bist nicht länger Polizist, durch deine letzten Taten hat der Admin dich suspendiert oder gefeuert!";
+		subtitle = "You are blacklisted in the police force.";
+		description = "You are no longer a policeman, through your past deeds the Admin has you suspended or fired!";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};

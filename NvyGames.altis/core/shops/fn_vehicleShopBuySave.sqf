@@ -104,7 +104,40 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "cop_car_5";
 		_dir = markerDir "cop_car_5";
 	};
+//added by clock=========================
+//Police=================================
+		case "cop_ship_55":
+	{
+		_sp = getMarkerPos "cop_ship_55";
+		_dir = markerDir "cop_ship_55";
+	};
 	
+	case "cop_air_55":
+	{
+		_sp = getMarkerPos "cop_air_55";
+		_dir = markerDir "cop_air_55";
+	};
+	
+	case "cop_car_55":
+	{
+		_sp = getMarkerPos "cop_car_55";
+		_dir = markerDir "cop_car_55";
+	};
+//Independent============================
+	case "indy_car_1":
+	{
+		_sp = getMarkerPos "indy_car_1";
+		_dir = markerDir "indy_car_1";
+	};	
+	
+//Rebel============================
+	case "rebel_car_1":
+	{
+		_sp = getMarkerPos "rebel_car_1";
+		_dir = markerDir "rebel_car_1";
+	};	
+	
+//added by clock========================
 	case "fed_car":
 	{
 		_sp = getMarkerPos "fed_car_1";
@@ -269,7 +302,7 @@ if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 _price = round(_price * 1.5); //It's a permanent vehicle, add some bank to it!
 if(life_cash < _price) exitWith {hint format["You do not have enough money. you need %1", [_price] call life_fnc_numberText]; };
-hint "This may take a two seconds...";
+hint "This may take a few seconds...";
 sleep floor(random 3);
 
 if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};
@@ -286,7 +319,7 @@ if(_veh == "serv_truck") then
 {
 	_name = getText(configFile >> "CfgVehicles" >> _veh >> "displayName");
 };
-hint format["You have a %1 for $%2 bought.",_name,[_price] call life_fnc_numberText];
+hint format["You have bought a %1 for $%2.",_name,[_price] call life_fnc_numberText];
 _vehicle = _veh createVehicle _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 _vehicle setPos _sp;

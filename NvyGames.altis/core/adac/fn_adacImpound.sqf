@@ -36,7 +36,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	
 	life_action_inUse = true;
 	
-	_upp = "Abschleppen ...";
+	_upp = "Towing ...";
 	//Setup our progress bar.
 	disableSerialization;
 	5 cutRsc ["life_progress","PLAIN"];

@@ -31,7 +31,7 @@ class houseInventory
 		{
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 3501;
-			text = "Haus-Inventar";
+			text = "House Inventory";
 			x = 0.1;
 			y = 0.2;
 			w = 0.7;
@@ -49,7 +49,7 @@ class houseInventory
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Lager";
+			text = "Storage";
 			sizeEx = 0.04;
 			
 			x = 0.11; y = 0.25;

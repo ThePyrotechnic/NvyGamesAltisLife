@@ -33,6 +33,6 @@ if([false,_food,1] call life_fnc_handleInv) then {
 	[player,"eat"] call life_fnc_globalSound;
 
 	_sum = life_hunger + _val;
-	if(_sum > 100) then {_sum = 100; player setFatigue 1; hint "You have over eat you, do you feel now tired now.";};
+	if(_sum > 100) then {_sum = 100; player setFatigue 1; hint "You have over-eaten, and feel fatigued.";};
 	life_hunger = _sum;
 };

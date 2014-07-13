@@ -27,7 +27,7 @@ if(!isNil {_val}) then
 	};
 	
 	player playmove "AinvPknlMstpSlayWrflDnon";
-	titleText[format["you $%1 recorded.",[_val] call life_fnc_numberText],"PLAIN"];
+	titleText[format["you picked up $%1.",[_val] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash + _val;
 	life_action_delay = time;
 };

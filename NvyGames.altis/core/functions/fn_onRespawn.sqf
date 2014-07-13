@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_onRespawn.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -5,7 +6,7 @@
 	Description:
 	Execute various actions when the _unit respawns.
 */
-private["_unit","_corpse","_handle","_spawn"];
+private["_unit","_corpse","_handle","_spawn","_getFaction"];
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _corpse = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
@@ -13,8 +14,8 @@ if(!isNull _corpse) then{deleteVehicle _corpse;};
 
 hideBody _corpse;
 deleteVehicle _corpse;
-//_handle = [] spawn life_fnc_setupActions;
-//waitUntil {scriptDone _handle};
+_handle = [] spawn life_fnc_setupActions;
+waitUntil {scriptDone _handle};
 
 switch(playerSide) do
 {
@@ -24,6 +25,8 @@ switch(playerSide) do
 		_unit setVariable["Escorting",false,true];
 		_unit setVariable["transporting",false,true];
 		[] spawn life_fnc_loadGear;
+		_getRank = switch (__GETC__(life_coplevel)) do {case 1: {1}; case 2: {2}; case 3: {3}; case 4: {4}; case 5: {5}; default {0};};
+		player setVariable["coplevel",_getRank,TRUE];
 	};
 	
 	case civilian:
@@ -35,12 +38,14 @@ switch(playerSide) do
 		if(goggles player != "") then {removeGoggles player;};*/
 		//[false] spawn life_fnc_civLoadGear;
 		[] call life_fnc_civLoadGear; //update civ gear 
+		_getFaction = switch (life_faction) do {case ("rebel"): {"rebel"}; case ("indy"): {"indy"}; default {"civilian"};};
+		player setVariable["faction",_getFaction,TRUE];
 	};
 };
 
 if(life_is_arrested) then
 {
-	hint "You tried to commit suicide in prison, you will now have a longer period of time must remain behind bars.";
+	hint "Tried to kill your self behind bars? Enjoy your extended jail time.";
 	life_is_arrested = false;
 	[_unit,true] spawn life_fnc_jail;
 }
@@ -52,12 +57,12 @@ if(life_is_arrested) then
 	//HOUSE RESPAWN
 	[[player], "HOUSE_fnc_requestSpawnMenu", false, false] spawn life_fnc_MP;
 	
-	hint "Question database ...";
+	hint "Questioning database ...";
 	
 	waitUntil{!isNull (findDisplay 38500)}; //ADDED: HOUSE_RESPAWN
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 	
-	hint "Players spawn!";
+	hint "Spawning!";
 };
 
 _unit addRating 100000;

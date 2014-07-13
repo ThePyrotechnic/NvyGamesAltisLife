@@ -36,7 +36,7 @@ switch (_state) do
 			license_civ_air = false;
 			license_civ_truck = false;
 			license_civ_boat = false;
-			hint "You get deprived of all vehicle licenses.";
+			hint "You have lost all vehicle licenses.";
 		};
 	};
 	
@@ -45,7 +45,7 @@ switch (_state) do
 	{
 		if(license_civ_gun) then {
 			license_civ_gun = false;
-			hint "You get deprived of weapons license.";
+			hint "You have lost all weapons license.";
 		};
 	};
 };

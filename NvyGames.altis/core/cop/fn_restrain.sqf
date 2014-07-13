@@ -26,7 +26,7 @@ if(isNull _cop) exitWith {};
 	};
 };
 
-titleText[format["You were chosen by %1 tied.",name _cop],"PLAIN"];
+titleText[format["You were restrained by %1.",name _cop],"PLAIN"];
 				
 while {player getVariable "restrained"} do
 {

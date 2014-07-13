@@ -67,14 +67,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 		}
 		else
 		{
-			hint "The other player must be tied up.";
+			hint "The other player must be restrained.";
 			sleep 3;
-			hint "Use the Shift + R to captivate the player.";
+			hint "Use the Shift + R to restrain the player.";
 		};
 	}
 	else
 	{
-		if(playerSide == civilian) then
+		if(playerSide == civilian && (life_faction in ["rebel","indy"])) then
 		{
 			if(_curTarget getVariable["restrained",false]) then
 			{
@@ -90,10 +90,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 			}
 			else
 			{
-				hint "The other player must be tied up.";
-				sleep 3;
-				hint "Use the Shift + R to captivate the player.";
+				hint "The other player must be restrained.";
+				sleep 2;
+				hint "Use the Shift + R to restrain the player.";
 			};
+		}
+		else
+		{
+			hint "You need to be a member of a whitelisted faction!";
 		};
 	};
 } 

@@ -13,7 +13,7 @@ _session = _this;
 diag_log format["CLIENT: %1 :: %2", typeName _session,_session];
 life_session_tries = life_session_tries + 1;
 if(life_session_tries > 3) exitWith {cutText["Connection to the server can not be established. You've reached the maximum number of 3 tries. Please reconnect!","BLACK FADED"];0 cutFadeOut 9999999;};
-cutText["Erhalte Informationen von Server...","BLACK FADED"];
+cutText["Recieving information from server...","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 //Error handling types
@@ -121,6 +121,10 @@ switch (playerSide) do
 		//##119 perms
 		life_player_perms = (_session select 12);					
 		life_player_perms = call compile format["%1", life_player_perms];
+		life_faction = (_session select 13);
+		life_rank = (_session select 14);
+		life_position = (_session select 15);
+		
 	};
 };
 
@@ -129,8 +133,8 @@ if(_isbanned) exitWith
 	life__inventory = [];
 	civ_gear = [];
 	cop_gear = [];
-	[[0,format["DBBAN >>> Banned player '%1' and cannot. <<<", name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;
-	cutText["You have been banned from this server! In case of complaints www.nvygames.com","BLACK FADED"];0 cutFadeOut 9999999;
+	[[0,format["DBBAN >>> Banned player '%1' tried to connect. <<<", name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;
+	cutText["You have been banned from this server! In case of complaints visit www.nvygames.com","BLACK FADED"];0 cutFadeOut 9999999;
 };
 
 switch(__GETC__(life_donator)) do
@@ -153,6 +157,6 @@ if(isNil("life__inventory")) then
 [true] call life_fnc_dynPermCheckout;
 
 if((getPlayerUID player) != (_session select 0)) exitWith {[] spawn life_fnc_sessionCreate;}; //Since it didn't match create the session again?
-cutText["Receive information from the server and test them, you're almost done.","BLACK FADED"];
+cutText["Received information from the server and tested it, you're almost done.","BLACK FADED"];
 0 cutFadeOut 9999999;
 life_session_completed = true;

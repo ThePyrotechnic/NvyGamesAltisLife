@@ -60,11 +60,11 @@ if(_veh distance impound_obj < 50) then
 		};
 	};
 	_check = nearestObjects[_pos,["LandVehicle","Air"],4];
-	if(count _check > 0) exitWith {hint "There is currently a vehicle.";};
+	if(count _check > 0) exitWith {hint "There is currently a vehicle on the spawn.";};
 	if(_price > life_cash) then
 	{
 		_price = _price + 200;
-		if(_price > life_atmcash) exitWith {hint "You did not get enough money in your bank account to your vehicle back."};
+		if(_price > life_atmcash) exitWith {hint "You do not have enough money in your bank account."};
 		life_atmcash = life_atmcash - _price;
 		life_cash = life_cash + _price;
 	};
@@ -83,7 +83,7 @@ if(_veh distance impound_obj < 50) then
 		[_v] call life_fnc_vehicleAfterSpawn; //Cleanups, ...
 	};
 
-	hint format["Du hast dein %1 für $%3 ausgeparkt.",_name,[_price] call life_fnc_numberText];
+	hint format["You pulled out your %1 for $%3",_name,[_price] call life_fnc_numberText];
 	detach _veh;
 	if(_veh isKindOf "Air") then 
 	{

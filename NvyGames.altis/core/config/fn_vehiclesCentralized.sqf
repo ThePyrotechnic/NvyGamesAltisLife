@@ -13,12 +13,15 @@ diag_log "Loading centralized vehicle configuration ...";
 life_vehicle_config_new = [
 
 	["B_Quadbike_01_F", 50, 3000, 1000, 500, false, 0],
+	["I_Quadbike_01_F", 50, 3000, 1000, 500, false, 0],
+	["O_Quadbike_01_F", 50, 3000, 1000, 500, false, 0],
 	
 	["C_Hatchback_01_F", 75, 10000, 3000, 2500, false, 0],
 	["C_Hatchback_01_sport_F", 75, 30000, 7500, 3000, false, 0],
 	
 	["C_Offroad_01_F", 150, 20000, 10000, 5000, false, 0],
 	["B_G_Offroad_01_F", 150, 50000, 15000, 5000, false, 0],
+	["I_G_Offroad_01_F", 150, 50000, 15000, 5000, false, 0],
 	["B_G_Offroad_01_armed_F", 100, 4000000, 1000000, 1000000, true, 500000],
 	
 	["C_SUV_01_F", 100, 50000, 15000, 8000, false, 0],

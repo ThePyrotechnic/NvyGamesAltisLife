@@ -9,7 +9,7 @@ class launderdlg
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Geld waschen</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Money Laundering</t>"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
@@ -54,7 +54,7 @@ class launderdlg
 		class RscStructuredText_1101: RscStructuredText
 		{
 			idc = 1101;
-			text = "Geld von Drogenverkauf, etc. musst du zuerst waschen lassen,<br/>um es benutzen zu konnen.<br/><br/><br/><t color='#FF0000'>Der Geldwascher wird dir einen Teil abziehen! Je mehr Geld du ihm gibt, desto mehr Rabatt gibt er!</t>"; //--- ToDo: Localize;
+			text = "Money earned from selling drugs must be washed.<br/>The more money you give him, the more of a discount you will get!</t>"; //--- ToDo: Localize;
 			x = 11.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
@@ -87,12 +87,12 @@ class launderdlg
 		class bLaunder: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Waschen"; //--- ToDo: Localize;
+			text = "Wash Money"; //--- ToDo: Localize;
 			x = 24.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4.5 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Geld waschen lassen"; //--- ToDo: Localize;
+			tooltip = "Money Laundering lassen"; //--- ToDo: Localize;
 			onButtonClick="[] spawn life_fnc_launderClick;";
 		};
 	};

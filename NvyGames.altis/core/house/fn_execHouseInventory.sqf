@@ -66,7 +66,7 @@ if(life_action_inUse) exitWith {hint "You're doing something else.";};
 
 life_action_inUse = true;
 
-//Wenn Hausschlüssel HIER CHECK FÜR IN USE!!!
+//Wenn Houseschlüssel HIER CHECK FÜR IN USE!!!
 
 if(!createDialog "houseInventory") exitWith {hint "Failed Creating Dialog";}; //Couldn't create the menu?
 disableSerialization;

@@ -38,7 +38,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 
 	if(_type in life_illegal_item_shortnames) then
 	{
-		hint format["you are selling %1 %2 for $%3. You have to let wash only the money to use it can.",_amount,_name,[_price] call life_fnc_numberText];
+		hint format["you are selling %1 %2 for $%3. You have to wash the money.",_amount,_name,[_price] call life_fnc_numberText];
 		[true,"illegalmoney",_price] call life_fnc_handleInv;
 	}
 	else

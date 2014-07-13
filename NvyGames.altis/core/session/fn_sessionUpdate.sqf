@@ -5,7 +5,7 @@
 	Description:
 	Sends the update request to the server to save information in the database.
 */
-private["_packet","_inventory"];
+private["_packet","_inventory","_pos","_gear"];
 
 _packet = [player,playerSide,life_cash,life_atmcash,getPlayerUID player];
 switch (playerSide) do
@@ -47,6 +47,7 @@ switch (playerSide) do
 		_packet set[count _packet,life_is_arrested];
 		_packet set[count _packet,civ_gear];
 	};
+
 };
 
 _packet set[8,name player];
@@ -60,7 +61,15 @@ _packet set[9,_inventory];
 //##119 perm
 _packet set[10, format["""%1""", str life_player_perms]];
 
-
+if(alive player) then
+{
+	_pos = format["%1",getPos player];
+}
+else
+{
+	_pos = "[]";
+};
+_packet set[count _packet,_pos];
 ///CIV COP gear setter
 /*_gear = cop_gear;
 _packet set[10,_gear]; //add gear Cop-Civ-Gear*/

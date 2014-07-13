@@ -17,15 +17,15 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 	
 	if(_damage > 0.5) exitWith
 	{
-		hint "The vehicle is too damaged! You can not repair it on! But you can call the ADAC.";
+		hint "The vehicle is too damaged! You can not repair it! But you can call the ADAC.";
 	};
 
 
 	if("ToolKit" in (items player)) then
 	{
-		life_action_inUse = true;
+		life_action_in_use = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
-		_upp = format["Repariere %1",_displayName];
+		_upp = format["Repairing... %1",_displayName];
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];
@@ -52,11 +52,11 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 			if(life_interrupted) exitWith {};
 		};
 		
-		life_action_inUse = false;
+		life_action_in_use = false;
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
-		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_inUse = false;};
-		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it can!","PLAIN"];};
+		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_in_use = false;};
+		if(player != vehicle player) exitWith {titleText["You have to get out of the vehicle in order to repair it!","PLAIN"];};
 		player removeItem "ToolKit";
 		_veh setDamage 0;
 		titleText["Vehicle repaired.","PLAIN"];

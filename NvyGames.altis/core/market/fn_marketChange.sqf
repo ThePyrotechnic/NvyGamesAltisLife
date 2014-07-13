@@ -118,7 +118,7 @@ switch(true) do
 		["heroinp", [15,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		["froglsd", [15,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		
-		diag_log "+Market+ Event drugm";
+		diag_log "+Market+ Event drugs";
 	};
 	case (_rand <= 90): //10% Schildkröten höher
 	{

@@ -6,7 +6,7 @@
 	Buy a virtual item from the store.
 */
 private["_type","_price","_amount","_diff","_name","_marketprice","_isillegal","_illegalmoney"];
-if((lbCurSel 2401) == -1) exitWith {hint "Du musst ein Item auswählen das du kaufen möchtest."};
+if((lbCurSel 2401) == -1) exitWith {hint "Du musst ein Item auswählen das du buy möchtest."};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
@@ -26,7 +26,7 @@ if(_marketprice != -1) then
 
 /*if(_marketprice != -1) exitWith
 {
-	hint "Du kannst das nicht kaufen!";
+	hint "Du kannst das nicht buy!";
 };*/
 
 ///////////
@@ -35,7 +35,7 @@ if(_marketprice != -1) then
 if(!([_amount] call fnc_isnumber)) exitWith {hint "You've given no current number.";};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _amount = parseNumber(_amount);
-if(_diff <= 0) exitWith {hint "You do not have enough space for this number!"};
+if(_diff <= 0) exitWith {hint "You do not have enough space for this amount!"};
 _amount = _diff;
 
 if(_isillegal) then
@@ -66,7 +66,7 @@ if(_isillegal) then
 }
 else
 {
-	if((_price * _amount) > life_cash) exitWith {hint "You do not have so much money!"};
+	if((_price * _amount) > life_cash) exitWith {hint "You do not have enough money!"};
 
 	_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 

@@ -7,7 +7,7 @@ cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
 diag_log "------------------------------------------------------------------------------------------------------";
-diag_log "--------------------------------- Starting Stratis Life Client Init ----------------------------------";
+diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
 //Setup initial client core functions
@@ -49,6 +49,16 @@ switch (playerSide) do
 		waitUntil {scriptDone _handle};
 	};
 	
+	case sideLogic:
+
+    {
+
+        _handle = [] spawn life_fnc_initZeus;
+
+        waitUntil {scriptDone _handle};
+
+    };
+	
 	default  //Invalid side
 	{
 		["NotWhitelisted",false,true] call BIS_fnc_endMission;
@@ -69,7 +79,7 @@ diag_log "Display 46 Found";
 player addRating 99999999;
 //[] execVM "core\client\init_survival.sqf";
 diag_log "------------------------------------------------------------------------------------------------------";
-diag_log format["                End of Stratis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
+diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
 life_sidechat = true;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
@@ -91,7 +101,8 @@ setPlayerRespawnTime life_respawn_timer; //Set our default respawn time.
 
 //FIXES ##27
 onPlayerDisconnected { [_id, _name, _uid] call compile preProcessFileLineNumbers "core\functions\fn_onPlayerDisconnect.sqf" };
-
+// Init automatically saving gear
+[] spawn life_fnc_autoSave;
 //##104 update clothing timer
 [] spawn
 {

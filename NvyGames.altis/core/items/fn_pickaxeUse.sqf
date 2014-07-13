@@ -48,7 +48,7 @@ if(_mine == "") exitWith
 		hint "You are not near a mine!"
 	};
 };
-if(vehicle player != player) exitWith {hint "You can not break down within your car!";};
+if(vehicle player != player) exitWith {hint "You can not use a pickaxe within your car!";};
 
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint "Your inventory is full."};
@@ -67,7 +67,7 @@ for "_i" from 0 to 2 do
 if(([true,_mine,_diff] call life_fnc_handleInv)) then
 {
 	_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format["You %2 %1 mined.",_itemName,_diff],"PLAIN"];
+	titleText[format["You mined %2 %1.",_itemName,_diff],"PLAIN"];
 	
 	if(_endsound != "") then
 	{

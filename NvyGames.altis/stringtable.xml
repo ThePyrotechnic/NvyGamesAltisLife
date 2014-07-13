@@ -337,7 +337,7 @@
 			<Original>You have earned $%1</Original>
 		</Key>
 		<Key ID="STR_NOTF_NetDrop">
-			<Original>Dropping fishing net....</Original>
+			<Original>Dropped net. Check your inventory! (Press y) </Original>
 		</Key>
 		<Key ID="STR_NOTF_NetDropFail">
 			<Original>Didn't catch any fish..</Original>

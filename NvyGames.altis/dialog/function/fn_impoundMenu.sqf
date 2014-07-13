@@ -45,7 +45,7 @@ lbClear _control;
 		if(_colorstring == "") then { _colorstring = "Standard"; };
 	};
 	
-	_control lbAdd format["%1 (%4) - $%2 || Wert: $%3", _displayName,[_price] call life_fnc_numberText,[_sPrice] call life_fnc_numberText,_colorstring];
+	_control lbAdd format["%1 (%4) - $%2 || Price: $%3", _displayName,[_price] call life_fnc_numberText,[_sPrice] call life_fnc_numberText,_colorstring];
 	_control lbSetData [(lbSize _control)-1,(_x select 2)];
 	_control lbSetValue [(lbSize _control)-1,(call compile format["%1", _x select 0])];
 	_control lbSetPicture [(lbSize _control)-1,_picture];

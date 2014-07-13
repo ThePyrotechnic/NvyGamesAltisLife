@@ -11,7 +11,7 @@ _len = [_value] call KRON_StrLen;
 
 if(_len > 25) exitWith {hint "The name is too long. It may be up to 25 characters long."};
 if(life_cash < 10000) exitWith {hint "You do not have the necessary $10,000!"};
-if(isNil {life_gang_list}) exitWith {hint "Server not authorized for feature."};
+if(isNil {life_gang_list}) exitWith {hint "Server does not support gangs."};
 if(([_value,life_gang_list] call fnc_index) != -1) exitWith {hint "There is already a gang with this name!"};
 
 _group = createGroup civilian;

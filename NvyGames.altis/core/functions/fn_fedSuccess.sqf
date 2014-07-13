@@ -17,19 +17,19 @@ sleep 45;
 
 if(_funds > life_atmcash) then
 {
-	hint "Because the State Bank was robbed you've lost a part of your money.\n\nNext time you should buy an insurance accounts!";
+	hint "Because the State Bank was robbed you've lost all of your money.\n\nNext time you should buy insurance!";
 	life_atmcash = 0;
 }
 	else
 {
 	if(life_has_insurance) then
 	{
-		hint "The last attack on the State Bank has hit the civilians where it hurts the most, fortunately you have a bank insurance accounts and do not have a lost a penny!\n\nYou should go to an ATM machine to renew the insurance!";
+		hint "The last attack on the State Bank has hit the civilians where it hurts the most, fortunately you have a bank insurance accounts and have not lost a penny!\n\nYou should go to an ATM machine to renew the insurance!";
 		life_has_insurance = false;
 	}
 		else
 	{
-		hint format["Durch den letzten Überfall auf die Staatsbank hast du $%1 verloren, nächstes mal solltest du dir eine Kontenversicherung kaufen!\n\nDiese erhähltst du am Bankautomaten!",[_funds] call life_fnc_numberText];
+		hint format["Due to the recent robbery on the State Bank, you lost $%1. Next time buy banking insurance!!",[_funds] call life_fnc_numberText];
 		life_atmcash = life_atmcash - _funds;
 	};
 };

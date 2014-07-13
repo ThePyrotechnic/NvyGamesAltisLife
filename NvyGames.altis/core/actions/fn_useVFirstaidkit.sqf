@@ -6,7 +6,7 @@
 
 */
 
-hint "First-Aid kit is unpacked ...";
+hint "You open the First-Aid Kit ...";
 sleep 2;
 
 if(player canAdd "FirstAidKit") then
@@ -29,5 +29,5 @@ else
 	
 	hint "First-Aid Kit could not be unpacked.";
 	sleep 3;
-	hint "You get back the item.";
+	hint "The item has been returned.";
 };

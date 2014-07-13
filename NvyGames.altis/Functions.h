@@ -9,6 +9,7 @@ class Life_Client_Core
 		class setupEVH {};
 		class initCiv {};
 		class initCop {};
+		class initZeus {};
 		class welcomeNotification {};
 	};
 	
@@ -37,6 +38,8 @@ class Life_Client_Core
 		class adminTpTo {};
 		class adminTpHere {};
 		class adminMapTp {};
+		class adminTpToServer {};
+		class adminTpHereServer {};
 		
 		class adminRestrain {};
 		class adminUnrestrain {};
@@ -91,7 +94,7 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
-		class robStoreAction {};
+        class robShops {}; //Rob Gas Station & Shops Script
 		
 		//#2
 		class putToGarage {};
@@ -155,6 +158,7 @@ class Life_Client_Core
 		class clothing_adac {};
 		class clothing_reb {};
 		class clothing_dive {};
+		class clothing_indy {};
 		
 		class civDefault {};
 		
@@ -244,6 +248,7 @@ class Life_Client_Core
 		
 		class bagSound {};
 		
+		class playSound {};
 		class globalSound {};
 		class globalSoundClient {};
 		
@@ -255,6 +260,9 @@ class Life_Client_Core
 		
 		class dbbanExec {};
 		class handleFlashbang {};
+		class autoSave {};
+		class pushFunction {};
+		
 	};
 	
 	class Network
@@ -281,6 +289,7 @@ class Life_Client_Core
 		class robPerson {};
 		class removeLicenses {};
 		class zoneCreator {};
+		class gangMarkers{};
 	};
 	
 	class Vehicle
@@ -330,10 +339,6 @@ class Life_Client_Core
 		
 		class showArrestDialog {};
 		class arrestDialog_Arrest {};
-		
-		//holster
-		class holsterSaveGear {};
-		class holsterLoadGear {};
 	};
 	
 	class Gangs

@@ -5,11 +5,11 @@ private["_unit","_rand","_damage", "_fatigue"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
 if(playerSide == west) exitWith {};
-if(life_action_inUse) exitWith {};
+if(life_action_in_use) exitWith {};
 
 if(player distance _unit > 5 || !alive player || !alive _unit) exitWith {hint "You can not torture the person."};
 
-life_action_inUse = true;
+life_action_in_use = true;
 
 _rand = [0,4] call life_fnc_randomRound;
 
@@ -18,7 +18,7 @@ switch(_rand) do
 {
 	case 0:
 	{
-		hintSilent "You have the players hit in the stomach.";
+		hintSilent "You punch him in the stomach.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -41,7 +41,7 @@ switch(_rand) do
 	};
 	case 1:
 	{
-		hintSilent "You have the players hit in the face.";
+		hintSilent "You punch him in the face.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -62,7 +62,7 @@ switch(_rand) do
 	};
 	case 2:
 	{
-		hintSilent "You've come to the player.";
+		hintSilent "You knee his gut.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -83,7 +83,7 @@ switch(_rand) do
 	};
 	case 3:
 	{
-		hintSilent "You have the players kicked in the balls.";
+		hintSilent "You kick him in the balls.";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -99,7 +99,7 @@ switch(_rand) do
 	};
 	default
 	{
-		hintSilent "You have the players knocked out some teeth.";
+		hintSilent "You knocked out his teeth!";
 		//Play sound on _unit
 		
 		//Damage _unit
@@ -121,6 +121,6 @@ switch(_rand) do
 };
 
 
-life_action_inUse = false;
+life_action_in_use = false;
 
-[[getPlayerUID player,name player,"",["Folter",800]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,name player,"",["Torture",800]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

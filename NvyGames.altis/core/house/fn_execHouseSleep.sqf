@@ -35,7 +35,7 @@ _canview = _exdata call life_fnc_houseCanAccess; //replaced by life_fnc_houseCan
 if(!_canview) exitWith
 {
 	hint "No access!";
-	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
+	diag_log format [ "%1 tried to access to %2 illegally", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
 //Sleep

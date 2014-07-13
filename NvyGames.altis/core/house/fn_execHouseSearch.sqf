@@ -26,7 +26,7 @@ _house_name =  [_exdata, "name"] call life_fnc_houseExtractDataVal; //TO BE SAFE
 
 diag_log format [ "%1 is trying to access %2 ...", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 
-/*hint format ["DEBUG: Haus gehört %1", [_exdata, "owner"] call life_fnc_houseExtractDataVal];
+/*hint format ["DEBUG: House gehört %1", [_exdata, "owner"] call life_fnc_houseExtractDataVal];
 sleep 1;*/
 
 _canview = true;

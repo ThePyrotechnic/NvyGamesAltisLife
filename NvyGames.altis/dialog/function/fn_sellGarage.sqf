@@ -14,7 +14,7 @@ _vid = lbValue[2801,(lbCurSel 2801)];
 _pid = getPlayerUID player;
 _unit = player;
 
-if(isNil "_vehicle") exitWith {hint "Die Auswahl hatte einen Fehler..."};
+if(isNil "_vehicle") exitWith {hint "There was a mistake with the selection..."};
 
 _price = [_vehicle,__GETC__(life_garage_sell)] call fnc_index;
 if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_sell) select _price) select 1;};

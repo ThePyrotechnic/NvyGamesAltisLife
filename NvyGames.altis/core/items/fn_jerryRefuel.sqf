@@ -86,5 +86,5 @@ switch (true) do
 		};
 	};
 };
-titleText[format["You have the %1 refueled.",_displayName],"PLAIN"];
+titleText[format["You have refueled the %1",_displayName],"PLAIN"];
 [true,"fuelE",1] call life_fnc_handleInv;

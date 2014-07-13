@@ -11,7 +11,7 @@
 		switch(life_hunger) do {
 			case 30: {hint "You've eaten nothing for a while, you should eat something soon!";};
 			case 20: {hint "You start to starve, you should eat something or you die!";};
-			case 10: {hint "You are now starve to death, you will die very soon if you do not eat something soon!";player setFatigue 1;};
+			case 10: {hint "You are now starving to death, you will die very soon if you do not eat something!";player setFatigue 1;};
 			};
 		};
 	};
@@ -27,8 +27,8 @@
 			switch(life_thirst) do 
 			{
 				case 30: {hint "You have not been drinking for a while, you should drink something soon!";};
-				case 20: {hint "You start to die of thirst, you should drink something or you die!"; player setFatigue 1;};
-				case 10: {hint "You are now dying of thirst, you're going to die very soon if you do not drink something soon!"; player setFatigue 1;};
+				case 20: {hint "You start to die of thirst, you should drink something or you will die!"; player setFatigue 1;};
+				case 10: {hint "You are now dying of thirst, you're going to die very soon if you do not drink something!"; player setFatigue 1;};
 			};
 		};
 	};
@@ -79,7 +79,7 @@
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
-			hint "You are overweight, as long as you are carrying this much you can not even run.";
+			hint "You are overweight, as long as you are carrying this much you can't run.";
 		} else {
 			if(isForcedWalk player) then {
 				player forceWalk false;

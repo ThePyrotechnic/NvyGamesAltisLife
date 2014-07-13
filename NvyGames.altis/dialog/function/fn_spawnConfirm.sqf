@@ -7,12 +7,11 @@
 */
 private["_spCfg","_sp","_spawnPos"];
 closeDialog 0;
+if((life_spawn_point select 1) == "Last Pos") exitWith {player setPos [life_position select 0, life_position select 1, 0]};
 if(count life_spawn_point == 0) then
 {
-	private["_sp","_spCfg"];
 	_spCfg = [playerSide] call life_fnc_spawnPointCfg;
 	_sp = _spCfg select 0;
-	
 	if(playerSide == civilian) then
 	{
 		if(isNil {(call compile format["%1", _sp select 0])}) then {
@@ -30,7 +29,7 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",_sp select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 	
 	//Show message if civilian spawned in spawnpoint to make it easier fro cops
-	[[0,format["%1 wurde in %2 gespawnt.", name player, _sp select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format["%1 has spawned at %2.", name player, _sp select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 }
 	else
 {
