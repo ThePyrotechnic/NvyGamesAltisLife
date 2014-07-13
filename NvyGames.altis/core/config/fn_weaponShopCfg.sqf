@@ -359,7 +359,9 @@ switch(_shop) do
 			{
 				["Private 1st Class Equipment", //add action name? 
 					[
-						["hgun_PDW2000_F",nil,1000], //pdw
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
+						["hgun_PDW2000_F",nil,10000], //pdw
 						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
 						["muzzle_snds_L",nil,4000], //supp
@@ -403,6 +405,8 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp 9
 						["muzzle_snds_H",nil,4000], //supp 6.5
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["hgun_PDW2000_F",nil,10000], //pdw
 						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
@@ -446,6 +450,8 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp
 						["muzzle_snds_H",nil,4000], //supp 6.5
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["hgun_PDW2000_F",nil,10000], //pdw
 						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
@@ -492,6 +498,8 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_green_mag_Tracer",nil,3000], //6.5tracers
 						["muzzle_snds_L",nil,4000], //supp
 						["muzzle_snds_H",nil,4000], //supp 6.5
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["hgun_PDW2000_F",nil,10000], //pdw
 						["optic_ACO_grn_smg",nil,1000], //smg aco green
 						["hgun_Rook40_F",nil,5000], //rook
@@ -559,6 +567,8 @@ switch(_shop) do
 			{
 				["Private 1st Class Equipment", //add action name? 
 					[
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["SMG_01_F",nil,10000], //vermin
 						["30Rnd_45ACP_Mag_SMG_01",nil,2000], //vermin mag
 						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,2000], //vermin mag tracer
@@ -594,6 +604,8 @@ switch(_shop) do
 			{
 				["Specialist Equipment", //add action name? 
 					[
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["arifle_TRG20_F",nil,15000], //trg 20
 						["muzzle_snds_M",nil,10000], //556 supp
 						["30Rnd_556x45_Stanag",nil,3000], // 556 stanag
@@ -637,6 +649,8 @@ switch(_shop) do
 			{
 				["Corporal Equipment", //add action name? 
 					[
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["arifle_TRG21_F",nil,20000], //trg 21
 						["arifle_TRG20_F",nil,15000], //trg 20
 						["muzzle_snds_M",nil,10000], //556 supp
@@ -681,6 +695,8 @@ switch(_shop) do
 			{
 				["Sergeant Equipment", //add action name? 
 					[
+						["arifle_SDAR_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,50],
 						["arifle_Mk20_GL_F",nil,25000], //mk20gl
 						["1Rnd_SmokeGreen_Grenade_shell",nil,5000], //smoke for gl
 						["arifle_TRG21_F",nil,20000], //trg 21
